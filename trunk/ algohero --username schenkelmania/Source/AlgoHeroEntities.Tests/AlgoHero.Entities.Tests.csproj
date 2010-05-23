@@ -52,6 +52,7 @@
     <Compile Include="NotaFixture.cs" />
     <Compile Include="PartituraFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TiempoCancionFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlgoHeroEntities\AlgoHero.Entities.csproj">
