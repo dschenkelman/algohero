@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHeroEntities", "AlgoHeroEntities\AlgoHeroEntities.csproj", "{801DF353-3C2D-4940-9042-7001F3F96C4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHero.Entities", "AlgoHeroEntities\AlgoHero.Entities.csproj", "{801DF353-3C2D-4940-9042-7001F3F96C4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHeroEntities.Tests", "AlgoHeroEntities.Tests\AlgoHeroEntities.Tests.csproj", "{18E19EF3-F58A-4F59-AF85-C5D60678D690}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHero.Entities.Tests", "AlgoHeroEntities.Tests\AlgoHero.Entities.Tests.csproj", "{18E19EF3-F58A-4F59-AF85-C5D60678D690}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

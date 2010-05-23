@@ -8,8 +8,8 @@
     <ProjectGuid>{18E19EF3-F58A-4F59-AF85-C5D60678D690}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AlgoHeroEntities.Tests</RootNamespace>
-    <AssemblyName>AlgoHeroEntities.Tests</AssemblyName>
+    <RootNamespace>AlgoHero.Entities.Tests</RootNamespace>
+    <AssemblyName>AlgoHero.Entities.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlgoHeroEntities\AlgoHeroEntities.csproj">
+    <ProjectReference Include="..\AlgoHeroEntities\AlgoHero.Entities.csproj">
       <Project>{801DF353-3C2D-4940-9042-7001F3F96C4A}</Project>
-      <Name>AlgoHeroEntities</Name>
+      <Name>AlgoHero.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
