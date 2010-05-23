@@ -1,0 +1,6 @@
+﻿namespace AlgoHeroEntities
+{
+    class Partitura
+    {
+    }
+}
