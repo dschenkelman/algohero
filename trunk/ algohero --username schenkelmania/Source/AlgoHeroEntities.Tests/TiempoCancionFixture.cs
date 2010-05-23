@@ -10,28 +10,36 @@
         [Test]
         public void CrearTiempoCompasConDuracionCompasNegativoLanzaExcepcion()
         {
-            TiempoCancion tCancion = new TiempoCancion(-1, 1);
+            var tiempoCancion = new TiempoCancion(-1, 1);
         }
 
         [ExpectedException(ExceptionType = typeof(ArgumentException))]
         [Test]
         public void CrearTiempoCompasConDuracionCompasCeroLanzaExcepcion()
         {
-            TiempoCancion tCancion = new TiempoCancion(0, 1);
+            var tiempoCancion = new TiempoCancion(0, 1);
         }
         
         [ExpectedException(ExceptionType = typeof(ArgumentException))]
         [Test]
         public void CrearTimpoCompasConCantidadBlancasNegativaLanzaExcepcion()
         {
-            TiempoCancion tCancion = new TiempoCancion(2, -1);
+            var tiempoCancion = new TiempoCancion(2, -1);
         }
 
         [ExpectedException(ExceptionType = typeof(ArgumentException))]
         [Test]
         public void CrearTiempoCompasConCantidadBlancasCeroLanzaExcepcion()
         {
-            TiempoCancion tCancion = new TiempoCancion(3, 0);
+            var tiempoCancion = new TiempoCancion(3, 0);
+        }
+
+        [Test]
+        public void CrearTiempoCompasSeteaValoresCorrectamente()
+        {
+            var tiempoCancion = new TiempoCancion(1.5, 2);
+            Assert.AreEqual(tiempoCancion.DuracionCompas, 1.5);
+            Assert.AreEqual(tiempoCancion.CantidadBlancas, 2);
         }
 
     }
