@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{801DF353-3C2D-4940-9042-7001F3F96C4A}</ProjectGuid>
+    <ProjectGuid>{18E19EF3-F58A-4F59-AF85-C5D60678D690}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AlgoHero.Entities</RootNamespace>
-    <AssemblyName>AlgoHero.Entities</AssemblyName>
+    <RootNamespace>AlgoHeroMusic.Entities.Tests</RootNamespace>
+    <AssemblyName>AlgoHero.MusicEntities.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,24 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cancion.cs" />
-    <Compile Include="Compas.cs" />
-    <Compile Include="FiguraMusical.cs" />
-    <Compile Include="Nota.cs" />
-    <Compile Include="Partitura.cs" />
+    <Compile Include="Core\CancionFixture.cs" />
+    <Compile Include="Core\CompasFixture.cs" />
+    <Compile Include="Core\NotaFixture.cs" />
+    <Compile Include="Core\PartituraFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <DependentUpon>Resources.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="TiempoCancion.cs" />
+    <Compile Include="Core\TiempoCancionFixture.cs" />
+    <Compile Include="Servicios\CalculadorDuracionNotasFixture.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\AlgoHeroEntities\AlgoHero.MusicEntities.csproj">
+      <Project>{801DF353-3C2D-4940-9042-7001F3F96C4A}</Project>
+      <Name>AlgoHero.MusicEntities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
