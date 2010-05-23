@@ -8,8 +8,8 @@
     <ProjectGuid>{801DF353-3C2D-4940-9042-7001F3F96C4A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AlgoHeroEntities</RootNamespace>
-    <AssemblyName>AlgoHeroEntities</AssemblyName>
+    <RootNamespace>AlgoHero.Entities</RootNamespace>
+    <AssemblyName>AlgoHero.Entities</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
