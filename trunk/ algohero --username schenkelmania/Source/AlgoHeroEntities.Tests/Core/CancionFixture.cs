@@ -1,7 +1,7 @@
-﻿namespace AlgoHeroEntities.Tests
+﻿using NUnit.Framework;
+
+namespace AlgoHeroMusic.Entities.Tests.Core
 {
-    using NUnit.Framework;
-    
     [TestFixture]
     public class CancionFixture
     {

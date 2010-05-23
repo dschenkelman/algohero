@@ -1,4 +1,4 @@
-﻿namespace AlgoHeroEntities.Tests
+﻿namespace AlgoHeroMusic.Entities.Tests.Core
 {
     using NUnit.Framework;
 

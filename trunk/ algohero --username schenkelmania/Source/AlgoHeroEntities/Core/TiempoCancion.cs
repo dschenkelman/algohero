@@ -1,7 +1,7 @@
 ﻿using System;
-using AlgoHero.Entities.Properties;
+using AlgoHero.MusicEntities.Properties;
 
-namespace AlgoHero.Entities
+namespace AlgoHero.MusicEntities.Core
 {
     public class TiempoCancion
     {

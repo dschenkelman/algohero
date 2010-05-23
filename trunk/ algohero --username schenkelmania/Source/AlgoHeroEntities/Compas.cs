@@ -1,6 +1,0 @@
-﻿namespace AlgoHeroEntities
-{
-    class Compas
-    {
-    }
-}
