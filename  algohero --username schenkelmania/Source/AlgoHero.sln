@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHeroEntities", "AlgoHeroEntities\AlgoHeroEntities.csproj", "{801DF353-3C2D-4940-9042-7001F3F96C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHeroEntities.Tests", "AlgoHeroEntities.Tests\AlgoHeroEntities.Tests.csproj", "{18E19EF3-F58A-4F59-AF85-C5D60678D690}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{801DF353-3C2D-4940-9042-7001F3F96C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801DF353-3C2D-4940-9042-7001F3F96C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801DF353-3C2D-4940-9042-7001F3F96C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801DF353-3C2D-4940-9042-7001F3F96C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E19EF3-F58A-4F59-AF85-C5D60678D690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E19EF3-F58A-4F59-AF85-C5D60678D690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E19EF3-F58A-4F59-AF85-C5D60678D690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E19EF3-F58A-4F59-AF85-C5D60678D690}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
