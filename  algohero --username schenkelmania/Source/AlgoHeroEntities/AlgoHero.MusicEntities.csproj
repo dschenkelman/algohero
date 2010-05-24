@@ -59,6 +59,7 @@
     <Compile Include="Core\TiempoCancion.cs" />
     <Compile Include="Enums\Tono.cs" />
     <Compile Include="Servicios\CalculadorDuracionNotas.cs" />
+    <Compile Include="Servicios\Interfaces\ICalculadorDuracionNotas.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
