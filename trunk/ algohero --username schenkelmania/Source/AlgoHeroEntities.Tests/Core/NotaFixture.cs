@@ -33,5 +33,32 @@ namespace AlgoHeroMusic.Entities.Tests.Core
             double segundos = nota.CalcularDuracion(tiempoCancion);
             Assert.AreEqual(2, segundos);
         }
+
+        [Test]
+        public void CalcularDuracionNotaMusicalNegraDevuelveValorCorrecto()
+        {
+            var tiempoCancion = new TiempoCancion(4, 2);
+            var nota = new Nota(Tono.Do, FiguraMusical.Negra);
+            double segundos = nota.CalcularDuracion(tiempoCancion);
+            Assert.AreEqual(1, segundos);
+        }
+
+        [Test]
+        public void CalcularDuracionNotaMusicalCorcheaDevuelveValorCorrecto()
+        {
+            var tiempoCancion = new TiempoCancion(4, 2);
+            var nota = new Nota(Tono.Do, FiguraMusical.Corchea);
+            double segundos = nota.CalcularDuracion(tiempoCancion);
+            Assert.AreEqual(0.5, segundos);
+        }
+
+        [Test]
+        public void CalcularDuracionNotaMusicalSemicorcheaDevuelveValorCorrecto()
+        {
+            var tiempoCancion = new TiempoCancion(4, 2);
+            var nota = new Nota(Tono.Do, FiguraMusical.Semicorchea);
+            double segundos = nota.CalcularDuracion(tiempoCancion);
+            Assert.AreEqual(0.25, segundos);
+        }
     }
 }
