@@ -13,7 +13,25 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var nota = new Nota(Tono.Do, FiguraMusical.Negra);
             Assert.AreEqual(nota.Tono, Tono.Do);
-            Assert.AreEqual(nota.Figura, FiguraMusical.Negra);
+            Assert.AreEqual(FiguraMusical.Negra, nota.Figura);
+        }
+
+        [Test]
+        public void CalcularDuracionNotaMusicalRedondaDevuelveValorCorrecto()
+        {
+            var tiempoCancion = new TiempoCancion(4, 2);
+            var nota = new Nota(Tono.Do, FiguraMusical.Redonda);
+            double segundos = nota.CalcularDuracion(tiempoCancion);
+            Assert.AreEqual(4,segundos);
+        }
+
+        [Test]
+        public void CalcularDuracionNotaMusicalBlancaDevuelveValorCorrecto()
+        {
+            var tiempoCancion = new TiempoCancion(4, 2);
+            var nota = new Nota(Tono.Do, FiguraMusical.Blanca);
+            double segundos = nota.CalcularDuracion(tiempoCancion);
+            Assert.AreEqual(2, segundos);
         }
     }
 }
