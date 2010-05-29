@@ -68,7 +68,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         }
 
         [Test]
-        public void ObtenerNotasDevuelveCollectionSoloLectura()
+        public void ObtenerNotasDevuelveColeccionSoloLectura()
         {
             var nota = new Nota(Tono.Fa, FiguraMusical.Negra);
             var nota2 = new Nota(Tono.Fa, FiguraMusical.Negra);
@@ -82,6 +82,24 @@ namespace AlgoHeroMusic.Entities.Tests.Core
             Assert.AreEqual(nota, notas[0]);
             Assert.AreEqual(nota2, notas[1]);
             Assert.AreEqual(nota3, notas[2]);
+        }
+
+        [Test]
+        public void DuracionCompasIgualADuracionCompasCancionEsCompasCompleto()
+        {
+            var nota = new Nota(Tono.Fa, FiguraMusical.Negra);
+            var nota2 = new Nota(Tono.Fa, FiguraMusical.Negra);
+            var nota3 = new Nota(Tono.Si, FiguraMusical.Blanca);
+            this.compas.AgregarNota(nota);
+            
+            Assert.IsFalse(this.compas.EsCompleto);
+
+            this.compas.AgregarNota(nota2);
+
+            Assert.IsFalse(this.compas.EsCompleto);
+
+            this.compas.AgregarNota(nota3);
+            Assert.IsTrue(this.compas.EsCompleto);
         }
 
     }
