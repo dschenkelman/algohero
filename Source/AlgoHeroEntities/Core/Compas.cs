@@ -37,6 +37,11 @@ namespace AlgoHero.MusicEntities.Core
             get { return this.notas.Count; }
         }
 
+        public bool EsCompleto
+        {
+            get { return (this.tiempoMaximoCompas == this.tiempoActualCompas); }
+        }
+
         public Nota ObtenerNota(int index)
         {
             return this.notas[index];

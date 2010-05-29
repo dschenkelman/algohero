@@ -5,5 +5,10 @@
     [TestFixture]
     public class PartituraFixture
     {
+        [Test]
+        public void AgregarCompasAPartituraAgregaCompasCompleto()
+        {
+
+        }
     }
 }
