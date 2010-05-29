@@ -21,7 +21,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var tiempoCancion = new TiempoCancion(4, 2);
             var nota = new Nota(Tono.Do, FiguraMusical.Redonda);
-            double segundos = nota.CalcularDuracion(tiempoCancion);
+            double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(4,segundos);
         }
 
@@ -30,7 +30,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var tiempoCancion = new TiempoCancion(4, 2);
             var nota = new Nota(Tono.Do, FiguraMusical.Blanca);
-            double segundos = nota.CalcularDuracion(tiempoCancion);
+            double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(2, segundos);
         }
 
@@ -39,7 +39,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var tiempoCancion = new TiempoCancion(4, 2);
             var nota = new Nota(Tono.Do, FiguraMusical.Negra);
-            double segundos = nota.CalcularDuracion(tiempoCancion);
+            double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(1, segundos);
         }
 
@@ -48,7 +48,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var tiempoCancion = new TiempoCancion(4, 2);
             var nota = new Nota(Tono.Do, FiguraMusical.Corchea);
-            double segundos = nota.CalcularDuracion(tiempoCancion);
+            double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(0.5, segundos);
         }
 
@@ -57,7 +57,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var tiempoCancion = new TiempoCancion(4, 2);
             var nota = new Nota(Tono.Do, FiguraMusical.Semicorchea);
-            double segundos = nota.CalcularDuracion(tiempoCancion);
+            double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(0.25, segundos);
         }
     }
