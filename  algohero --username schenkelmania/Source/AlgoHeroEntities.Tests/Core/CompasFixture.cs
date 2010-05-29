@@ -1,4 +1,5 @@
-﻿using AlgoHero.MusicEntities.Core;
+﻿using System.Collections.ObjectModel;
+using AlgoHero.MusicEntities.Core;
 using NUnit.Framework;
 using AlgoHero.MusicEntities.Enums;
 using AlgoHero.MusicEntities.Excepciones;
@@ -65,6 +66,23 @@ namespace AlgoHeroMusic.Entities.Tests.Core
 
             Assert.AreEqual(0, this.compas.CantidadNotas);
         }
-        
+
+        [Test]
+        public void ObtenerNotasDevuelveCollectionSoloLectura()
+        {
+            var nota = new Nota(Tono.Fa, FiguraMusical.Negra);
+            var nota2 = new Nota(Tono.Fa, FiguraMusical.Negra);
+            var nota3 = new Nota(Tono.Si, FiguraMusical.Corchea);
+            this.compas.AgregarNota(nota);
+            this.compas.AgregarNota(nota2);
+            this.compas.AgregarNota(nota3);
+
+            ReadOnlyCollection<Nota> notas = this.compas.ObtenerNotas();
+            Assert.AreEqual(3, notas.Count);
+            Assert.AreEqual(nota, notas[0]);
+            Assert.AreEqual(nota2, notas[1]);
+            Assert.AreEqual(nota3, notas[2]);
+        }
+
     }
 }

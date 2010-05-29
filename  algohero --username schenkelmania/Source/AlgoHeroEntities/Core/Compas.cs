@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using AlgoHero.MusicEntities.Excepciones;
 using System;
 
@@ -44,6 +45,11 @@ namespace AlgoHero.MusicEntities.Core
         public void BorrarNota(Nota nota)
         {
             this.notas.Remove(nota);
+        }
+
+        public ReadOnlyCollection<Nota> ObtenerNotas()
+        {
+            return this.notas.AsReadOnly();
         }
     }
 }
