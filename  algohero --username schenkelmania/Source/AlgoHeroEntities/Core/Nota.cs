@@ -29,7 +29,7 @@ namespace AlgoHero.MusicEntities.Core
         #endregion
 
 
-        public double CalcularDuracion(TiempoCancion tiempoCancion)
+        public double CalcularTiempoProximaNota(TiempoCancion tiempoCancion)
         {
             return this.calculadorDuracion.CalcularDuracion(tiempoCancion, this);
         }
