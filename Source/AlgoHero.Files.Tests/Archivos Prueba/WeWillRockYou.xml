@@ -1,0 +1,23 @@
+<xml>
+	<cancion nombre="We will rock you" autor="Queen">
+		<tiempo duracionCompasSegundos="4" cantidadBlancas="2"/>
+    <compases>
+      <compas>
+        <notas>
+          <nota forma="blanca" tono="Do"/>
+          <nota forma="negra" tono="Re"/>
+          <nota forma="negra" tono="La"/>
+          </notas>
+			</compas>
+      <compas>
+        <notas>
+          <nota tipo="corchea" tono="Mi"/>
+          <nota tipo="corchea" tono="Mi"/>
+          <nota tipo="corchea" tono="Mi"/>
+          <nota tipo="corchea" tono="Mi"/>
+          <nota forma="blanca" tono="Do"/>
+          </notas>
+			</compas>
+    </compases>
+	</cancion>
+</xml> 
