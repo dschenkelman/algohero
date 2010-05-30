@@ -21,6 +21,7 @@ namespace AlgoHero.Files.Tests
             Assert.AreEqual(Tono.La, ConvertidorStringAEntidadesMusicales.ConvertirATono("La"));
             Assert.AreEqual(Tono.LaSostenido, ConvertidorStringAEntidadesMusicales.ConvertirATono("La#"));
             Assert.AreEqual(Tono.Si, ConvertidorStringAEntidadesMusicales.ConvertirATono("Si"));
+            Assert.AreEqual(Tono.Silencio, ConvertidorStringAEntidadesMusicales.ConvertirATono("Silencio"));
         }
 
         [Test]

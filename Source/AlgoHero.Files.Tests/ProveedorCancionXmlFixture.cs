@@ -60,7 +60,7 @@ namespace AlgoHero.Files.Tests
 
             //Tercer nota primer compas
             nota = cancion.Partitura.ObtenerCompas(0).ObtenerNota(2);
-            Assert.AreEqual(Tono.La, nota.Tono);
+            Assert.AreEqual(Tono.Silencio, nota.Tono);
             Assert.AreEqual(FiguraMusical.Negra, nota.Figura);
 
             //Primeras cuatro notas segundo compas
@@ -72,7 +72,7 @@ namespace AlgoHero.Files.Tests
             }
 
             nota = cancion.Partitura.ObtenerCompas(1).ObtenerNota(4);
-            Assert.AreEqual(Tono.Do, nota.Tono);
+            Assert.AreEqual(Tono.DoSostenido, nota.Tono);
             Assert.AreEqual(FiguraMusical.Blanca, nota.Figura);
         }
 
