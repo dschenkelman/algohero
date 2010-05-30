@@ -21,6 +21,16 @@ namespace AlgoHero.MusicEntities.Core
             get { return this.compases.Count; }
         }
 
+        public double DuracionCompas
+        {
+            get { return this.tiempoCancion.DuracionCompas; }
+        }
+
+        public int CantidadBlancas
+        {
+            get { return this.tiempoCancion.CantidadBlancas; }
+        }
+
         public void AgregarCompas(Compas compas)
         {
             if (!compas.EsCompleto)

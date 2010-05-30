@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvertidorStringAEntidadesMusicales.cs" />
     <Compile Include="Interfaces\IProveedorCancion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorCancionXml.cs" />

@@ -10,7 +10,8 @@ namespace AlgoHero.MusicEntities.Core
             this.Autor = autor;
         }
 
-        public string Nombre { get; set; }
-        public string Autor { get; set; }
+        public string Nombre { get; private set; }
+        public string Autor { get; private set; }
+        public Partitura Partitura{ get; set; }
     }
 }

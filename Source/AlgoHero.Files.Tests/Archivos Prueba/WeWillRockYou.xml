@@ -11,10 +11,10 @@
 			</compas>
       <compas>
         <notas>
-          <nota tipo="corchea" tono="Mi"/>
-          <nota tipo="corchea" tono="Mi"/>
-          <nota tipo="corchea" tono="Mi"/>
-          <nota tipo="corchea" tono="Mi"/>
+          <nota forma="corchea" tono="Mi"/>
+          <nota forma="corchea" tono="Mi"/>
+          <nota forma="corchea" tono="Mi"/>
+          <nota forma="corchea" tono="Mi"/>
           <nota forma="blanca" tono="Do"/>
           </notas>
 			</compas>
