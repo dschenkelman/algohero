@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using AlgoHero.MusicEntities.Excepciones;
+using System.Collections.ObjectModel;
 
 namespace AlgoHero.MusicEntities.Core
 {
@@ -43,6 +44,11 @@ namespace AlgoHero.MusicEntities.Core
         public Compas ObtenerCompas(int index)
         {
             return this.compases[index];
+        }
+
+        public ReadOnlyCollection<Compas> ObtenerCompases()
+        {
+            return this.compases.AsReadOnly();
         }
     }
 }
