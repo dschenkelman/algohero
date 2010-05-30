@@ -1,6 +1,8 @@
 ﻿namespace AlgoHero.MusicEntities.Core
 {
-    class Cancion
+    public class Cancion
     {
+        public string Nombre { get; set; }
+        public string Autor { get; set; }
     }
 }

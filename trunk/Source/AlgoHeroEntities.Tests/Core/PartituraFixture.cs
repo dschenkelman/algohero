@@ -18,6 +18,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var tiempoCancion = new TiempoCancion(4, 2);
             this.CrearCompasCompleto(tiempoCancion);
+            this.CrearCompasIncompleto(tiempoCancion);
             this.partitura = new Partitura(tiempoCancion);
         }
 
