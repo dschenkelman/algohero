@@ -31,6 +31,8 @@ namespace AlgoHero.Files
                     return Tono.LaSostenido;
                 case "si":
                     return Tono.Si;
+                case "silencio":
+                    return Tono.Silencio;
                 default:
                     throw new ArgumentException();
             }

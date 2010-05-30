@@ -8,6 +8,7 @@
         Fa, FaSostenido,
         Sol,
         La, LaSostenido,
-        Si
+        Si,
+        Silencio
     }
 }

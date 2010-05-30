@@ -6,8 +6,8 @@
         <notas>
           <nota forma="blanca" tono="Do"/>
           <nota forma="negra" tono="Re"/>
-          <nota forma="negra" tono="La"/>
-          </notas>
+          <nota forma="negra" tono="Silencio"/>
+        </notas>
 			</compas>
       <compas>
         <notas>
@@ -15,8 +15,8 @@
           <nota forma="corchea" tono="Mi"/>
           <nota forma="corchea" tono="Mi"/>
           <nota forma="corchea" tono="Mi"/>
-          <nota forma="blanca" tono="Do"/>
-          </notas>
+          <nota forma="blanca" tono="Do#"/>
+        </notas>
 			</compas>
     </compases>
 	</cancion>
