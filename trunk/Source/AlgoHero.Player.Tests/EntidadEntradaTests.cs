@@ -12,7 +12,7 @@ namespace AlgoHero.Player.Tests
         {
             int codigo = 1;
             EntidadEntrada entEntrada = new EntidadEntrada(codigo);
-            Assert.AreEqual(entEntrada.getCodigo(), 1);
+            Assert.AreEqual(1, entEntrada.Codigo);
         }
     }
 }   

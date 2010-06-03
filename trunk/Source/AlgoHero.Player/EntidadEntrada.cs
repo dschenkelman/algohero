@@ -7,22 +7,13 @@ namespace AlgoHero.Player
 {
     public class EntidadEntrada
     {
-        private int codigo;
 
         public EntidadEntrada(int codigo)
         {
-            this.setCodigo(codigo);
+            this.Codigo = codigo;
         }
 
-        private void setCodigo(int codigo)
-        {
-            this.codigo = codigo;
-        }
-
-        public int getCodigo()
-        {
-            return this.codigo;
-        }
+        public int Codigo { get; private set; }
 
     }
 }

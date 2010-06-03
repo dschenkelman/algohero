@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="EntidadEntradaTests.cs" />
     <Compile Include="ControladorTeclasTests.cs" />
-    <Compile Include="MapeoTests.cs" />
+    <Compile Include="MapeoTecladoEntidadesEntradaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeclaTests.cs" />
   </ItemGroup>
