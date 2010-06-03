@@ -44,8 +44,8 @@
   <ItemGroup>
     <Compile Include="EntidadEntrada.cs" />
     <Compile Include="ControladorTeclas.cs" />
-    <Compile Include="Interfaces\IObtenerEntidadEntrada.cs" />
-    <Compile Include="Mapeo.cs" />
+    <Compile Include="Interfaces\IMapeoTecladoEntidadesEntrada.cs" />
+    <Compile Include="MapeoTecladoEntidadesEntrada.cs" />
     <Compile Include="Nivel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tecla.cs" />
