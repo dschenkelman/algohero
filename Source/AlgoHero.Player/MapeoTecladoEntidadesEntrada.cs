@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using AlgoHero.Player.Interfaces;
 using System.Windows.Input;
+using System.Linq;
 
 namespace AlgoHero.Player
 {
     public class MapeoTecladoEntidadesEntrada : IMapeoTecladoEntidadesEntrada
     {
         private Dictionary<Key, EntidadEntrada> diccionarioEntidades;
+        private ReadOnlyCollection<EntidadEntrada> entidadesEntrada;
         private int codigo = 1;
 
         public MapeoTecladoEntidadesEntrada()
@@ -23,7 +25,7 @@ namespace AlgoHero.Player
         {
             if (this.diccionarioEntidades.ContainsKey(key))
             {
-                EntidadEntrada entEntrada = diccionarioEntidades[key];
+                EntidadEntrada entEntrada = this.diccionarioEntidades[key];
                 return entEntrada;
             }
             return null;
@@ -35,5 +37,14 @@ namespace AlgoHero.Player
             this.codigo++;
         }
 
+        public ReadOnlyCollection<EntidadEntrada> ObtenerEntidadesEntrada()
+        {
+            //performance
+            if(this.entidadesEntrada == null)
+            {
+                this.entidadesEntrada = this.diccionarioEntidades.Values.ToList().AsReadOnly();
+            }
+            return entidadesEntrada;
+        }
     }
 }

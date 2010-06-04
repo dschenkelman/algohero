@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using NUnit.Framework;
 using System.Windows.Input;
+using System.Linq;
 
 namespace AlgoHero.Player.Tests
 {
@@ -28,6 +28,20 @@ namespace AlgoHero.Player.Tests
         {
             MapeoTecladoEntidadesEntrada map = new MapeoTecladoEntidadesEntrada();
             Assert.AreEqual(null, map.ObtenerEntidadEntrada(Key.G));
+        }
+
+        [Test]
+        public void ObtenerTodasLasEntidadesDevuelveValoresCorrectos()
+        {
+            var map = new MapeoTecladoEntidadesEntrada();
+
+            ReadOnlyCollection<EntidadEntrada> entidades = map.ObtenerEntidadesEntrada();
+
+            Assert.AreEqual(4, entidades.Count);
+            Assert.IsTrue(entidades.Any(e => e.Codigo == 1));
+            Assert.IsTrue(entidades.Any(e => e.Codigo == 2));
+            Assert.IsTrue(entidades.Any(e => e.Codigo == 3));
+            Assert.IsTrue(entidades.Any(e => e.Codigo == 4));
         }
 
     }
