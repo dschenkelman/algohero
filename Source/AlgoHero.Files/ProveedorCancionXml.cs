@@ -29,7 +29,7 @@ namespace AlgoHero.Files
 
         private TiempoCancion CrearTiempoCancion(XmlDocument documento)
         {
-            XmlNode nodoTiempoCancion = documento.FirstChild.FirstChild.FirstChild;
+            XmlNode nodoTiempoCancion = documento.SelectSingleNode("/xml/cancion/tiempo");
             double duracionCompas = Convert.ToDouble(nodoTiempoCancion.Attributes["duracionCompasSegundos"].Value);
             int cantidadBlancas = Convert.ToInt32(nodoTiempoCancion.Attributes["cantidadBlancas"].Value);
 
@@ -38,7 +38,7 @@ namespace AlgoHero.Files
 
         private void AgregarCompases(Partitura partitura, TiempoCancion tiempoCancion, XmlDocument documento)
         {
-            XmlNodeList nodosCompases = documento.FirstChild.FirstChild.LastChild.ChildNodes;
+            XmlNodeList nodosCompases = documento.SelectNodes("/xml/cancion/compases/compas"); //documento.FirstChild.FirstChild.LastChild.ChildNodes;
             foreach (XmlNode nodo in nodosCompases)
             {
                 var compas = new Compas(tiempoCancion);
@@ -50,7 +50,7 @@ namespace AlgoHero.Files
         private void ComponerCompas(Compas compas, XmlNode nodoCompas)
         {
             //TODO: Refactor this to avoid mock.
-            XmlNodeList listaNotas = nodoCompas.FirstChild.ChildNodes;
+            XmlNodeList listaNotas = nodoCompas.SelectNodes("./notas/nota");
             foreach (XmlNode nota in listaNotas)
             {
                 Tono tonoNota = ConvertidorStringAEntidadesMusicales.ConvertirATono(nota.Attributes["tono"].Value);
