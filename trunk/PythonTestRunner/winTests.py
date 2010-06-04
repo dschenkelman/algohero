@@ -43,13 +43,13 @@ def nombrar(cadena):
 			else:
 				final += cad+"/"
 
-		if cad == "Sources":
+		if cad == "Source":
 			escribir = True
-	return final
+	return final[:-1]
 
 def filtrar(texto, archivo, i=0):
 	try:
-		cadena = "\n"+str(i)+"-"*35+"\n..."+nombrar(archivo)+":\n"
+		cadena = "\n"+str(i)+"-"*35+"\n.../"+nombrar(archivo)+":\n"
 		texto = texto.split("\n")
 		for linea in texto:
 			if "Tests run:" in linea:
@@ -90,6 +90,7 @@ def main(PATHN):
 	help = raw_input("\n\nTERMINADO! (enter para salir; help y enter para ayuda)")
 	if "help" in help:
 		ayuda()
+		raw_input("\nFIN! (enter para salir)")
 	
 
 if __name__ == "__main__":
