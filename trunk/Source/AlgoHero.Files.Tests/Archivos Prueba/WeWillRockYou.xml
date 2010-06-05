@@ -4,18 +4,35 @@
     <compases>
       <compas>
         <notas>
-          <nota forma="blanca" tono="Do"/>
-          <nota forma="negra" tono="Re"/>
-          <nota forma="negra" tono="Silencio"/>
+          <nota forma="blanca">
+            <tono valor="Do"/>
+            <tono valor="Mi"/>
+          </nota>
+          <nota forma="negra">
+            <tono valor="Re"/>
+          </nota>
+          <nota forma="negra">
+            <tono valor="Silencio"/>
+          </nota> 
         </notas>
 			</compas>
       <compas>
         <notas>
-          <nota forma="corchea" tono="Mi"/>
-          <nota forma="corchea" tono="Mi"/>
-          <nota forma="corchea" tono="Mi"/>
-          <nota forma="corchea" tono="Mi"/>
-          <nota forma="blanca" tono="Do#"/>
+          <nota forma="corchea">
+            <tono valor="Mi"/>
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi"/>
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi"/>
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi"/>
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Do#"/>
+          </nota>
         </notas>
 			</compas>
     </compases>
