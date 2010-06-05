@@ -1,7 +1,8 @@
 
 function printResultsFromFile($filePath)
 {
-    gc $filePath | foreach{
+    $content = gc $filePath
+    $content | foreach{
         if ($_.Contains("Tests run:")){
             if ($_.Contains("Failures: 0")){
                 Write-Host $_ -foregroundcolor green
@@ -9,6 +10,7 @@ function printResultsFromFile($filePath)
             else
             {
                 Write-Host $_ -foregroundcolor red
+                Write-Host $content -foregroundcolor red
             }
         }
     }

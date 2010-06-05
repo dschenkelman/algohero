@@ -30,7 +30,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             Assert.AreEqual(FiguraMusical.Negra, this.acorde.Figura);
             int indice = 0;
-            foreach (Tono tono in this.acorde.ObtenerTonos())
+            foreach (Tono tono in this.acorde.Tonos)
             {
                 Assert.AreEqual(tono, this.tonos[indice]);
                 indice += 1;
@@ -43,7 +43,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var nota = new Nota(Tono.Si, FiguraMusical.Redonda);
             Assert.AreEqual(FiguraMusical.Redonda, nota.Figura);
-            Assert.AreEqual(Tono.Si, nota.ObtenerTonos()[0]);
+            Assert.AreEqual(Tono.Si, nota.Tonos[0]);
 
         }
 
