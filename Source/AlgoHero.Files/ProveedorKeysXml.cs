@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Windows.Input;
 using System.Xml;
 
@@ -49,7 +47,5 @@ namespace AlgoHero.Files
             }
             return listaKey;
         }
-
-
     }
 }
