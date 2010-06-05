@@ -37,7 +37,7 @@ namespace AlgoHero.Files.Tests
         public void ObtenerCancionDeArchivoDevuelveCancionConTiempoCorrecto()
         {
             Assert.AreEqual(4, cancion.Partitura.DuracionCompas);
-            Assert.AreEqual(2, cancion.Partitura.CantidadBlancas);
+            Assert.AreEqual(2, cancion.Partitura.CantidadBlancasPorCompas);
         }
 
         [Test]
