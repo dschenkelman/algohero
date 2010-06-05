@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{18E19EF3-F58A-4F59-AF85-C5D60678D690}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -55,6 +55,10 @@
     <Compile Include="Servicios\CalculadorDuracionNotasFixture.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlgoHero.Interface\AlgoHero.Interface.csproj">
+      <Project>{95BAC13E-9D2D-4573-9D66-8AB41F39F803}</Project>
+      <Name>AlgoHero.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AlgoHeroEntities\AlgoHero.MusicEntities.csproj">
       <Project>{801DF353-3C2D-4940-9042-7001F3F96C4A}</Project>
       <Name>AlgoHero.MusicEntities</Name>
