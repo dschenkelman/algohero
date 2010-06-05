@@ -5,14 +5,15 @@ using System.Windows.Input;
 using AlgoHero.MusicEntities.Core;
 using System.Linq;
 using AlgoHero.MusicEntities.Enums;
+using AlgoHero.Player.Interfaces;
 
 namespace AlgoHero.Player
 {
-    public class ControladorTeclas
+    public class ManagerTeclas : IManagerTeclas
     {
         private List<Tecla> teclas;
 
-        public ControladorTeclas(Nivel nivel)
+        public ManagerTeclas(Nivel nivel)
         {
             this.teclas = new List<Tecla>();
             AgregarTeclas(nivel);
@@ -34,6 +35,11 @@ namespace AlgoHero.Player
         public Tecla ObtenerTecla(int index)
         {
             return this.teclas[index];
+        }
+
+        public IEnumerable<Tecla> ObtenerTeclas()
+        {
+            return this.teclas.AsEnumerable();
         }
 
         private void AgregarTeclas(Nivel nivel)

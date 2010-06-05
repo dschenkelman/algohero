@@ -1,4 +1,5 @@
-﻿using AlgoHero.MusicEntities.Servicios.Interfaces;
+﻿using System.Linq;
+using AlgoHero.MusicEntities.Servicios.Interfaces;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System;
@@ -13,9 +14,9 @@ namespace AlgoHero.MusicEntities.Core
         private ICalculadorDuracionNotas calculadorDuracion;
         private List<Tono> tonos;
 
-        public Nota(List<Tono> tonos, FiguraMusical figura)
+        public Nota(IEnumerable<Tono> tonos, FiguraMusical figura)
         {
-            this.tonos = tonos;
+            this.tonos = new List<Tono>(tonos);
             this.Figura = figura;
             this.calculadorDuracion = new CalculadorDuracionNotas();
         }
@@ -23,6 +24,13 @@ namespace AlgoHero.MusicEntities.Core
         public Nota(Tono tono, FiguraMusical figura)
         {
             this.tonos = new List<Tono>(){tono};
+            this.Figura = figura;
+            this.calculadorDuracion = new CalculadorDuracionNotas();
+        }
+
+        public Nota(FiguraMusical figura, params Tono[] tonos)
+        {
+            this.tonos = new List<Tono>(tonos.AsEnumerable());
             this.Figura = figura;
             this.calculadorDuracion = new CalculadorDuracionNotas();
         }
