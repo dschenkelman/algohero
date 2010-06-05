@@ -12,27 +12,32 @@ namespace AlgoHero.MusicEntities.Core
 
         private List<Compas> compases;
         
+        /*Crea una nueva partitura con el tiempo de cancion recibido.*/
         public Partitura(TiempoCancion tiempoCancion)
         {
             this.tiempoCancion = tiempoCancion;
             this.compases = new List<Compas>();
         }
 
+        /*Devuelve la cantidad de compases de la partitura.*/
         public int CantidadCompases
         {
             get { return this.compases.Count; }
         }
 
+        /*Devuelve la duracion del compas. Depende del tiempo de la cancion.*/
         public double DuracionCompas
         {
             get { return this.tiempoCancion.DuracionCompas; }
         }
 
-        public int CantidadBlancas
+        /*Devuelve la cantidad de blancas por compas. Depende del tiempo de la cancion.*/
+        public int CantidadBlancasPorCompas
         {
             get { return this.tiempoCancion.CantidadBlancas; }
         }
 
+        /*Agrega un compas a la partitura. Si el compas no esta completo lanza una excepcion ExcepcionCompasInvalido.*/
         public void AgregarCompas(Compas compas)
         {
             if (!compas.EsCompleto)
@@ -42,16 +47,19 @@ namespace AlgoHero.MusicEntities.Core
             this.compases.Add(compas);
         }
 
+        /*Devuelve un compas que esta en la posicion que recibe como parametro.*/
         public Compas ObtenerCompas(int index)
         {
             return this.compases[index];
         }
 
+        /*Devuleve todos los compases de la partitura.*/
         public ReadOnlyCollection<Compas> ObtenerCompases()
         {
             return this.compases.AsReadOnly();
         }
 
+        /*Devuelve un iterador para las notas de la partitura.*/
         public IIterador<Nota> ObtenerIterador()
         {
             return new IteradorPartirura(this);
@@ -84,11 +92,13 @@ namespace AlgoHero.MusicEntities.Core
             }
 
             #region Interfaz Iterador
+            /*Devuelve si la partitura tiene una nota siguiente.*/
             public bool TieneSiguiente
             {
                 get { return tieneSiguiente; }
             }
 
+            /*Devuelve la siguiente nota de la partitura y avanza.*/
             public Nota Siguiente()
             {
                 if (!this.tieneSiguiente)

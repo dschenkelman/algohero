@@ -14,6 +14,7 @@ namespace AlgoHero.MusicEntities.Core
         private ICalculadorDuracionNotas calculadorDuracion;
         private List<Tono> tonos;
 
+        /*Crea una nueva nota con los tonos y la figura musical recibidos.*/
         public Nota(IEnumerable<Tono> tonos, FiguraMusical figura)
         {
             this.tonos = new List<Tono>(tonos);
@@ -21,6 +22,7 @@ namespace AlgoHero.MusicEntities.Core
             this.calculadorDuracion = new CalculadorDuracionNotas();
         }
 
+        /*Crea una nueva nota con el tono y la figura recibidos como parametros.*/
         public Nota(Tono tono, FiguraMusical figura)
         {
             this.tonos = new List<Tono>(){tono};
@@ -28,6 +30,7 @@ namespace AlgoHero.MusicEntities.Core
             this.calculadorDuracion = new CalculadorDuracionNotas();
         }
 
+        /*Crea una nueva nota con los tonos y la figura musical recibidos.*/
         public Nota(FiguraMusical figura, params Tono[] tonos)
         {
             this.tonos = new List<Tono>(tonos.AsEnumerable());
@@ -50,7 +53,8 @@ namespace AlgoHero.MusicEntities.Core
 
         #endregion
         
-
+        /*En base al tiempo de la cancion calcula el tiempo entre la nota actual
+         * (dependiendo de su Figura) y la proxima nota.*/
         public double CalcularTiempoProximaNota(TiempoCancion tiempoCancion)
         {
             return this.calculadorDuracion.CalcularDuracion(tiempoCancion, this);

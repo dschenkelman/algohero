@@ -8,6 +8,8 @@ namespace AlgoHero.MusicEntities.Servicios
 
     public class CalculadorDuracionNotas : ICalculadorDuracionNotas
     {
+        /*Devuelve la duracion entre una nota y la siguiente a partir del tiempo 
+         * de la cancion y la nota. Depende de la figura de la nota.*/
         public double CalcularDuracion(TiempoCancion tiempoCancion, Nota nota)
         {
             double tiempoBlanca = tiempoCancion.DuracionCompas / tiempoCancion.CantidadBlancas;
