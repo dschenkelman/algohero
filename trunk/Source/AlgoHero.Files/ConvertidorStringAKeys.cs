@@ -1,11 +1,12 @@
-﻿using System.Linq;
-using System.Text;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace AlgoHero.Files
 {
     public class ConvertidorStringAKeys
     {
+        /*Recibe una cadena con una representacion de una tecla del teclado como string y
+         * devuelve su key relacionada. 
+         * Si la cadena no esta relacionada a ninguna tecla lanza una excpecion ArgumentException.*/
         public static Key ConvertirAKey(string key)
         {
             switch (key.ToLower())

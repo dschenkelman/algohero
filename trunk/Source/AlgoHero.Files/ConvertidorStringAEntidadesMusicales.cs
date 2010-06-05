@@ -5,6 +5,8 @@ namespace AlgoHero.Files
 {
     public class ConvertidorStringAEntidadesMusicales
     {
+        /*Recibe una cadena con una representacion de un tono como string y devuelve su tono relacionado. 
+         Si la cadena no esta relacionada a ningun tono lanza una excpecion ArgumentException.*/
         public static Tono ConvertirATono(string tono)
         {
             switch (tono.ToLower())
@@ -38,6 +40,8 @@ namespace AlgoHero.Files
             }
         }
 
+        /*Recibe una cadena con una representacion de un figura como string y devuelve su figura relacionado. 
+         Si la cadena no esta relacionada a ninguna figura lanza una excpecion ArgumentException.*/
         public static FiguraMusical ConvertirAFigura(string figura)
         {
             switch (figura.ToLower())
