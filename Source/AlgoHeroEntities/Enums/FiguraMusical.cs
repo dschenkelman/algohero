@@ -2,6 +2,6 @@
 {
     public enum FiguraMusical
     {
-        Redonda, Blanca, Negra, Corchea, Semicorchea
+        Redonda, Blanca, Negra, Corchea, Semicorchea, Fusa, Semifusa
     }
 }

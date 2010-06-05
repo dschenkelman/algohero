@@ -24,6 +24,10 @@ namespace AlgoHero.MusicEntities.Servicios
                     return tiempoBlanca / 4;
                 case FiguraMusical.Semicorchea:
                     return tiempoBlanca / 8;
+                case FiguraMusical.Fusa:
+                    return tiempoBlanca / 16;
+                case FiguraMusical.Semifusa:
+                    return tiempoBlanca / 32;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
