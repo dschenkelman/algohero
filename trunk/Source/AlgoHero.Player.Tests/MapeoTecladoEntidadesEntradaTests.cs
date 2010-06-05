@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.IO;
 using NUnit.Framework;
 using System.Windows.Input;
 using System.Linq;
