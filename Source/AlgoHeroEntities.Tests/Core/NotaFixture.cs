@@ -1,6 +1,9 @@
-﻿
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System;
+
 namespace AlgoHeroMusic.Entities.Tests.Core
-{       
+{
     using NUnit.Framework;
     using AlgoHero.MusicEntities.Core;
     using AlgoHero.MusicEntities.Enums;
@@ -8,28 +11,56 @@ namespace AlgoHeroMusic.Entities.Tests.Core
     [TestFixture]
     public class NotaFixture
     {
-        [Test]
-        public void CrearNotaMusicalAsignaTonoYFigura()
+        private List<Tono> tonos;
+        private Nota acorde;
+
+        [SetUp]
+        public void TestInitialize()
         {
-            var nota = new Nota(Tono.Do, FiguraMusical.Negra);
-            Assert.AreEqual(nota.Tono, Tono.Do);
-            Assert.AreEqual(FiguraMusical.Negra, nota.Figura);
+            this.tonos = new List<Tono>();
+            this.tonos.Add(Tono.Do);
+            this.tonos.Add(Tono.Mi);
+            this.tonos.Add(Tono.Sol);
+            // tonos es el acorde Do mayor
+            this.acorde = new Nota(tonos, FiguraMusical.Negra);
+        }
+
+        [Test]
+        public void CrearAcordeAsignarTonosYFigura()
+        {
+            Assert.AreEqual(FiguraMusical.Negra, this.acorde.Figura);
+            int indice = 0;
+            foreach (Tono tono in this.acorde.ObtenerTonos())
+            {
+                Assert.AreEqual(tono, this.tonos[indice]);
+                indice += 1;
+            }
+            
+        }
+
+        [Test]
+        public void CrearAcordeDeUnaNotaAsignarTonoYFigura()
+        {
+            var nota = new Nota(Tono.Si, FiguraMusical.Redonda);
+            Assert.AreEqual(FiguraMusical.Redonda, nota.Figura);
+            Assert.AreEqual(Tono.Si, nota.ObtenerTonos()[0]);
+
         }
 
         [Test]
         public void CalcularDuracionNotaMusicalRedondaDevuelveValorCorrecto()
         {
             var tiempoCancion = new TiempoCancion(4, 2);
-            var nota = new Nota(Tono.Do, FiguraMusical.Redonda);
+            var nota = new Nota(this.tonos, FiguraMusical.Redonda);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
-            Assert.AreEqual(4,segundos);
+            Assert.AreEqual(4, segundos);
         }
 
         [Test]
         public void CalcularDuracionNotaMusicalBlancaDevuelveValorCorrecto()
         {
             var tiempoCancion = new TiempoCancion(4, 2);
-            var nota = new Nota(Tono.Do, FiguraMusical.Blanca);
+            var nota = new Nota(this.tonos, FiguraMusical.Blanca);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(2, segundos);
         }
@@ -38,7 +69,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         public void CalcularDuracionNotaMusicalNegraDevuelveValorCorrecto()
         {
             var tiempoCancion = new TiempoCancion(4, 2);
-            var nota = new Nota(Tono.Do, FiguraMusical.Negra);
+            var nota = new Nota(this.tonos, FiguraMusical.Negra);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(1, segundos);
         }
@@ -47,7 +78,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         public void CalcularDuracionNotaMusicalCorcheaDevuelveValorCorrecto()
         {
             var tiempoCancion = new TiempoCancion(4, 2);
-            var nota = new Nota(Tono.Do, FiguraMusical.Corchea);
+            var nota = new Nota(this.tonos, FiguraMusical.Corchea);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(0.5, segundos);
         }
@@ -56,7 +87,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         public void CalcularDuracionNotaMusicalSemicorcheaDevuelveValorCorrecto()
         {
             var tiempoCancion = new TiempoCancion(4, 2);
-            var nota = new Nota(Tono.Do, FiguraMusical.Semicorchea);
+            var nota = new Nota(this.tonos, FiguraMusical.Semicorchea);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(0.25, segundos);
         }

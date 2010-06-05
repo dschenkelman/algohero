@@ -46,9 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Cancion.cs" />
+    <Compile Include="Core\Nota.cs" />
     <Compile Include="Core\Compas.cs" />
     <Compile Include="Enums\FiguraMusical.cs" />
-    <Compile Include="Core\Nota.cs" />
     <Compile Include="Core\Partitura.cs" />
     <Compile Include="Excepciones\ExcepcionCompasInvalido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

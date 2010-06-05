@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using AlgoHero.Files.Interfaces;
 using AlgoHero.MusicEntities.Core;
 using System.Xml;
@@ -53,7 +55,12 @@ namespace AlgoHero.Files
             XmlNodeList listaNotas = nodoCompas.SelectNodes("./notas/nota");
             foreach (XmlNode nota in listaNotas)
             {
-                Tono tonoNota = ConvertidorStringAEntidadesMusicales.ConvertirATono(nota.Attributes["tono"].Value);
+                List<Tono> tonoNota = new List<Tono>();
+                XmlNodeList listaTonos = nota.SelectNodes("./tono");
+                foreach (XmlNode tono in listaTonos)
+                {
+                    tonoNota.Add(ConvertidorStringAEntidadesMusicales.ConvertirATono(tono.Attributes["valor"].Value));
+                }
                 FiguraMusical figura = ConvertidorStringAEntidadesMusicales.ConvertirAFigura(nota.Attributes["forma"].Value);
                 compas.AgregarNota(new Nota(tonoNota, figura));
             }

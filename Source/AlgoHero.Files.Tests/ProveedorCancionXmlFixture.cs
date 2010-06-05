@@ -3,6 +3,8 @@ using AlgoHero.Files.Interfaces;
 using AlgoHero.MusicEntities.Core;
 using System.IO;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using AlgoHero.MusicEntities.Enums;
 
 namespace AlgoHero.Files.Tests
@@ -50,29 +52,31 @@ namespace AlgoHero.Files.Tests
             Nota nota;
             //Primer nota primer compas
             nota = cancion.Partitura.ObtenerCompas(0).ObtenerNota(0);
-            Assert.AreEqual(Tono.Do, nota.Tono);
+            Assert.AreEqual(Tono.Do, nota.ObtenerTonos()[0]);
+            Assert.AreEqual(Tono.Mi, nota.ObtenerTonos()[1]);
+            //Este ademas prueba un acorde
             Assert.AreEqual(FiguraMusical.Blanca, nota.Figura);
 
             //Segunda nota primer compas
             nota = cancion.Partitura.ObtenerCompas(0).ObtenerNota(1);
-            Assert.AreEqual(Tono.Re, nota.Tono);
+            Assert.AreEqual(Tono.Re, nota.ObtenerTonos()[0]);
             Assert.AreEqual(FiguraMusical.Negra, nota.Figura);
 
             //Tercer nota primer compas
             nota = cancion.Partitura.ObtenerCompas(0).ObtenerNota(2);
-            Assert.AreEqual(Tono.Silencio, nota.Tono);
+            Assert.AreEqual(Tono.Silencio, nota.ObtenerTonos()[0]);
             Assert.AreEqual(FiguraMusical.Negra, nota.Figura);
 
             //Primeras cuatro notas segundo compas
             for (int i = 0; i < 4; i++)
             {
                 nota = cancion.Partitura.ObtenerCompas(1).ObtenerNota(i);
-                Assert.AreEqual(Tono.Mi, nota.Tono);
+                Assert.AreEqual(Tono.Mi, nota.ObtenerTonos()[0]);
                 Assert.AreEqual(FiguraMusical.Corchea, nota.Figura);
             }
 
             nota = cancion.Partitura.ObtenerCompas(1).ObtenerNota(4);
-            Assert.AreEqual(Tono.DoSostenido, nota.Tono);
+            Assert.AreEqual(Tono.DoSostenido, nota.ObtenerTonos()[0]);
             Assert.AreEqual(FiguraMusical.Blanca, nota.Figura);
         }
 

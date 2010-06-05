@@ -107,8 +107,11 @@ namespace AlgoHero.Player
                 IEnumerable<Nota> notas = compas.ObtenerNotas();
                 foreach (var nota in notas)
                 {
-                    TonoConCantidad t = tonosConCantidades[nota.Tono];
-                    t.Cantidad += 1;
+                    foreach (var tono in nota.ObtenerTonos())
+                    {
+                        TonoConCantidad t = tonosConCantidades[tono];
+                        t.Cantidad += 1;
+                    }
                 }
             }
         }
