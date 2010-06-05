@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.ObjectModel;
 using AlgoHero.MusicEntities.Enums;
 using System.Collections.Generic;
