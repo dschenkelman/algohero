@@ -102,7 +102,7 @@ if __name__ == "__main__":
 	#Si no funciona puede deberse al path de nunit, insertelo aqui! NO SE OLVIDE DE ESCAPEAR LAS BARRAS INVERTIDAS...
 
 	PATHN = "c:\\Archivos de programa\\NUnit 2.4.8\\bin\\nunit-console.exe"
-	#Si no lo sabe corra descomente la siguiente linea (ADVERTENCIA: esto puede tardar varios minutos)
+	#Si no lo sabe descomente la siguiente linea (ADVERTENCIA: esto puede tardar varios minutos)
 	#PATHN = cmd("dir c:\ /s /b | find \"nunit-console.exe\" ").split("\n")[0]
 	main(PATHN)
 	
