@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 
 namespace AlgoHero.Files
 {
@@ -64,7 +65,7 @@ namespace AlgoHero.Files
                 case "z":
                     return Key.Z;
                 default:
-                    return Key.Escape;
+                    throw new ArgumentException();
             }
         }
     }

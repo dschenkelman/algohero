@@ -6,6 +6,7 @@ namespace AlgoHero.Files
 {
     public class ProveedorKeysXml
     {
+        /* Obtiene una lista de listas de Key a partir de un archivo XML pasado por parametro*/
         public List<List<Key>> ObtenerListaDeKeys(string path)
         {
             XmlDocument documento = new XmlDocument();
@@ -15,16 +16,19 @@ namespace AlgoHero.Files
             return ConvertirListaNodosAListaKeys(listaEntradas);
         }
 
+        /* Recibe el documento XML y devuelve el nodo de las entradas */
         private XmlNode ObtenerNodoEntradas(XmlDocument documento)
         {
             return documento.FirstChild.FirstChild;
         }
 
+        /* Recibe un nodo de entradas y devuelve una lista de nodos con todas las entradas */
         private XmlNodeList ObtenerListaNodos(XmlNode nodo)
         {
             return nodo.ChildNodes;
         }
 
+        /* Recibe una lista de nodos, la convierte a una lista de listas de Key y la devuelve */
         private List<List<Key>>ConvertirListaNodosAListaKeys(XmlNodeList listaNodos)
         {
             List<List<Key>> listaKeys = new List<List<Key>>();
@@ -36,6 +40,7 @@ namespace AlgoHero.Files
             return listaKeys;
         }
 
+        /* Recibe un nodo del documento XML y a partir de los datos de dicho nodo crea una Key y la devuelve */
         private List<Key> CrearKey(XmlNode nodo)
         {
             XmlNodeList listaTeclas = nodo.ChildNodes;
