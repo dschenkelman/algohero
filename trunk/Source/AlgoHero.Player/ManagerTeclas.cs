@@ -6,6 +6,7 @@ using AlgoHero.MusicEntities.Core;
 using System.Linq;
 using AlgoHero.MusicEntities.Enums;
 using AlgoHero.Player.Interfaces;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Player
 {

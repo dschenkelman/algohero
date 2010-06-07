@@ -3,6 +3,7 @@ using System.Windows.Input;
 using AlgoHero.MusicEntities.Core;
 using NUnit.Framework;
 using AlgoHero.MusicEntities.Enums;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Player.Tests
 {

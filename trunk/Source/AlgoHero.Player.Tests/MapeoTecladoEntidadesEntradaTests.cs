@@ -4,6 +4,7 @@ using System.IO;
 using NUnit.Framework;
 using System.Windows.Input;
 using System.Linq;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Player.Tests
 {
