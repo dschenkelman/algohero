@@ -50,7 +50,8 @@ namespace AlgoHero.Player.Tests
         [Test]
         public void MapeoDesdeArchivoAsignaKeysCorrectamente()
         {
-            const string pathArchivo = "C:\\Gonzalo\\UBA-UNLP\\Materias (UBA)\\Programacion III\\tp2\\Source\\AlgoHero.Files.Tests\\bin\\Debug\\Archivos Prueba\\Entradas.xml";
+            string pathArchivo = Path.Combine(Environment.CurrentDirectory,
+                 Path.Combine("Archivos Prueba", "Entradas.xml"));
             var map = new MapeoTecladoEntidadesEntrada(pathArchivo);
             EntidadEntrada entEntradaUno = map.ObtenerEntidadEntrada(Key.A);
             EntidadEntrada entEntradaDos = map.ObtenerEntidadEntrada(Key.S);
