@@ -4,6 +4,7 @@ using AlgoHero.Player.Interfaces;
 using System.Windows.Input;
 using System.Linq;
 using AlgoHero.Files;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Player
 {
