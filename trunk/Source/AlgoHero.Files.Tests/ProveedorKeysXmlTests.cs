@@ -20,7 +20,7 @@ namespace AlgoHero.Files.Tests
             this.listaKeys = proveedor.ObtenerListaDeKeys(pathArchivo);
         }
 
-          [Test]
+        [Test]
         public void ObtenerListaKeysObtieneCantidadCorrectaDeEntradas()
         {
             Assert.AreEqual(3, listaKeys.Count);
