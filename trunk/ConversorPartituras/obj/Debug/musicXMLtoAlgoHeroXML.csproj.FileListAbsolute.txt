@@ -1,0 +1,14 @@
+C:\Documents and Settings\man__\Mis documentos\Visual Studio 2008\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\man__\Mis documentos\Visual Studio 2008\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\man__\Mis documentos\Visual Studio 2008\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Documents and Settings\man__\Mis documentos\Visual Studio 2008\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\man__\Mis documentos\Visual Studio 2008\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Documents and Settings\man__\Escritorio\PartGen\PartGen\obj\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\man__\Escritorio\PartGen\PartGen\obj\Debug\ConsoleApplication1.pdb
+C:\Documents and Settings\man__\Escritorio\PartGen\PartGen\bin\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\man__\Escritorio\PartGen\PartGen\bin\Debug\ConsoleApplication1.pdb
+C:\Documents and Settings\man__\Escritorio\PartGen\PartGen\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\man__\Escritorio\PartGen\obj\Debug\ConsoleApplication1.exe
+C:\Documents and Settings\man__\Escritorio\PartGen\obj\Debug\ConsoleApplication1.pdb
+C:\Algo-Hero\PartGen\obj\Debug\ConsoleApplication1.exe
+C:\Algo-Hero\PartGen\obj\Debug\ConsoleApplication1.pdb
