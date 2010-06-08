@@ -1,20 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using AlgoHero.Interface;
-using AlgoHero.Player.Interfaces;
 
 namespace AlgoHero.Player
 {
     public class ControladorTeclas : IControladorTeclas
     {
+        private readonly IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada;
+        private List<Tecla> teclas;
+
+        public ControladorTeclas(IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada)
+        {
+            this.mapeoTecladoEntidadesEntrada = mapeoTecladoEntidadesEntrada;
+            this.teclas = new List<Tecla>();
+
+            foreach(EntidadEntrada entidad in mapeoTecladoEntidadesEntrada.ObtenerEntidadesEntrada())
+            {
+                this.teclas.Add(new Tecla(entidad));
+            }
+        }
+
         public int CantidadTeclas
         {
-            get { throw new NotImplementedException(); }
+            get { return this.teclas.Count; }
         }
 
         public ITecla ObtenerTecla(int index)
         {
-            throw new NotImplementedException();
+            return this.teclas[index];
         }
 
         public IEnumerable<ITecla> ObtenerTeclas()

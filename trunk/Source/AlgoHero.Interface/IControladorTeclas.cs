@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using AlgoHero.Interface;
 
-namespace AlgoHero.Player.Interfaces
+namespace AlgoHero.Interface
 {
     public interface IControladorTeclas
     {
