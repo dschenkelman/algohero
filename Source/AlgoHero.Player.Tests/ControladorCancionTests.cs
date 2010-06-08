@@ -75,7 +75,7 @@ namespace AlgoHero.Player.Tests
             Assert.IsNull(controlador.ObtenerSiguienteNota());
         }
 
-        private class MockManagerTeclas : IManagerTeclas
+        private class MockManagerTeclas : IControladorTeclas
         {
             public int CantidadTeclas
             {
