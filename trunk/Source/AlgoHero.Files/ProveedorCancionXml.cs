@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using AlgoHero.Files.Interfaces;
+using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Core;
 using System.Xml;
-using AlgoHero.MusicEntities.Enums;
 
 namespace AlgoHero.Files
 {

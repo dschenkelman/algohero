@@ -1,12 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System;
+using AlgoHero.Interface.Enums;
 
 namespace AlgoHeroMusic.Entities.Tests.Core
 {
     using NUnit.Framework;
     using AlgoHero.MusicEntities.Core;
-    using AlgoHero.MusicEntities.Enums;
 
     [TestFixture]
     public class NotaFixture

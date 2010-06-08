@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
+using AlgoHero.Interface.Enums;
 
 namespace AlgoHero.Interface
 {
-    public interface ITecla<T>
+    public interface ITecla
     {
-        void AgregarTonoAsociado(T tono);
-        T ObtenerTono(int index);
-        ReadOnlyCollection<T> ObtenerTonosAsociados();
+        void AgregarTonoAsociado(Tono tono);
+        Tono ObtenerTono(int index);
+        ReadOnlyCollection<Tono> ObtenerTonosAsociados();
+        int CantidadTonos { get; }
+        EntidadEntrada EntidadEntrada { get; }
     }
 }

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Core;
-using AlgoHero.MusicEntities.Enums;
 using NUnit.Framework;
 using AlgoHero.Player.Interfaces;
-using System.Windows.Input;
 using AlgoHero.Interface;
 
 namespace AlgoHero.Player.Tests

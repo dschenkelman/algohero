@@ -1,5 +1,4 @@
-﻿using System.Windows.Input;
-using AlgoHero.MusicEntities.Enums;
+﻿using AlgoHero.Interface.Enums;
 using NUnit.Framework;
 using System;
 using AlgoHero.Interface;

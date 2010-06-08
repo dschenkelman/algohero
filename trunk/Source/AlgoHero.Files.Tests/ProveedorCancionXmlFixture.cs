@@ -1,11 +1,9 @@
-﻿using NUnit.Framework;
+﻿using AlgoHero.Interface.Enums;
+using NUnit.Framework;
 using AlgoHero.Files.Interfaces;
 using AlgoHero.MusicEntities.Core;
 using System.IO;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using AlgoHero.MusicEntities.Enums;
 
 namespace AlgoHero.Files.Tests
 {

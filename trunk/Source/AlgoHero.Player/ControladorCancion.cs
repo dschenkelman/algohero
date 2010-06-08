@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using AlgoHero.Interface;
+using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Player.Interfaces;
-using AlgoHero.MusicEntities.Enums;
 
 namespace AlgoHero.Player
 {

@@ -1,5 +1,5 @@
-﻿using AlgoHero.MusicEntities.Core;
-using AlgoHero.MusicEntities.Enums;
+﻿using AlgoHero.Interface.Enums;
+using AlgoHero.MusicEntities.Core;
 using AlgoHero.MusicEntities.Servicios;
 
 namespace AlgoHeroMusic.Entities.Tests.Servicios

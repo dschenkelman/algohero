@@ -1,6 +1,6 @@
 ﻿using AlgoHero.Interface;
+using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Core;
-using AlgoHero.MusicEntities.Enums;
 
 namespace AlgoHeroMusic.Entities.Tests.Core
 {

@@ -1,4 +1,4 @@
-﻿using AlgoHero.MusicEntities.Enums;
+﻿using AlgoHero.Interface.Enums;
 using NUnit.Framework;
 
 namespace AlgoHero.Files.Tests
