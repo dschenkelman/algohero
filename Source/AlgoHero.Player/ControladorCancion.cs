@@ -3,7 +3,6 @@ using System.Linq;
 using AlgoHero.Interface;
 using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Core;
-using AlgoHero.Player.Interfaces;
 
 namespace AlgoHero.Player
 {

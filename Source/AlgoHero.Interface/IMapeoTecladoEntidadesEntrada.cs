@@ -1,10 +1,11 @@
-﻿using System.Windows.Input;
-using AlgoHero.Interface;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 
-namespace AlgoHero.Player.Interfaces
+namespace AlgoHero.Interface
 {
     public interface IMapeoTecladoEntidadesEntrada
     {
         EntidadEntrada ObtenerEntidadEntrada(Key key);
+        ReadOnlyCollection<EntidadEntrada> ObtenerEntidadesEntrada();
     }
 }

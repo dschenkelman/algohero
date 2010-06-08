@@ -1,5 +1,8 @@
-﻿using AlgoHero.Interface.Enums;
-using AlgoHero.MusicEntities.Core;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+using AlgoHero.Interface;
 using NUnit.Framework;
 
 namespace AlgoHero.Player.Tests
@@ -7,35 +10,31 @@ namespace AlgoHero.Player.Tests
     [TestFixture]
     public class ControladorTeclasTests
     {
-
-        private static Cancion ObtenerCancionMock()
+        [Test]
+        public void CrearControladorTeclasCreaEntidadesEntradaDeMapeo()
         {
-            Cancion cancion = new Cancion("Mock", "Autor Mock");
-            TiempoCancion tiempo = new TiempoCancion(4, 2);
-            Partitura partitura = new Partitura(tiempo);
-            //Do 16, La 10, Re 8, Si 6, Mi 4, Fa 2, Sol 1
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 16, Tono.Do, FiguraMusical.Semicorchea));
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 8, Tono.Re, FiguraMusical.Corchea));
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 4, Tono.Mi, FiguraMusical.Negra));
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 2, Tono.Fa, FiguraMusical.Blanca));
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 1, Tono.Sol, FiguraMusical.Redonda));
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 2, Tono.La, FiguraMusical.Blanca));
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 4, Tono.Si, FiguraMusical.Negra));
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 2, Tono.Si, FiguraMusical.Blanca));
-            partitura.AgregarCompas(ObtenerMockCompas(tiempo, 8, Tono.La, FiguraMusical.Corchea));
+            ControladorTeclas controlador = new ControladorTeclas(new MapeoTecladoMock());
+            Assert.AreEqual(4, controlador.CantidadTeclas);
 
-            cancion.Partitura = partitura;
-            return cancion;
+            for (int i = 1; i < 5; i++)
+            {
+                Assert.AreEqual(i ,controlador.ObtenerTecla(i-1).EntidadEntrada.Codigo);
+            }
+            
         }
 
-        private static Compas ObtenerMockCompas(TiempoCancion tiempo, int cantidad, Tono tono, FiguraMusical figura)
+        private class MapeoTecladoMock : IMapeoTecladoEntidadesEntrada
         {
-            Compas compas = new Compas(tiempo);
-            for (int i = 0; i < cantidad; i++)
+            public EntidadEntrada ObtenerEntidadEntrada(Key key)
             {
-                compas.AgregarNota(new Nota(tono, figura));
+                throw new NotImplementedException();
             }
-            return compas;
+
+            public ReadOnlyCollection<EntidadEntrada> ObtenerEntidadesEntrada()
+            {
+                return new List<EntidadEntrada>()
+                           {new EntidadEntrada(1), new EntidadEntrada(2), new EntidadEntrada(3), new EntidadEntrada(4)}.AsReadOnly();
+            }
         }
     }
 }

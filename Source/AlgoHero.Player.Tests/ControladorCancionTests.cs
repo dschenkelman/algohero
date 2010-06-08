@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Core;
 using NUnit.Framework;
-using AlgoHero.Player.Interfaces;
 using AlgoHero.Interface;
 
 namespace AlgoHero.Player.Tests
