@@ -28,7 +28,13 @@ namespace AlgoHero.Player
 
         public ITecla ObtenerTecla(int codigoEntidadEntrada)
         {
-            return this.teclas.First(t => t.EntidadEntrada.Codigo == codigoEntidadEntrada);
+            ITecla tecla =  this.teclas.FirstOrDefault(t => t.EntidadEntrada.Codigo == codigoEntidadEntrada);
+            if (tecla == null)
+            {
+                throw new ArgumentException();
+            }
+
+            return tecla;
         }
 
         public IEnumerable<ITecla> ObtenerTeclas()
