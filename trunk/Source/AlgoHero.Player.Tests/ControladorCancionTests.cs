@@ -93,6 +93,11 @@ namespace AlgoHero.Player.Tests
                 tecla.AgregarTonoAsociado(Tono.Fa);
                 return new List<Tecla>() {tecla};
             }
+
+            public Tecla ObtenerTecla(EntidadEntrada entidadEntrada)
+            {
+                throw new NotImplementedException();
+            }
         }
 
         private void CrearCompasCompleto(TiempoCancion tiempoCancion)
