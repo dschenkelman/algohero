@@ -36,6 +36,14 @@ namespace AlgoHero.Player.Tests
             }
         }
 
+        [Test]
+        [ExpectedException(ExceptionType = typeof(ArgumentException))]
+        public void ObtenerTeclaLanzaExcepcionSiNoExisteEntidadEntradaConTalCodigo()
+        {
+            ControladorTeclas controlador = new ControladorTeclas(new MapeoTecladoMock());
+            controlador.ObtenerTecla(5);
+        }
+
         private class MapeoTecladoMock : IMapeoTecladoEntidadesEntrada
         {
             public EntidadEntrada ObtenerEntidadEntrada(Key key)
