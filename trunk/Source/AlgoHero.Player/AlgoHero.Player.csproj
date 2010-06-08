@@ -42,7 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControladorCancion.cs" />
     <Compile Include="ControladorTeclas.cs" />
     <Compile Include="MapeoTecladoEntidadesEntrada.cs" />
     <Compile Include="Nivel.cs" />
