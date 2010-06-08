@@ -63,20 +63,20 @@ namespace AlgoHero.Player
 
         private void AgregarTeclasNivelFacil()
         {
-            this.teclas.Add(new Tecla(Key.A));
-            this.teclas.Add(new Tecla(Key.S));
+            this.teclas.Add(new Tecla(new EntidadEntrada(1)));
+            this.teclas.Add(new Tecla(new EntidadEntrada(2)));
         }
 
         private void AgregarTeclasNivelMedio()
         {
             this.AgregarTeclasNivelFacil();
-            this.teclas.Add(new Tecla(Key.K));
+            this.teclas.Add(new Tecla(new EntidadEntrada(3)));
         }
 
         private void AgregarTeclasNivelDificil()
         {
             this.AgregarTeclasNivelMedio();
-            this.teclas.Add(new Tecla(Key.L));
+            this.teclas.Add(new Tecla(new EntidadEntrada(4)));
         }
 
         private Dictionary<Tono, TonoConCantidad> ObtenerDiccionarioDeTodosLosTonos()
