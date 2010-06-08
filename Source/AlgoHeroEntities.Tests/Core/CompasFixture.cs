@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Core;
 using NUnit.Framework;
-using AlgoHero.MusicEntities.Enums;
 using AlgoHero.MusicEntities.Excepciones;
 
 namespace AlgoHeroMusic.Entities.Tests.Core

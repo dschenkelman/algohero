@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using AlgoHero.MusicEntities.Enums;
+using AlgoHero.Interface.Enums;
 using System.Collections.Generic;
 using AlgoHero.Interface;
 
 namespace AlgoHero.Player
 {
-    public class Tecla
+    public class Tecla : ITecla
     {
         private List<Tono> tonos;
 

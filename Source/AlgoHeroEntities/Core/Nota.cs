@@ -1,12 +1,11 @@
 ﻿using System.Linq;
+using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System;
 
 namespace AlgoHero.MusicEntities.Core
 {
-    using AlgoHero.MusicEntities.Enums;
     using AlgoHero.MusicEntities.Servicios;
 
     public class Nota

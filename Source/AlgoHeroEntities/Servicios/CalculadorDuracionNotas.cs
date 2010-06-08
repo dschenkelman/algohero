@@ -1,4 +1,4 @@
-﻿using AlgoHero.MusicEntities.Enums;
+﻿using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
 
 namespace AlgoHero.MusicEntities.Servicios

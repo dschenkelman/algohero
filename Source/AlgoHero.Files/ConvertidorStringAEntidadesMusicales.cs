@@ -1,5 +1,5 @@
 ﻿using System;
-using AlgoHero.MusicEntities.Enums;
+using AlgoHero.Interface.Enums;
 
 namespace AlgoHero.Files
 {

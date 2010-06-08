@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{95BAC13E-9D2D-4573-9D66-8AB41F39F803}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntidadEntrada.cs" />
+    <Compile Include="Enums\FiguraMusical.cs" />
+    <Compile Include="Enums\Tono.cs" />
     <Compile Include="IIterador.cs" />
     <Compile Include="IManagerTeclas.cs" />
     <Compile Include="ITecla.cs" />

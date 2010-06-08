@@ -1,13 +1,12 @@
-﻿using AlgoHero.MusicEntities.Core;
+﻿using AlgoHero.Interface.Enums;
+using AlgoHero.MusicEntities.Core;
 using NUnit.Framework;
-using AlgoHero.MusicEntities.Enums;
 
 namespace AlgoHero.Player.Tests
 {
     [TestFixture]
     public class ControladorTeclasTests
     {
-        
 
         private static Cancion ObtenerCancionMock()
         {

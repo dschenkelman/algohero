@@ -48,7 +48,6 @@
     <Compile Include="Core\Cancion.cs" />
     <Compile Include="Core\Nota.cs" />
     <Compile Include="Core\Compas.cs" />
-    <Compile Include="Enums\FiguraMusical.cs" />
     <Compile Include="Core\Partitura.cs" />
     <Compile Include="Excepciones\ExcepcionCompasInvalido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,7 +57,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Core\TiempoCancion.cs" />
-    <Compile Include="Enums\Tono.cs" />
     <Compile Include="Servicios\CalculadorDuracionNotas.cs" />
     <Compile Include="Servicios\Interfaces\ICalculadorDuracionNotas.cs" />
   </ItemGroup>
