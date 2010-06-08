@@ -1,40 +1,37 @@
-﻿using System;
-using System.Windows.Input;
-using AlgoHero.MusicEntities.Core;
+﻿using AlgoHero.MusicEntities.Core;
 using NUnit.Framework;
 using AlgoHero.MusicEntities.Enums;
-using AlgoHero.Interface;
 
 namespace AlgoHero.Player.Tests
 {
     [TestFixture]
-    public class ManagerTeclasTests
+    public class ControladorTeclasTests
     {
         [Test]
         public void CrearControladorEnNivelFacilCreaConDosTeclas()
         {
-            var controlador = new ManagerTeclas(Nivel.Facil);
+            var controlador = new ControladorTeclas(Nivel.Facil);
             Assert.AreEqual(2, controlador.CantidadTeclas);
         }
         
         [Test]
         public void CrearControladorEnNivelFacilCreaConTresTeclas()
         {
-            var controlador = new ManagerTeclas(Nivel.Medio);
+            var controlador = new ControladorTeclas(Nivel.Medio);
             Assert.AreEqual(3, controlador.CantidadTeclas);
         }
 
         [Test]
         public void CrearControladorEnNivelFacilCreaConCuatroTeclas()
         {
-            var controlador = new ManagerTeclas(Nivel.Dificil);
+            var controlador = new ControladorTeclas(Nivel.Dificil);
             Assert.AreEqual(4, controlador.CantidadTeclas);
         }
 
         [Test]
         public void CrearControladorEnNivelFacilCreaTeclasAyS()
         {
-            var controlador = new ManagerTeclas(Nivel.Facil);
+            var controlador = new ControladorTeclas(Nivel.Facil);
             Assert.AreEqual(1, controlador.ObtenerTecla(0).EntidadEntrada.Codigo);
             Assert.AreEqual(2, controlador.ObtenerTecla(1).EntidadEntrada.Codigo);
         }
@@ -42,21 +39,21 @@ namespace AlgoHero.Player.Tests
         [Test]
         public void CrearControladorEnNivelFacilCreaTeclaK()
         {
-            var controlador = new ManagerTeclas(Nivel.Medio);
+            var controlador = new ControladorTeclas(Nivel.Medio);
             Assert.AreEqual(3, controlador.ObtenerTecla(2).EntidadEntrada.Codigo);
         }
 
         [Test]
         public void CrearControladorEnNivelFacilCreaTeclaL()
         {
-            var controlador = new ManagerTeclas(Nivel.Dificil);
+            var controlador = new ControladorTeclas(Nivel.Dificil);
             Assert.AreEqual(4, controlador.ObtenerTecla(3).EntidadEntrada.Codigo);
         }
 
         [Test]
         public void AsignarTonosPorTeclaEnNivelFacilAsignaCorrectamente()
         {
-            var controlador = new ManagerTeclas(Nivel.Facil);
+            var controlador = new ControladorTeclas(Nivel.Facil);
             Cancion cancion = ObtenerCancionMock();
 
             controlador.AsignarTonosATeclas(cancion);
@@ -75,7 +72,7 @@ namespace AlgoHero.Player.Tests
         [Test]
         public void AsignarTonosPorTeclaEnNivelMedioAsignaCorrectamente()
         {
-            var controlador = new ManagerTeclas(Nivel.Medio);
+            var controlador = new ControladorTeclas(Nivel.Medio);
             Cancion cancion = ObtenerCancionMock();
 
             controlador.AsignarTonosATeclas(cancion);
@@ -94,7 +91,7 @@ namespace AlgoHero.Player.Tests
         [Test]
         public void AsignarTonosPorTeclaEnNivelDificilAsignaCorrectamente()
         {
-            var controlador = new ManagerTeclas(Nivel.Dificil);
+            var controlador = new ControladorTeclas(Nivel.Dificil);
             Cancion cancion = ObtenerCancionMock();
 
             controlador.AsignarTonosATeclas(cancion);
@@ -114,7 +111,7 @@ namespace AlgoHero.Player.Tests
         [Test]
         public void AsignarTonosPorTeclaNoAsignaTeclasConNingunaAparicion()
         {
-            var controlador = new ManagerTeclas(Nivel.Facil);
+            var controlador = new ControladorTeclas(Nivel.Facil);
             Cancion cancion = ObtenerCancionMock();
 
             controlador.AsignarTonosATeclas(cancion);

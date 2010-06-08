@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using AlgoHero.MusicEntities.Core;
 
 namespace AlgoHero.Player.Interfaces
 {
-    public interface IManagerTeclas
+    public interface IControladorTeclas
     {
         int CantidadTeclas{ get; }
 

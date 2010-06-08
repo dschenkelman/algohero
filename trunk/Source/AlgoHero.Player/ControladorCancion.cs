@@ -11,14 +11,14 @@ namespace AlgoHero.Player
     public class ControladorCancion
     {
         private Cancion cancion;
-        private IManagerTeclas managerTeclas;
+        private IControladorTeclas controladorTeclas;
         private IIterador<Nota> iteradorCancion;
 
         /*Crea un nuevo controlador cancion a partir de la cancion y el manager de teclas recibidos.*/
-        public ControladorCancion(Cancion cancion, IManagerTeclas manager)
+        public ControladorCancion(Cancion cancion, IControladorTeclas controlador)
         {
             this.cancion = cancion;
-            this.managerTeclas = manager;
+            this.controladorTeclas = controlador;
             this.iteradorCancion = cancion.Partitura.ObtenerIterador();
         }
 
@@ -34,7 +34,7 @@ namespace AlgoHero.Player
         public Nota ObtenerSiguienteNota()
         {
             Nota nota = this.iteradorCancion.Siguiente();
-            IEnumerable<Tecla> teclas = managerTeclas.ObtenerTeclas();
+            IEnumerable<Tecla> teclas = controladorTeclas.ObtenerTeclas();
             foreach (var tecla in teclas)
             {
                 IEnumerable<Tono> tonosAsociados = tecla.ObtenerTonosAsociados();

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{68813492-8BD6-4F0E-9F01-0B6FAB439851}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -43,8 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControladorCancion.cs" />
-    <Compile Include="Interfaces\IManagerTeclas.cs" />
-    <Compile Include="ManagerTeclas.cs" />
+    <Compile Include="Interfaces\IControladorTeclas.cs" />
+    <Compile Include="ControladorTeclas.cs" />
     <Compile Include="Interfaces\IMapeoTecladoEntidadesEntrada.cs" />
     <Compile Include="MapeoTecladoEntidadesEntrada.cs" />
     <Compile Include="Nivel.cs" />
