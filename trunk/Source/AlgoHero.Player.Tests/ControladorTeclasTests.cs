@@ -18,9 +18,22 @@ namespace AlgoHero.Player.Tests
 
             for (int i = 1; i < 5; i++)
             {
-                Assert.AreEqual(i ,controlador.ObtenerTecla(i-1).EntidadEntrada.Codigo);
+                Assert.AreEqual(i ,controlador.ObtenerTecla(i).EntidadEntrada.Codigo);
             }
-            
+        }
+
+        [Test]
+        public void ObtenerTeclasDevuelveTodasLasTeclas()
+        {
+            ControladorTeclas controlador = new ControladorTeclas(new MapeoTecladoMock());
+            Assert.AreEqual(4, controlador.CantidadTeclas);
+
+            int cont = 1;
+            foreach (Tecla tecla in controlador.ObtenerTeclas())
+            {
+                Assert.AreEqual(cont, tecla.EntidadEntrada.Codigo);
+                cont++;
+            }
         }
 
         private class MapeoTecladoMock : IMapeoTecladoEntidadesEntrada

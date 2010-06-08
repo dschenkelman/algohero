@@ -6,10 +6,8 @@ namespace AlgoHero.Interface
     {
         int CantidadTeclas{ get; }
 
-        ITecla ObtenerTecla(int index);
-
         IEnumerable<ITecla> ObtenerTeclas();
 
-        ITecla ObtenerTecla(EntidadEntrada entidadEntrada);
+        ITecla ObtenerTecla(int codigoEntidadEntrada);
     }
 }

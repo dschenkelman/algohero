@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AlgoHero.Interface;
 
 namespace AlgoHero.Player
@@ -7,12 +8,12 @@ namespace AlgoHero.Player
     public class ControladorTeclas : IControladorTeclas
     {
         private readonly IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada;
-        private List<Tecla> teclas;
+        private List<ITecla> teclas;
 
         public ControladorTeclas(IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada)
         {
             this.mapeoTecladoEntidadesEntrada = mapeoTecladoEntidadesEntrada;
-            this.teclas = new List<Tecla>();
+            this.teclas = new List<ITecla>();
 
             foreach(EntidadEntrada entidad in mapeoTecladoEntidadesEntrada.ObtenerEntidadesEntrada())
             {
@@ -25,19 +26,14 @@ namespace AlgoHero.Player
             get { return this.teclas.Count; }
         }
 
-        public ITecla ObtenerTecla(int index)
+        public ITecla ObtenerTecla(int codigoEntidadEntrada)
         {
-            return this.teclas[index];
+            return this.teclas.First(t => t.EntidadEntrada.Codigo == codigoEntidadEntrada);
         }
 
         public IEnumerable<ITecla> ObtenerTeclas()
         {
-            throw new NotImplementedException();
-        }
-
-        public ITecla ObtenerTecla(EntidadEntrada entidadEntrada)
-        {
-            throw new NotImplementedException();
+            return this.teclas;
         }
     }
 }
