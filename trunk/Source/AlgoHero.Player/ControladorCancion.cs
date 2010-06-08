@@ -33,7 +33,7 @@ namespace AlgoHero.Player
         public Nota ObtenerSiguienteNota()
         {
             Nota nota = this.iteradorCancion.Siguiente();
-            IEnumerable<Tecla> teclas = controladorTeclas.ObtenerTeclas();
+            IEnumerable<ITecla> teclas = controladorTeclas.ObtenerTeclas();
             foreach (var tecla in teclas)
             {
                 IEnumerable<Tono> tonosAsociados = tecla.ObtenerTonosAsociados();

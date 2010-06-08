@@ -12,17 +12,17 @@ namespace AlgoHero.Player
             get { throw new NotImplementedException(); }
         }
 
-        public Tecla ObtenerTecla(int index)
+        public ITecla ObtenerTecla(int index)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Tecla> ObtenerTeclas()
+        public IEnumerable<ITecla> ObtenerTeclas()
         {
             throw new NotImplementedException();
         }
 
-        public Tecla ObtenerTecla(EntidadEntrada entidadEntrada)
+        public ITecla ObtenerTecla(EntidadEntrada entidadEntrada)
         {
             throw new NotImplementedException();
         }
