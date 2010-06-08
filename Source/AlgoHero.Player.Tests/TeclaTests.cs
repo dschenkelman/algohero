@@ -2,6 +2,7 @@
 using AlgoHero.MusicEntities.Enums;
 using NUnit.Framework;
 using System;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Player.Tests
 {
@@ -11,14 +12,14 @@ namespace AlgoHero.Player.Tests
         [Test]
         public void CrearTeclaSeteaKeyAsociada()
         {
-            Tecla tecla = new Tecla(Key.A);
-            Assert.AreEqual(Key.A, tecla.Key);
+            Tecla tecla = new Tecla(new EntidadEntrada(1));
+            Assert.AreEqual(1, tecla.EntidadEntrada.Codigo);
         }
 
         [Test]
         public void AgregarTonoAsociadoAumentaCantidad()
         {
-            var tecla = new Tecla(Key.A);
+            var tecla = new Tecla(new EntidadEntrada(1));
             tecla.AgregarTonoAsociado(Tono.Do);
 
             Assert.AreEqual(1, tecla.CantidadTonos);
@@ -33,7 +34,7 @@ namespace AlgoHero.Player.Tests
         [ExpectedException(ExceptionType = typeof(InvalidOperationException))]
         public void AgregarTonoDosVecesLanzaExcepcion()
         {
-            var tecla = new Tecla(Key.A);
+            var tecla = new Tecla(new EntidadEntrada(1));
             tecla.AgregarTonoAsociado(Tono.Do);
             tecla.AgregarTonoAsociado(Tono.Do);
         }

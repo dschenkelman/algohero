@@ -35,22 +35,22 @@ namespace AlgoHero.Player.Tests
         public void CrearControladorEnNivelFacilCreaTeclasAyS()
         {
             var controlador = new ManagerTeclas(Nivel.Facil);
-            Assert.AreEqual(Key.A, controlador.ObtenerTecla(0).Key);
-            Assert.AreEqual(Key.S, controlador.ObtenerTecla(1).Key);
+            Assert.AreEqual(1, controlador.ObtenerTecla(0).EntidadEntrada.Codigo);
+            Assert.AreEqual(2, controlador.ObtenerTecla(1).EntidadEntrada.Codigo);
         }
 
         [Test]
         public void CrearControladorEnNivelFacilCreaTeclaK()
         {
             var controlador = new ManagerTeclas(Nivel.Medio);
-            Assert.AreEqual(Key.K, controlador.ObtenerTecla(2).Key);
+            Assert.AreEqual(3, controlador.ObtenerTecla(2).EntidadEntrada.Codigo);
         }
 
         [Test]
         public void CrearControladorEnNivelFacilCreaTeclaL()
         {
             var controlador = new ManagerTeclas(Nivel.Dificil);
-            Assert.AreEqual(Key.L, controlador.ObtenerTecla(3).Key);
+            Assert.AreEqual(4, controlador.ObtenerTecla(3).EntidadEntrada.Codigo);
         }
 
         [Test]

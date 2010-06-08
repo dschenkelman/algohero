@@ -5,6 +5,7 @@ using AlgoHero.MusicEntities.Enums;
 using NUnit.Framework;
 using AlgoHero.Player.Interfaces;
 using System.Windows.Input;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Player.Tests
 {
@@ -88,7 +89,7 @@ namespace AlgoHero.Player.Tests
 
             public IEnumerable<Tecla> ObtenerTeclas()
             {
-                var tecla = new Tecla(Key.A);
+                var tecla = new Tecla(new EntidadEntrada(1));
                 tecla.AgregarTonoAsociado(Tono.Fa);
                 return new List<Tecla>() {tecla};
             }

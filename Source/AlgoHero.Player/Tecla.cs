@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using AlgoHero.MusicEntities.Enums;
 using System.Collections.Generic;
-using System.Windows.Input;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Player
 {
@@ -10,10 +10,10 @@ namespace AlgoHero.Player
     {
         private List<Tono> tonos;
 
-        public Tecla(Key key)
+        public Tecla(EntidadEntrada entidad)
         {
             this.tonos = new List<Tono>();
-            this.Key = key;
+            this.EntidadEntrada = entidad;
         }
 
         public void AgregarTonoAsociado(Tono tono)
@@ -33,7 +33,7 @@ namespace AlgoHero.Player
             }
         }
 
-        public Key Key
+        public EntidadEntrada EntidadEntrada
         {
             get; private set;
         }
