@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="EntidadEntrada.cs" />
     <Compile Include="IIterador.cs" />
+    <Compile Include="IManagerTeclas.cs" />
+    <Compile Include="ITecla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
