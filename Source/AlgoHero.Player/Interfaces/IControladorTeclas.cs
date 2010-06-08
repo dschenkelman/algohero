@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Player.Interfaces
 {
@@ -9,5 +10,7 @@ namespace AlgoHero.Player.Interfaces
         Tecla ObtenerTecla(int index);
 
         IEnumerable<Tecla> ObtenerTeclas();
+
+        Tecla ObtenerTecla(EntidadEntrada entidadEntrada);
     }
 }
