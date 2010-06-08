@@ -81,19 +81,19 @@ namespace AlgoHero.Player.Tests
                 get { throw new NotImplementedException(); }
             }
 
-            public Tecla ObtenerTecla(int index)
+            public ITecla ObtenerTecla(int index)
             {
                 throw new NotImplementedException();
             }
 
-            public IEnumerable<Tecla> ObtenerTeclas()
+            public IEnumerable<ITecla> ObtenerTeclas()
             {
                 var tecla = new Tecla(new EntidadEntrada(1));
                 tecla.AgregarTonoAsociado(Tono.Fa);
-                return new List<Tecla>() {tecla};
+                return new List<ITecla>() {tecla};
             }
 
-            public Tecla ObtenerTecla(EntidadEntrada entidadEntrada)
+            public ITecla ObtenerTecla(EntidadEntrada entidadEntrada)
             {
                 throw new NotImplementedException();
             }

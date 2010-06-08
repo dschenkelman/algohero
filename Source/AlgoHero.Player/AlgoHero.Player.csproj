@@ -43,9 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControladorCancion.cs" />
-    <Compile Include="Interfaces\IControladorTeclas.cs" />
     <Compile Include="ControladorTeclas.cs" />
-    <Compile Include="Interfaces\IMapeoTecladoEntidadesEntrada.cs" />
     <Compile Include="MapeoTecladoEntidadesEntrada.cs" />
     <Compile Include="Nivel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

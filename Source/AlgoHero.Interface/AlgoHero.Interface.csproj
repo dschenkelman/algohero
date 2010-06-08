@@ -43,13 +43,17 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntidadEntrada.cs" />
     <Compile Include="Enums\FiguraMusical.cs" />
     <Compile Include="Enums\Tono.cs" />
+    <Compile Include="IControladorTeclas.cs" />
     <Compile Include="IIterador.cs" />
-    <Compile Include="IManagerTeclas.cs" />
+    <Compile Include="IMapeoTecladoEntidadesEntrada.cs" />
     <Compile Include="ITecla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
