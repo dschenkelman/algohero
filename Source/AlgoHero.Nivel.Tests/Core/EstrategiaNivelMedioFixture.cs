@@ -14,7 +14,7 @@ namespace AlgoHero.Nivel.Tests.Core
     using AlgoHero.Nivel.Intefaces;
 
     [TestFixture]
-    public class EstrategiaNivelFacilFixture
+    public class EstrategiaNivelMedioFixture
     {
         private Cancion cancion;
         private Partitura partitura;
@@ -32,12 +32,12 @@ namespace AlgoHero.Nivel.Tests.Core
 
         [Test]
         public void ObtenerSiguienteNotaDevuelveNota()
-        {   
+        {
             this.partitura.AgregarCompas(this.compasCompleto);
             this.cancion = new Cancion("We will rock you", "Queen");
             this.cancion.Partitura = this.partitura;
-            
-            var nivel = new EstrategiaNivelFacil(this.cancion);
+
+            var nivel = new EstrategiaNivelMedio(this.cancion);
             Assert.IsFalse(nivel.EsFinalCancion());
             Assert.IsTrue(nivel.ObtenerSiguienteNota().Tonos.Contains(Tono.Fa));
             Assert.IsFalse(nivel.EsFinalCancion());
@@ -50,7 +50,7 @@ namespace AlgoHero.Nivel.Tests.Core
             this.cancion = new Cancion("We will rock you", "Queen");
             this.cancion.Partitura = this.partitura;
 
-            var nivel = new EstrategiaNivelFacil(this.cancion);
+            var nivel = new EstrategiaNivelMedio(this.cancion);
             Assert.IsFalse(nivel.EsFinalCancion());
 
             Assert.IsTrue(nivel.ObtenerSiguienteNota().Tonos.Contains(Tono.Fa));
@@ -58,13 +58,13 @@ namespace AlgoHero.Nivel.Tests.Core
         }
 
         [Test]
-        public void ObtenerNotaConMuchosTonosDevuelveNotaYLuegoNull()
+        public void ObtenerNotaConMuchosTonosDevuelveNotasEnOrden()
         {
             this.partitura.AgregarCompas(this.compasCompletoConAcordes);
             this.cancion = new Cancion("We will rock you", "Queen");
             this.cancion.Partitura = this.partitura;
 
-            var nivel = new EstrategiaNivelFacil(this.cancion);
+            var nivel = new EstrategiaNivelMedio(this.cancion);
             Assert.IsFalse(nivel.EsFinalCancion());
 
             Nota primerAcorde = nivel.ObtenerSiguienteNota();
@@ -72,7 +72,8 @@ namespace AlgoHero.Nivel.Tests.Core
             Assert.IsTrue(primerAcorde.Tonos.Contains(Tono.Fa));
             Assert.IsTrue(primerAcorde.Tonos.Contains(Tono.Do));
             Assert.IsNull(nivel.ObtenerSiguienteNota());
-            Assert.IsNull(nivel.ObtenerSiguienteNota());
+            Assert.IsTrue(nivel.ObtenerSiguienteNota().Tonos.Contains(Tono.Mi));
+            Assert.IsTrue(nivel.EsFinalCancion());
         }
 
 
@@ -82,18 +83,20 @@ namespace AlgoHero.Nivel.Tests.Core
             this.partitura.AgregarCompas(this.compasCompletoConAcordes);
             this.cancion = new Cancion("We will rock you", "Queen");
             this.cancion.Partitura = this.partitura;
-
+            
             IControladorTeclas control = new MockControladorTeclas();
-            IEstrategiaNivel nivel = new EstrategiaNivelFacil(this.cancion);
+            IEstrategiaNivel nivel = new EstrategiaNivelMedio(this.cancion);
 
             nivel.AsignarTonos(control);
             ITecla teclaUno = control.ObtenerTecla(0);
             ITecla teclaDos = control.ObtenerTecla(1);
+            ITecla teclaTres = control.ObtenerTecla(2);
             ReadOnlyCollection<Tono> listaUno = teclaUno.ObtenerTonosAsociados();
             ReadOnlyCollection<Tono> listaDos = teclaDos.ObtenerTonosAsociados();
+            ReadOnlyCollection<Tono> listaTres = teclaTres.ObtenerTonosAsociados();
             Assert.IsTrue(listaUno.Contains(Tono.Do));
-            Assert.IsTrue(listaUno.Contains(Tono.Si));
             Assert.IsTrue(listaDos.Contains(Tono.Fa));
+            Assert.IsTrue(listaTres.Contains(Tono.Mi));
         }
 
         [Test]
@@ -104,19 +107,20 @@ namespace AlgoHero.Nivel.Tests.Core
             this.cancion = new Cancion("We will rock you", "Queen");
             this.cancion.Partitura = this.partitura;
 
-            var nivel = new EstrategiaNivelFacil(this.cancion);
+            var nivel = new EstrategiaNivelMedio(this.cancion);
             nivel.ObtenerSiguienteNota();
             nivel.ObtenerSiguienteNota();
             nivel.ObtenerSiguienteNota();
             nivel.ObtenerSiguienteNota();
         }
 
+
         private void CrearCompasCompleto(TiempoCancion tiempoCancion)
         {
             this.compasCompleto = new Compas(tiempoCancion);
             var nota = new Nota(Tono.Fa, FiguraMusical.Negra);
             var nota2 = new Nota(Tono.Fa, FiguraMusical.Negra);
-            var nota3 = new Nota(Tono.Si, FiguraMusical.Blanca);
+            var nota3 = new Nota(Tono.Mi, FiguraMusical.Blanca);
             this.compasCompleto.AgregarNota(nota);
             this.compasCompleto.AgregarNota(nota2);
             this.compasCompleto.AgregarNota(nota3);
@@ -127,7 +131,7 @@ namespace AlgoHero.Nivel.Tests.Core
             this.compasCompletoConAcordes = new Compas(tiempoCancion);
             var nota = new Nota(FiguraMusical.Negra, Tono.Do, Tono.Fa);
             var nota2 = new Nota(FiguraMusical.Negra, Tono.Do, Tono.Fa);
-            var nota3 = new Nota(FiguraMusical.Blanca, Tono.Si, Tono.Do);
+            var nota3 = new Nota(FiguraMusical.Blanca, Tono.Mi, Tono.Do);
             this.compasCompletoConAcordes.AgregarNota(nota);
             this.compasCompletoConAcordes.AgregarNota(nota2);
             this.compasCompletoConAcordes.AgregarNota(nota3);
@@ -135,3 +139,4 @@ namespace AlgoHero.Nivel.Tests.Core
 
     }
 }
+
