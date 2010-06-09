@@ -32,7 +32,7 @@ namespace AlgoHero.MusicEntities.Core
         }
 
         /*Devuelve la cantidad de blancas por compas. Depende del tiempo de la cancion.*/
-        public int CantidadBlancasPorCompas
+        public double CantidadBlancasPorCompas
         {
             get { return this.tiempoCancion.CantidadBlancas; }
         }
