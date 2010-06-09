@@ -41,7 +41,11 @@
   </Target>
   -->
   <ItemGroup>
+    <Compile Include="Core\EstrategiaNivelDificilFixture.cs" />
     <Compile Include="Core\EstrategiaNivelFacilFixture.cs" />
+    <Compile Include="Core\EstrategiaNivelMedioFixture.cs" />
+    <Compile Include="Core\MockControladorTeclas.cs" />
+    <Compile Include="Core\MockTecla.cs" />
     <Compile Include="Servicios\OrganizadorDeTonosFixture.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -41,7 +41,9 @@
   </Target>
   -->
   <ItemGroup>
+    <Compile Include="Core\EstrategiaNivelDificil.cs" />
     <Compile Include="Core\EstrategiaNivelFacil.cs" />
+    <Compile Include="Core\EstrategiaNivelMedio.cs" />
     <Compile Include="Excepciones\ExcepcionFinalDeCancion.cs" />
     <Compile Include="Intefaces\IEstrategiaNivel.cs" />
     <Compile Include="Servicios\OrganizadorDeTonos.cs" />
