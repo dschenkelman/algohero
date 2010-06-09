@@ -21,7 +21,7 @@ def cargar():
 	path = cmd("cd .. && cd")[:-1]
 	print path
 	directoriosTest = cmd("cd.. && cd Source && dir /b *.Tests")
-	archivos = []
+	archivos = [] 
 	directoriosTest = directoriosTest.split("\n")
 	for directorio in directoriosTest:
 		salida = cmd("cd.. && cd \"Source/"+directorio+"/bin/Debug/\" && dir /b *Tests.dll")

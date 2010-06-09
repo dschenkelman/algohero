@@ -6,7 +6,7 @@ namespace AlgoHero.MusicEntities.Core
     public class TiempoCancion
     {
         /*Crea un nuevo TiempoCancion a partir de la duracion del compas y la cantidad de blancas por compas.*/
-        public TiempoCancion(double duracionCompas, int cantidadBlancas)
+        public TiempoCancion(double duracionCompas, double cantidadBlancas)
         {
             if (duracionCompas <= 0)
             {
@@ -27,7 +27,7 @@ namespace AlgoHero.MusicEntities.Core
             get; private set;
         }
 
-        public int CantidadBlancas
+        public double CantidadBlancas
         {
             get; private set;
         }

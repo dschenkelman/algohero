@@ -43,5 +43,13 @@ namespace AlgoHeroMusic.Entities.Tests.Core
             Assert.AreEqual(2, tiempoCancion.CantidadBlancas);
         }
 
+        [Test]
+        public void CrearTiempoCompasSeteaValoresCorrectamenteDoubles()
+        {
+            var tiempoCancion = new TiempoCancion(1.5, 0.6);
+            Assert.AreEqual(1.5, tiempoCancion.DuracionCompas);
+            Assert.AreEqual(0.6, tiempoCancion.CantidadBlancas);
+        }
+
     }
 }
