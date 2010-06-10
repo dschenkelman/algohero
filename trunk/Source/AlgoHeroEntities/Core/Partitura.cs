@@ -62,10 +62,10 @@ namespace AlgoHero.MusicEntities.Core
         /*Devuelve un iterador para las notas de la partitura.*/
         public IIterador<Nota> ObtenerIterador()
         {
-            return new IteradorPartirura(this);
+            return new IteradorPartitura(this);
         }
 
-        private class IteradorPartirura : IIterador<Nota>
+        private class IteradorPartitura : IIterador<Nota>
         {
 
             #region Atributos
@@ -77,7 +77,7 @@ namespace AlgoHero.MusicEntities.Core
             private bool tieneSiguiente;
             #endregion
 
-            public IteradorPartirura(Partitura partitura)
+            public IteradorPartitura(Partitura partitura)
             {
                 this.partitura = partitura;
 
