@@ -33,35 +33,72 @@ def nombrar(cadena):
 			escribir = True
 	return final[:-1]
 
+def contar(cadena, num):
+	try:
+		l = cadena.split(',')
+		k = l[num].split(':')
+		return int(k[1])
+	except:
+		return 0
+
+
 def filtrar(texto, archivo, i=0):
+	ok__ = 0
+	error__ = 0
+	not__ = 0
 	try:
 		cadena = "\n"+str(i)+"-"*35+"\n.../"+nombrar(archivo)+":\n"
 		texto = texto.split("\n")
 		for linea in texto:
 			if "Tests run:" in linea:
+				ok__ += contar(linea, 0)
+				error__ += contar(linea, 1)
+				not__ += contar(linea, 2)
 				cadena += "   -->"+linea+"_"*6
 				if "Failures: 0" in linea:
-					return cadena+"OK"
+					cadena += "OK"
+					l = [ok__, error__, not__, cadena]
+					return l
 				else:
-					return cadena+" ERROR!!!!"      
-			return cadena + " !FALLO!!"
+					os.system("color C && echo ")
+					cadena += "ERROR!!!"
+					l = [ok__, error__, not__, cadena]
+					return l
+
+		os.system("color C && echo ")
+		cadena += "__FAIL__ !!"
+		l = [ok__, error__, not__, cadena]
+		return l
 	except:
 		print "Saliendo: 2"
-		return ""
+		return [0,0,0,""]
 
 def ejecutar(archivos):
 	i = 1
+	ok_ = 0
+	error_ = 0
+	not_c = 0
 	path = cmd("whereis nunit-console")
 	path = path.split(" ")[1]
 	print ">Path NUnit= "+path+"\n\n"
 	for archivo in archivos:
 		try:
 			salida = cmd("cd .. && "+path+" "+archivo)
-			print filtrar(salida, archivo, i)
+			l = filtrar(salida, archivo, i)
+			ok_ += l[0]
+			error_ += l[1]
+			not_c += l[2]
+			print l[3]
 		except:
-			print "Saliendo: 1"
+			print "Saliendo: 1 (enter)"
+			raw_input("")
 			sys.exit(1)
 		i += 1
+	print
+	print "Estado Final: "
+	print "     -Corridos:", ok_
+	print "     -Corridos y Fallados:", error_
+	print "     -No Corridos:", not_c
 
 def ayuda():
 	print "inserte ayuda aqui"
