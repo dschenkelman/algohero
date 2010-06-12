@@ -12,7 +12,6 @@ namespace AlgoHero.Juego.Core
     {
         private IIterador<Nota> iter;
         private Cancion cancion;
-        private bool estado;
 
         public EstrategiaNivelDificil(Cancion cancion)
         {
@@ -45,12 +44,8 @@ namespace AlgoHero.Juego.Core
 
             foreach (Tono tono in listaOrdenada)
             {
-                controlador.ObtenerTecla(estado).AgregarTonoAsociado(tono);
+                controlador.ObtenerTecla(estado % 4).AgregarTonoAsociado(tono);
                 estado += 1;
-                if (estado == 4)
-                {
-                    estado = 0;
-                }
             }
         }
     }
