@@ -14,6 +14,7 @@ namespace AlgoHero.Files.Tests
     public class ProveedorCancionXmlFixture
     {
         private Cancion cancion;
+        private Cancion cancionSinPartitura;
 
         [SetUp]
         public void TestInitialize()
@@ -21,16 +22,17 @@ namespace AlgoHero.Files.Tests
             string pathCancion = Path.Combine(Environment.CurrentDirectory,
             Path.Combine("Archivos Prueba", "WeWillRockYou.xml"));
             IProveedorCancion proveedor = new ProveedorCancionXml();
-            this.cancion = proveedor.ObtenerCancion(pathCancion);
+            this.cancion = proveedor.ObtenerCancionConPartitura(pathCancion);
+            this.cancionSinPartitura = proveedor.ObtenerCancionSinPartitura(pathCancion);
         }
 
         [Test]
-        public void ObtenerCancionDeArchivoDevuelveCancionConNombreYAutorCorrectos() 
+        public void ObtenerCancionSinPartiruaDeArchivoDevuelveCancionConNombreYAutorCorrectos()
         {
-            Assert.AreEqual("We will rock you", cancion.Nombre);
-            Assert.AreEqual("Queen", cancion.Autor);
+            Assert.AreEqual("We will rock you", cancionSinPartitura.Nombre);
+            Assert.AreEqual("Queen", cancionSinPartitura.Autor);
         }
-
+        
         [Test]
         public void ObtenerCancionDeArchivoDevuelveCancionConTiempoCorrecto()
         {
