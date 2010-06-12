@@ -57,12 +57,8 @@ namespace AlgoHero.Juego.Core
 
             foreach (Tono tono in listaOrdenada)
             {
-                controlador.ObtenerTecla(estado).AgregarTonoAsociado(tono);
+                controlador.ObtenerTecla(estado % 3).AgregarTonoAsociado(tono);
                 estado += 1;
-                if (estado == 3)
-                {
-                    estado = 0;
-                }
             }
         }
     }
