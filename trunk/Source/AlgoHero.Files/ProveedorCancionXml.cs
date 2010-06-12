@@ -36,6 +36,12 @@ namespace AlgoHero.Files
             return cancion;
         }
 
+        public IEnumerable<Cancion> ObtenerCancionesDirectorio(string path)
+        {
+            //TODO: Work on real implementation
+            throw new NotImplementedException();
+        }
+
         /*A partir del documento XML recibido devuelve el tiempo de la cancion.*/
         private TiempoCancion CrearTiempoCancion(XmlDocument documento)
         {
