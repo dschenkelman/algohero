@@ -7,6 +7,5 @@ namespace AlgoHero.Files.Interfaces
     {
         Cancion ObtenerCancionSinPartitura(string path);
         Cancion ObtenerCancionConPartitura(string path);
-        IEnumerable<Cancion> ObtenerCancionesDirectorio(string path);
     }
 }

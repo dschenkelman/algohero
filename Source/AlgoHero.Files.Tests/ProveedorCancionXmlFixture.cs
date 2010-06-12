@@ -1,4 +1,6 @@
-﻿using AlgoHero.Interface.Enums;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AlgoHero.Interface.Enums;
 using NUnit.Framework;
 using AlgoHero.Files.Interfaces;
 using AlgoHero.MusicEntities.Core;
@@ -13,22 +15,15 @@ namespace AlgoHero.Files.Tests
     [TestFixture]
     public class ProveedorCancionXmlFixture
     {
-        private Cancion cancion;
-        private Cancion cancionSinPartitura;
-
-        [SetUp]
-        public void TestInitialize()
-        {
-            string pathCancion = Path.Combine(Environment.CurrentDirectory,
-            Path.Combine("Archivos Prueba", "WeWillRockYou.xml"));
-            IProveedorCancion proveedor = new ProveedorCancionXml();
-            this.cancion = proveedor.ObtenerCancionConPartitura(pathCancion);
-            this.cancionSinPartitura = proveedor.ObtenerCancionSinPartitura(pathCancion);
-        }
 
         [Test]
         public void ObtenerCancionSinPartiruaDeArchivoDevuelveCancionConNombreYAutorCorrectos()
         {
+            string pathCancion = Path.Combine(Environment.CurrentDirectory,
+            Path.Combine(@"Archivos Prueba\Canciones\Queen", "WeWillRockYou.xml"));
+            string directorioCanciones = Path.Combine(Environment.CurrentDirectory, @"Archivos Prueba\Canciones");
+            IProveedorCancion proveedor = new ProveedorCancionXml();
+            Cancion cancionSinPartitura = proveedor.ObtenerCancionSinPartitura(pathCancion);
             Assert.AreEqual("We will rock you", cancionSinPartitura.Nombre);
             Assert.AreEqual("Queen", cancionSinPartitura.Autor);
         }
@@ -36,6 +31,13 @@ namespace AlgoHero.Files.Tests
         [Test]
         public void ObtenerCancionDeArchivoDevuelveCancionConTiempoCorrecto()
         {
+
+            string pathCancion = Path.Combine(Environment.CurrentDirectory,
+            Path.Combine(@"Archivos Prueba\Canciones\Queen", "WeWillRockYou.xml"));
+            string directorioCanciones = Path.Combine(Environment.CurrentDirectory, @"Archivos Prueba\Canciones");
+            IProveedorCancion proveedor = new ProveedorCancionXml();
+            Cancion cancion = proveedor.ObtenerCancionConPartitura(pathCancion);
+
             Assert.AreEqual(4, cancion.Partitura.DuracionCompas);
             Assert.AreEqual(2, cancion.Partitura.CantidadBlancasPorCompas);
         }
@@ -43,12 +45,24 @@ namespace AlgoHero.Files.Tests
         [Test]
         public void ObtenerCancionDeArchivoDevuelveCancionConCantidadDeCompasesCorrecta()
         {
+            string pathCancion = Path.Combine(Environment.CurrentDirectory,
+            Path.Combine(@"Archivos Prueba\Canciones\Queen", "WeWillRockYou.xml"));
+            string directorioCanciones = Path.Combine(Environment.CurrentDirectory, @"Archivos Prueba\Canciones");
+            IProveedorCancion proveedor = new ProveedorCancionXml();
+            Cancion cancion = proveedor.ObtenerCancionConPartitura(pathCancion);
+            
             Assert.AreEqual(2, cancion.Partitura.CantidadCompases);
         }
 
         [Test]
         public void ObtenerCancionDeArchivoDevuelveCompasesConNotasCorrectas()
         {
+            string pathCancion = Path.Combine(Environment.CurrentDirectory,
+            Path.Combine(@"Archivos Prueba\Canciones\Queen", "WeWillRockYou.xml"));
+            string directorioCanciones = Path.Combine(Environment.CurrentDirectory, @"Archivos Prueba\Canciones");
+            IProveedorCancion proveedor = new ProveedorCancionXml();
+            Cancion cancion = proveedor.ObtenerCancionConPartitura(pathCancion);
+            
             Nota nota;
             //Primer nota primer compas
             nota = cancion.Partitura.ObtenerCompas(0).ObtenerNota(0);
@@ -80,5 +94,37 @@ namespace AlgoHero.Files.Tests
             Assert.AreEqual(FiguraMusical.Blanca, nota.Figura);
         }
 
+        [Test]
+        public void ObtenerCancionesDeDirectorioDevuelveCantidadCancionesCorrecta()
+        {
+            string directorioCanciones = Path.Combine(Environment.CurrentDirectory, @"Archivos Prueba\Canciones");
+            IProveedorCancionesDirectorio proveedor = new ProveedorCancionXml();
+            IEnumerable<Cancion> canciones = proveedor.ObtenerCancionesDirectorio(directorioCanciones);
+            
+            Assert.AreEqual(3, canciones.Count());
+        }
+
+        [Test]
+        public void ObtenerCancionesDeDirectorioDevuelveCancionesConSuPath()
+        {
+            string directorioCanciones = Path.Combine(Environment.CurrentDirectory, @"Archivos Prueba\Canciones");
+            IProveedorCancionesDirectorio proveedor = new ProveedorCancionXml();
+            IEnumerable<Cancion> canciones = proveedor.ObtenerCancionesDirectorio(directorioCanciones);
+
+            Cancion cancion;
+            string pathCancion;
+            
+            cancion = canciones.First(c => c.Nombre == "We will rock you");
+            pathCancion = Path.Combine(directorioCanciones, @"Queen\WeWillRockYou.xml");
+            Assert.AreEqual(pathCancion, cancion.PathPartitura);
+
+            cancion = canciones.First(c => c.Nombre == "Hotel California");
+            pathCancion = Path.Combine(directorioCanciones, @"Eagles\HotelCalifornia.xml");
+            Assert.AreEqual(pathCancion, cancion.PathPartitura);
+
+            cancion = canciones.First(c => c.Nombre == "Jijiji");
+            pathCancion = Path.Combine(directorioCanciones, @"Los Redondos\Jijiji.xml");
+            Assert.AreEqual(pathCancion, cancion.PathPartitura);
+        }
     }
 }

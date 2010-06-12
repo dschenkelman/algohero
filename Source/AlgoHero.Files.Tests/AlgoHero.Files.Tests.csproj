@@ -65,10 +65,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Archivos Prueba\Entradas.xml">
+    <Content Include="Archivos Prueba\Canciones\Eagles\HotelCalifornia.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Archivos Prueba\WeWillRockYou.xml">
+    <Content Include="Archivos Prueba\Canciones\Los Redondos\Jijiji.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Archivos Prueba\Canciones\Queen\WeWillRockYou.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Archivos Prueba\Entradas.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

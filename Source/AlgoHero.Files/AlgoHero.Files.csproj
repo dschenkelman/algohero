@@ -48,6 +48,7 @@
     <Compile Include="ConvertidorStringAEntidadesMusicales.cs" />
     <Compile Include="ConvertidorStringAKeys.cs" />
     <Compile Include="Interfaces\IProveedorCancion.cs" />
+    <Compile Include="Interfaces\IProveedorCancionesDirectorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorCancionXml.cs" />
     <Compile Include="ProveedorKeysXml.cs" />

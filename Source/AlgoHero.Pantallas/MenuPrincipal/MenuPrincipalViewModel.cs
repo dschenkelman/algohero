@@ -1,25 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using AlgoHero.Files.Interfaces;
+using AlgoHero.Juego.Core;
+using AlgoHero.Juego.Intefaces;
 using AlgoHero.MusicEntities.Core;
+using System.IO;
+using System;
 
 namespace AlgoHero.Pantallas.MenuPrincipal
 {
     public class MenuPrincipalViewModel
     {
-        private readonly IProveedorCancion proveedorCancion;
+        private readonly IProveedorCancionesDirectorio proveedorCanciones;
+        private readonly IProveedorNiveles proveedorNiveles;
 
-        public MenuPrincipalViewModel(IProveedorCancion proveedorCancion)
+        public MenuPrincipalViewModel(IProveedorCancionesDirectorio proveedorCanciones, IProveedorNiveles proveedorNiveles)
         {
-            this.proveedorCancion = proveedorCancion;
+            this.proveedorCanciones = proveedorCanciones;
+            this.proveedorNiveles = proveedorNiveles;
             this.Canciones = new ObservableCollection<Cancion>();
+            this.Niveles = new ObservableCollection<Nivel>();
             AgregarCancionesDeProveedor();
+            AgregarNiveles();
+        }
+
+        private void AgregarNiveles()
+        {
+            this.Niveles = this.proveedorNiveles.ObtenerNiveles(); 
         }
 
         private void AgregarCancionesDeProveedor()
         {
-            IEnumerable<Cancion> canciones = this.proveedorCancion.ObtenerCancionesDirectorio(@"C:\");
+            //TODO: Cambiar esto para poder configurar de donde vienen las canciones
+            string pathCanciones = Path.Combine(Environment.CurrentDirectory, "Canciones");
+            IEnumerable<Cancion> canciones = this.proveedorCanciones.ObtenerCancionesDirectorio(pathCanciones);
             foreach (var cancion in canciones)
             {
                 this.Canciones.Add(cancion);
@@ -27,6 +41,11 @@ namespace AlgoHero.Pantallas.MenuPrincipal
         }
 
         public ObservableCollection<Cancion> Canciones
+        {
+            get; private set;
+        }
+
+        public ObservableCollection<Nivel> Niveles
         {
             get; private set;
         }
