@@ -5,18 +5,8 @@ using AlgoHero.MusicEntities.Core;
 
 namespace AlgoHero.Pantallas.Tests.Mocks
 {
-    public class MockProveedorCancionXml : IProveedorCancion
+    public class MockProveedorCanciones : IProveedorCancionesDirectorio
     {
-        public Cancion ObtenerCancionSinPartitura(string path)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Cancion ObtenerCancionConPartitura(string path)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<Cancion> ObtenerCancionesDirectorio(string path)
         {
             List<Cancion> canciones = new List<Cancion>();

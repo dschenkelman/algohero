@@ -44,13 +44,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MenuPrincipalViewModelTests.cs" />
+    <Compile Include="Mocks\MockEstrategiaNivel.cs" />
     <Compile Include="Mocks\MockProveedorCancionXml.cs" />
+    <Compile Include="Mocks\MockProveedorNiveles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlgoHero.Files\AlgoHero.Files.csproj">
       <Project>{915F1DE3-78FC-4D88-B437-FCD56959AB18}</Project>
       <Name>AlgoHero.Files</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlgoHero.Interface\AlgoHero.Interface.csproj">
+      <Project>{95BAC13E-9D2D-4573-9D66-8AB41F39F803}</Project>
+      <Name>AlgoHero.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlgoHero.Juego\AlgoHero.Juego.csproj">
+      <Project>{EFBA1611-F98C-471A-8EC7-312F641BB256}</Project>
+      <Name>AlgoHero.Juego</Name>
     </ProjectReference>
     <ProjectReference Include="..\AlgoHero.Pantallas\AlgoHero.Pantallas.csproj">
       <Project>{98EF13B4-40EE-44EE-8CCF-AB3B51EEFD63}</Project>

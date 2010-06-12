@@ -44,11 +44,13 @@
     <Compile Include="Core\EstrategiaNivelDificil.cs" />
     <Compile Include="Core\EstrategiaNivelFacil.cs" />
     <Compile Include="Core\EstrategiaNivelMedio.cs" />
+    <Compile Include="Core\Nivel.cs" />
     <Compile Include="Entrada\ControladorTeclas.cs" />
     <Compile Include="Entrada\MapeoTecladoEntidadesEntrada.cs" />
     <Compile Include="Entrada\Tecla.cs" />
     <Compile Include="Excepciones\ExcepcionFinalDeCancion.cs" />
     <Compile Include="Intefaces\IEstrategiaNivel.cs" />
+    <Compile Include="Intefaces\IProveedorNiveles.cs" />
     <Compile Include="Servicios\OrganizadorDeTonos.cs" />
   </ItemGroup>
   <ItemGroup>

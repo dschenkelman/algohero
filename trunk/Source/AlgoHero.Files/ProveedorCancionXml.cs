@@ -4,10 +4,11 @@ using AlgoHero.Files.Interfaces;
 using AlgoHero.Interface.Enums;
 using AlgoHero.MusicEntities.Core;
 using System.Xml;
+using System.IO;
 
 namespace AlgoHero.Files
 {
-    public class ProveedorCancionXml : IProveedorCancion
+    public class ProveedorCancionXml : IProveedorCancion, IProveedorCancionesDirectorio
     {
         /*Obtiene una Cancion sin partitura  a partir del archivo pasado como parametro.*/
         public Cancion ObtenerCancionSinPartitura(string path)
@@ -17,7 +18,7 @@ namespace AlgoHero.Files
             XmlNode nodoCancion = this.ObtenerNodoCancion(documento);
             string nombreCancion = nodoCancion.Attributes["nombre"].Value;
             string autorCancion = nodoCancion.Attributes["autor"].Value;
-            return new Cancion(nombreCancion, autorCancion);
+            return new Cancion(nombreCancion, autorCancion){ PathPartitura = path};
         }
 
         /*Obtiene una Cancion con partitura  a partir del archivo pasado como parametro.*/
@@ -39,7 +40,33 @@ namespace AlgoHero.Files
         public IEnumerable<Cancion> ObtenerCancionesDirectorio(string path)
         {
             //TODO: Work on real implementation
-            throw new NotImplementedException();
+            List<Cancion> canciones = new List<Cancion>();
+            ObtenerCancionesDirectorioRecursivo(path, canciones);
+            return canciones;
+        }
+
+        private void ObtenerCancionesDirectorioRecursivo(string path, List<Cancion> canciones)
+        {
+            canciones.AddRange(ObtenerCancionesDirectorioInterno(path));
+            string[] subDirectorios = Directory.GetDirectories(path);
+            foreach (var directorio in subDirectorios)
+            {
+                ObtenerCancionesDirectorioRecursivo(directorio, canciones);
+            }
+        }
+
+        private List<Cancion> ObtenerCancionesDirectorioInterno(string path)
+        {
+            List<Cancion> canciones = new List<Cancion>();
+            string[] archivosCancion = Directory.GetFiles(path);
+
+            foreach (var archivoCancion in archivosCancion)
+            {
+                Cancion cancion = this.ObtenerCancionSinPartitura(archivoCancion);
+                canciones.Add(cancion);
+            }
+
+            return canciones;
         }
 
         /*A partir del documento XML recibido devuelve el tiempo de la cancion.*/
