@@ -9,21 +9,28 @@ namespace AlgoHero.Files
 {
     public class ProveedorCancionXml : IProveedorCancion
     {
-        /*Obtiene una Cancion a partir del archivo pasado como parametro.*/
-        public Cancion ObtenerCancion(string path)
+        /*Obtiene una Cancion sin partitura  a partir del archivo pasado como parametro.*/
+        public Cancion ObtenerCancionSinPartitura(string path)
         {
             XmlDocument documento = new XmlDocument();
             documento.Load(path);
             XmlNode nodoCancion = this.ObtenerNodoCancion(documento);
             string nombreCancion = nodoCancion.Attributes["nombre"].Value;
             string autorCancion = nodoCancion.Attributes["autor"].Value;
+            return new Cancion(nombreCancion, autorCancion);
+        }
 
-            
+        /*Obtiene una Cancion con partitura  a partir del archivo pasado como parametro.*/
+        public Cancion ObtenerCancionConPartitura(string path)
+        {
+            Cancion cancion = ObtenerCancionSinPartitura(path);
+            XmlDocument documento = new XmlDocument();
+            documento.Load(path);
+           
             TiempoCancion tiempoCancion = this.CrearTiempoCancion(documento);
             Partitura partitura = new Partitura(tiempoCancion);
             this.AgregarCompases(partitura, tiempoCancion, documento);
-            
-            var cancion = new Cancion(nombreCancion, autorCancion);
+         
             cancion.Partitura = partitura;
 
             return cancion;
