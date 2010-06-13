@@ -1,5 +1,4 @@
-﻿using System;
-using AlgoHero.Files.Interfaces;
+﻿using AlgoHero.Files.Interfaces;
 using AlgoHero.Juego.Core;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Eventos;
