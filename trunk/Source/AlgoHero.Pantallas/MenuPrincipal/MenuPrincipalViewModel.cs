@@ -28,14 +28,35 @@ namespace AlgoHero.Pantallas.MenuPrincipal
             AgregarNiveles();
         }
 
+        private Cancion cancionActual;
+
         public Cancion CancionActual
         {
-            get; set;
+            get { return cancionActual; }
+            set
+            {
+                if (value != cancionActual)
+                {
+                    cancionActual = value;
+                    this.ComandoEmpezarCancion.RaiseCanExecuteChanged();
+                }
+            }
         }
+
+        private Nivel nivelActual;
 
         public Nivel NivelActual
         {
-            get; set;
+            get { return nivelActual; }
+            set
+            {
+                if (value != nivelActual)
+                {
+                    nivelActual = value;
+                    this.ComandoEmpezarCancion.RaiseCanExecuteChanged();
+                }
+                
+            }
         }
 
         public DelegateCommand<object> ComandoEmpezarCancion
