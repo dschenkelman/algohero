@@ -7,20 +7,24 @@ using AlgoHero.MusicEntities.Core;
 using System.IO;
 using System;
 using AlgoHero.Pantallas.Eventos;
+using AlgoHero.Pantallas.Interfaces;
 using Microsoft.Practices.Composite.Presentation.Commands;
 
 namespace AlgoHero.Pantallas.MenuPrincipal
 {
-    public class MenuPrincipalViewModel
+    public class MenuPrincipalViewModel : IMenuPrincipalViewModel
     {
         private readonly IProveedorCancionesDirectorio proveedorCanciones;
         private readonly IProveedorNiveles proveedorNiveles;
+        private readonly IManejadorVentanaPrincipal manejadorVentanaPrincipal;
 
-        public MenuPrincipalViewModel(IProveedorCancionesDirectorio proveedorCanciones, IProveedorNiveles proveedorNiveles)
+        public MenuPrincipalViewModel(IProveedorCancionesDirectorio proveedorCanciones, IProveedorNiveles proveedorNiveles,
+            IManejadorVentanaPrincipal manejadorVentanaPrincipal)
         {
             this.proveedorCanciones = proveedorCanciones;
             this.proveedorNiveles = proveedorNiveles;
-            
+            this.manejadorVentanaPrincipal = manejadorVentanaPrincipal;
+
             this.Canciones = new ObservableCollection<Cancion>();
             this.Niveles = new ObservableCollection<Nivel>();
             this.ComandoEmpezarCancion = new DelegateCommand<object>(this.EmpezarCancion, this.PuedeEmpezarCancion);
@@ -100,7 +104,11 @@ namespace AlgoHero.Pantallas.MenuPrincipal
 
         public void EmpezarCancion(object obj)
         {
-            EmpezarCancionLlamado(this, new EmpezarCancionLlamadoEventArgs(this.CancionActual, this.NivelActual));
+            var handler = this.EmpezarCancionLlamado;
+            if (handler != null)
+            {
+                handler(this, new EmpezarCancionLlamadoEventArgs(this.CancionActual, this.NivelActual));
+            }
         }
 
         public event EventHandler<EmpezarCancionLlamadoEventArgs> EmpezarCancionLlamado;

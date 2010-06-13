@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using AlgoHero.Pantallas.Interfaces;
 
 namespace AlgoHero.Pantallas.MenuPrincipal
 {
@@ -7,7 +8,7 @@ namespace AlgoHero.Pantallas.MenuPrincipal
     /// </summary>
     public partial class VistaMenuPrincipal : UserControl
     {
-        public VistaMenuPrincipal(MenuPrincipalViewModel model)
+        public VistaMenuPrincipal(IMenuPrincipalViewModel model)
         {
             this.DataContext = model;
             InitializeComponent();
