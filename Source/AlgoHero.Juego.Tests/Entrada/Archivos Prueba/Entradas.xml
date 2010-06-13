@@ -1,0 +1,14 @@
+<xml>
+	<entradas>
+		<entrada>
+			<tecla letra = "a"/>
+			<tecla letra = "s"/>
+		</entrada>
+		<entrada>
+			<tecla letra = "d"/>
+		</entrada>
+		<entrada>
+			<tecla letra = "f"/>
+		</entrada>
+	</entradas>
+</xml>
