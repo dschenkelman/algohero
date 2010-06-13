@@ -1,15 +1,40 @@
 ﻿<UserControl x:Class="AlgoHero.Pantallas.MenuPrincipal.VistaMenuPrincipal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <UserControl.Background>
-        <ImageBrush ImageSource="Imagenes/guitarhero.jpg"/>
-    </UserControl.Background>
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="Black" >
+    <UserControl.Resources>
+        <Style x:Key="CustomHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="Gold"/>
+            <Setter Property="BorderBrush" Value="Gold"/>
+        </Style>
+        <Style x:Key="ComboItemStyle" TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="Gold"/>
+            <Setter Property="BorderBrush" Value="Gold"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="Gold"/>
+            <Setter Property="BorderBrush" Value="Gold"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Menu Principal" FontSize="24" FontFamily="Times New Roman" Foreground="White" HorizontalAlignment="Center" /> 
+        <TextBlock Grid.Row="0" Text="Menu Principal" FontSize="24" Foreground="Gold" HorizontalAlignment="Center"/> 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -17,7 +42,7 @@
             </Grid.ColumnDefinitions>
             <ListView Grid.Column="0" Foreground="White" Background="Transparent" ItemsSource="{Binding Canciones}" SelectedItem="{Binding CancionActual}" >
                 <ListView.View>
-                    <GridView AllowsColumnReorder="False" ColumnHeaderToolTip="Informacion de la cancion">
+                    <GridView AllowsColumnReorder="False" ColumnHeaderToolTip="Informacion de la cancion" ColumnHeaderContainerStyle="{DynamicResource CustomHeaderStyle}">
                         <GridViewColumn DisplayMemberBinding= "{Binding Path=Nombre}"                                     
                                         Header="Nombre" Width="Auto"/>
                         <GridViewColumn DisplayMemberBinding="{Binding Path=Autor}" 
@@ -28,21 +53,25 @@
                     <Style TargetType="{x:Type ListViewItem}">
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" Value="Black" />
+                                <Setter Property="Background" Value="Black"/>
+                                <Setter Property="BorderBrush" Value="Gold" />
                                 <Setter Property="Cursor" Value="Hand"/>
                             </Trigger>
                             <Trigger Property="IsSelected" Value="true">
-                                <Setter Property="Background" Value="Blue" />
+                                <Setter Property="Background" Value="Gold" />
+                                <Setter Property="Foreground" Value="Black" />
+                                <Setter Property="BorderBrush" Value="Black" />
                             </Trigger>
                         </Style.Triggers>
                     </Style>
                 </ListView.ItemContainerStyle>
             </ListView>
             <StackPanel Grid.Column="1">
-                <ComboBox ItemsSource="{Binding Niveles}" DisplayMemberPath="Descripcion" SelectedItem="{Binding NivelActual}"/>
-                <Button Content="Empezar cancion" Command="{Binding ComandoEmpezarCancion}"/>
+                <ComboBox Background="Gold" BorderBrush="Black" Foreground="Black" ItemsSource="{Binding Niveles}" ItemContainerStyle="{DynamicResource ComboItemStyle}"
+                          SelectedItem="{Binding NivelActual}" Text="Seleccione Nivel" DisplayMemberPath="Descripcion">
+                </ComboBox>
+                <Button Content="Empezar cancion" Style="{DynamicResource ButtonStyle}"  Command="{Binding ComandoEmpezarCancion}"/>
             </StackPanel>
         </Grid>
     </Grid>
-    
 </UserControl>
