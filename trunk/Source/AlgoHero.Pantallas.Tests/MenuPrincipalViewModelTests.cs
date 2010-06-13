@@ -13,14 +13,14 @@ namespace AlgoHero.Pantallas.Tests
         [Test]
         public void CrearViewModelConProveedorCancionObtieneCantidadCancionesCorrecta()
         {
-            MenuPrincipalViewModel vm = new MenuPrincipalViewModel(new MockProveedorCanciones(), new MockProveedorNiveles());
+            MenuPrincipalViewModel vm = new MenuPrincipalViewModel(new MockProveedorCanciones(), new MockProveedorNiveles(), null);
             Assert.AreEqual(vm.Canciones.Count, 3);
         }
 
         [Test]
         public void CrearViewModelAsignaNivelesDeJuego()
         {
-            MenuPrincipalViewModel vm = new MenuPrincipalViewModel(new MockProveedorCanciones(), new MockProveedorNiveles());
+            MenuPrincipalViewModel vm = new MenuPrincipalViewModel(new MockProveedorCanciones(), new MockProveedorNiveles(), null);
             Assert.AreEqual(3, vm.Niveles.Count);
             
             Assert.AreEqual("Facil", vm.Niveles[0].Descripcion);
@@ -33,7 +33,7 @@ namespace AlgoHero.Pantallas.Tests
         [Test]
         public void EmpezarCancionPublicaEventoConCancionYNivelEnArgs()
         {
-            MenuPrincipalViewModel vm = new MenuPrincipalViewModel(new MockProveedorCanciones(), new MockProveedorNiveles());
+            MenuPrincipalViewModel vm = new MenuPrincipalViewModel(new MockProveedorCanciones(), new MockProveedorNiveles(), null);
             var cancion = new Cancion("We will rock you", "Queen");
             
             vm.CancionActual = cancion;

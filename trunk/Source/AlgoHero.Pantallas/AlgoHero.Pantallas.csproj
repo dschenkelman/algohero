@@ -79,6 +79,11 @@
   <ItemGroup>
     <Compile Include="Eventos\EmpezarCancionLlamadoEventArgs.cs" />
     <Compile Include="InicializadorAplicacion.cs" />
+    <Compile Include="Interfaces\IManejadorVentanaPrincipal.cs" />
+    <Compile Include="Interfaces\IMenuPrincipalViewModel.cs" />
+    <Compile Include="Interfaces\IPlayerCancionViewModel.cs" />
+    <Compile Include="Interfaces\IVentanaPrincipal.cs" />
+    <Compile Include="ManejadorVentanaPrincipal.cs" />
     <Compile Include="MenuPrincipal\MenuPrincipalView.xaml.cs">
       <DependentUpon>MenuPrincipalView.xaml</DependentUpon>
     </Compile>
@@ -103,7 +108,6 @@
     <Compile Include="VentanaPrincipal.xaml.cs">
       <DependentUpon>VentanaPrincipal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VentanaPrincipalViewModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
