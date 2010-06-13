@@ -6,6 +6,7 @@ using AlgoHero.Juego.Intefaces;
 using AlgoHero.MusicEntities.Core;
 using System.IO;
 using System;
+using Microsoft.Practices.Composite.Presentation.Commands;
 
 namespace AlgoHero.Pantallas.MenuPrincipal
 {
@@ -18,10 +19,40 @@ namespace AlgoHero.Pantallas.MenuPrincipal
         {
             this.proveedorCanciones = proveedorCanciones;
             this.proveedorNiveles = proveedorNiveles;
+            
             this.Canciones = new ObservableCollection<Cancion>();
             this.Niveles = new ObservableCollection<Nivel>();
+            this.ComandoEmpezarCancion = new DelegateCommand<object>(this.EmpezarCancion, this.PuedeEmpezarCancion);
+
             AgregarCancionesDeProveedor();
             AgregarNiveles();
+        }
+
+        public Cancion CancionActual
+        {
+            get; set;
+        }
+
+        public Nivel NivelActual
+        {
+            get; set;
+        }
+
+        public DelegateCommand<object> ComandoEmpezarCancion
+        {
+            get; private set;
+        }
+
+        public ObservableCollection<Cancion> Canciones
+        {
+            get;
+            private set;
+        }
+
+        public ObservableCollection<Nivel> Niveles
+        {
+            get;
+            private set;
         }
 
         private void AgregarNiveles()
@@ -40,14 +71,15 @@ namespace AlgoHero.Pantallas.MenuPrincipal
             }
         }
 
-        public ObservableCollection<Cancion> Canciones
+        private bool PuedeEmpezarCancion(object obj)
         {
-            get; private set;
+            return (this.NivelActual != null && this.CancionActual != null);
         }
 
-        public ObservableCollection<Nivel> Niveles
+        private void EmpezarCancion(object obj)
         {
-            get; private set;
+            //MessageBox.Show("Empezar cancion");
         }
+
     }
 }

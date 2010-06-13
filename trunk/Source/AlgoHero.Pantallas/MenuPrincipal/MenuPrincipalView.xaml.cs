@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
 
 namespace AlgoHero.Pantallas.MenuPrincipal
 {
@@ -19,8 +7,9 @@ namespace AlgoHero.Pantallas.MenuPrincipal
     /// </summary>
     public partial class VistaMenuPrincipal : UserControl
     {
-        public VistaMenuPrincipal()
+        public VistaMenuPrincipal(MenuPrincipalViewModel model)
         {
+            this.DataContext = model;
             InitializeComponent();
         }
     }
