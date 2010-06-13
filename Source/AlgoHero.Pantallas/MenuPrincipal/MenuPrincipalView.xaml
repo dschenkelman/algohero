@@ -15,7 +15,7 @@
             <ListView Grid.Column="0"/>
             <StackPanel Grid.Column="1">
                 <ComboBox />
-                <Button Content="Tocar cancion"/>
+                <Button Content="Empezar cancion" Command="{Binding ComandoEmpezarCancion}"/>
             </StackPanel>
         </Grid>
     </Grid>
