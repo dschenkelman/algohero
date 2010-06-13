@@ -2,7 +2,6 @@
 using AlgoHero.Juego.Core;
 using AlgoHero.Juego.Intefaces;
 using AlgoHero.Pantallas.MenuPrincipal;
-using AlgoHero.Files.Interfaces;
 using AlgoHero.Files;
 using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.Pantallas.PlayerCancion;
@@ -13,8 +12,8 @@ namespace AlgoHero.Pantallas
     {
         public void Iniciar()
         {
-            IProveedorCancionesDirectorio proveedorCancionesDirectorio = new ProveedorCancionXml();
-            //Cambiar para usar el proveedor de verdad
+            ProveedorCancionXml proveedorCancionesDirectorio = new ProveedorCancionXml();
+            //TODO: Cambiar para usar el proveedor de verdad
             IProveedorNiveles proveedorNiveles = new MockProveedorNiveles();
 
             VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
@@ -25,7 +24,11 @@ namespace AlgoHero.Pantallas
                 new MenuPrincipalViewModel(proveedorCancionesDirectorio, proveedorNiveles, manejadorVentanaPrincipal);
             VistaMenuPrincipal menuPrincipal = new VistaMenuPrincipal(menuPrincipalViewModel);
 
-            //IPlayerCancionViewModel playerCancionViewModel = new PlayerCancionViewModel();
+            IVistaPlayerCancion vistaPlayerCancion = new VistaPlayerCancion();
+            IPlayerCancionViewModel playerCancionViewModel = 
+                new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancionesDirectorio);
+
+            menuPrincipalViewModel.EmpezarCancionLlamado += playerCancionViewModel.EmpezarCancion;
 
             manejadorVentanaPrincipal.CambiarContenido(menuPrincipal);
             ventanaPrincipal.Show();

@@ -11,13 +11,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AlgoHero.Pantallas.Interfaces;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {
     /// <summary>
     /// Interaction logic for VistaPlayerCancion.xaml
     /// </summary>
-    public partial class VistaPlayerCancion : UserControl
+    public partial class VistaPlayerCancion : UserControl, IVistaPlayerCancion
     {
         public VistaPlayerCancion()
         {
