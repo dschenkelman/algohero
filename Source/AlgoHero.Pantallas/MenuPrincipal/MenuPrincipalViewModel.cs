@@ -6,6 +6,7 @@ using AlgoHero.Juego.Intefaces;
 using AlgoHero.MusicEntities.Core;
 using System.IO;
 using System;
+using AlgoHero.Pantallas.Eventos;
 using Microsoft.Practices.Composite.Presentation.Commands;
 
 namespace AlgoHero.Pantallas.MenuPrincipal
@@ -97,10 +98,11 @@ namespace AlgoHero.Pantallas.MenuPrincipal
             return (this.NivelActual != null && this.CancionActual != null);
         }
 
-        private void EmpezarCancion(object obj)
+        public void EmpezarCancion(object obj)
         {
-            //MessageBox.Show("Empezar cancion");
+            EmpezarCancionLlamado(this, new EmpezarCancionLlamadoEventArgs(this.CancionActual, this.NivelActual));
         }
 
+        public event EventHandler<EmpezarCancionLlamadoEventArgs> EmpezarCancionLlamado;
     }
 }

@@ -77,6 +77,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Eventos\EmpezarCancionLlamadoEventArgs.cs" />
     <Compile Include="InicializadorAplicacion.cs" />
     <Compile Include="MenuPrincipal\MenuPrincipalView.xaml.cs">
       <DependentUpon>MenuPrincipalView.xaml</DependentUpon>
