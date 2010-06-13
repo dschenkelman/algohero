@@ -1,6 +1,4 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
 using AlgoHero.Pantallas.Interfaces;
 
 namespace AlgoHero.Pantallas
@@ -15,12 +13,12 @@ namespace AlgoHero.Pantallas
             InitializeComponent();
         }
 
-        public Control ObtenerContenido()
+        public object ObtenerContenido()
         {
-            return (Control)this.Contenido.Content;
+            return this.Contenido.Content;
         }
 
-        public void CambiarContenido(Control control)
+        public void CambiarContenido(object control)
         {
             this.Contenido.Content = control;
         }

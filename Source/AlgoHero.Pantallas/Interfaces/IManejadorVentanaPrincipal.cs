@@ -4,6 +4,6 @@ namespace AlgoHero.Pantallas.Interfaces
 {
     public interface IManejadorVentanaPrincipal
     {
-        void CambiarContenido(Control control);
+        void CambiarContenido(object control);
     }
 }

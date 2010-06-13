@@ -9,11 +9,13 @@ namespace AlgoHero.Pantallas.PlayerCancion
 {
     public class PlayerCancionViewModel : IPlayerCancionViewModel
     {
+        private readonly IVistaPlayerCancion vistaPlayerCancion;
         private readonly IManejadorVentanaPrincipal manejadorVentanaPrincipal;
         private readonly IProveedorCancion proveedorCancion;
 
-        public PlayerCancionViewModel(IManejadorVentanaPrincipal manejadorVentanaPrincipal, IProveedorCancion proveedorCancion)
+        public PlayerCancionViewModel(IVistaPlayerCancion vistaPlayerCancion, IManejadorVentanaPrincipal manejadorVentanaPrincipal, IProveedorCancion proveedorCancion)
         {
+            this.vistaPlayerCancion = vistaPlayerCancion;
             this.manejadorVentanaPrincipal = manejadorVentanaPrincipal;
             this.proveedorCancion = proveedorCancion;
         }
@@ -22,6 +24,8 @@ namespace AlgoHero.Pantallas.PlayerCancion
         {
             this.CancionActual = proveedorCancion.ObtenerCancionConPartitura(args.Cancion.PathPartitura);
             this.NivelActual = args.Nivel;
+
+            this.manejadorVentanaPrincipal.CambiarContenido(this.vistaPlayerCancion);
         }
 
         public Cancion CancionActual
