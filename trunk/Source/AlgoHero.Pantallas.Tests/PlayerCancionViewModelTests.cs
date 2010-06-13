@@ -16,7 +16,7 @@ namespace AlgoHero.Pantallas.Tests
         public void HandlearElEventoEmpezarCancionObtieneCancionConPartitura()
         {
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(new MockManejadorVentanaPrincipal(), proveedorCancion);
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null, new MockManejadorVentanaPrincipal(), proveedorCancion);
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo"){PathPartitura = "MiPath"}, null));
@@ -28,12 +28,31 @@ namespace AlgoHero.Pantallas.Tests
         public void HandlearElEventoEmpezarCancionGuardaNivel()
         {
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(new MockManejadorVentanaPrincipal(), proveedorCancion);
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null, new MockManejadorVentanaPrincipal(), proveedorCancion);
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }, new Nivel("Nivel Test", null)));
 
             Assert.AreEqual("Nivel Test", vm.NivelActual.Descripcion);
+        }
+
+        [Test]
+        public void AlEmpezarCancionCambiaContenidoDeVentanaPrincipal()
+        {
+            IVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancion);
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
+                (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }, new Nivel("Nivel Test", null)));
+
+            Assert.AreEqual(vistaPlayerCancion, manejadorVentanaPrincipal.Contenido);
+        }
+
+        private class MockVistaPlayerCancion : IVistaPlayerCancion
+        {
+
         }
 
         private class MockProveedorCancionXml : IProveedorCancion
@@ -55,9 +74,14 @@ namespace AlgoHero.Pantallas.Tests
 
         private class MockManejadorVentanaPrincipal : IManejadorVentanaPrincipal
         {
-            public void CambiarContenido(Control control)
+            public object Contenido
             {
-                throw new NotImplementedException();
+                get; set;
+            }
+
+            public void CambiarContenido(object control)
+            {
+                this.Contenido = control;
             }
         }
     }

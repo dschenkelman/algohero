@@ -83,6 +83,7 @@
     <Compile Include="Interfaces\IMenuPrincipalViewModel.cs" />
     <Compile Include="Interfaces\IPlayerCancionViewModel.cs" />
     <Compile Include="Interfaces\IVentanaPrincipal.cs" />
+    <Compile Include="Interfaces\IVistaPlayerCancion.cs" />
     <Compile Include="ManejadorVentanaPrincipal.cs" />
     <Compile Include="MenuPrincipal\MenuPrincipalView.xaml.cs">
       <DependentUpon>MenuPrincipalView.xaml</DependentUpon>

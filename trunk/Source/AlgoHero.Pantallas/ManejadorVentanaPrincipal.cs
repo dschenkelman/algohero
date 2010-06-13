@@ -13,7 +13,7 @@ namespace AlgoHero.Pantallas
             this.ventanaPrincipal = ventanaPrincipal;
         }
 
-        public void CambiarContenido(Control control)
+        public void CambiarContenido(object control)
         {
             this.ventanaPrincipal.CambiarContenido(control);
         }
