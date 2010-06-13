@@ -82,6 +82,10 @@
       <DependentUpon>MenuPrincipalView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal\MenuPrincipalViewModel.cs" />
+    <Compile Include="PlayerCancion\PlayerCancionViewModel.cs" />
+    <Compile Include="PlayerCancion\VistaPlayerCancion.xaml.cs">
+      <DependentUpon>VistaPlayerCancion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -114,6 +118,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PlayerCancion\VistaPlayerCancion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VentanaPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,9 +151,6 @@
     <Content Include="Canciones\WeWillRockYou.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="MenuPrincipal\Imagenes\guitarhero.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
