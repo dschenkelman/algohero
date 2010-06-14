@@ -51,7 +51,7 @@ namespace AlgoHero.Juego.Tests.Core
             Assert.IsFalse(nivel.EsFinalCancion());
 
             Assert.IsTrue(nivel.ObtenerSiguienteNota().Tonos.Contains(Tono.Fa));
-            Assert.IsNull(nivel.ObtenerSiguienteNota());
+            Assert.IsTrue(nivel.ObtenerSiguienteNota().Tonos.Contains(Tono.Silencio));
         }
 
         [Test]
@@ -68,8 +68,8 @@ namespace AlgoHero.Juego.Tests.Core
 
             Assert.IsTrue(primerAcorde.Tonos.Contains(Tono.Fa));
             Assert.IsTrue(primerAcorde.Tonos.Contains(Tono.Do));
-            Assert.IsNull(nivel.ObtenerSiguienteNota());
-            Assert.IsNull(nivel.ObtenerSiguienteNota());
+            Assert.IsTrue(nivel.ObtenerSiguienteNota().Tonos.Contains(Tono.Silencio));
+            Assert.IsTrue(nivel.ObtenerSiguienteNota().Tonos.Contains(Tono.Silencio));
         }
 
 
