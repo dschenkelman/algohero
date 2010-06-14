@@ -43,8 +43,7 @@ namespace AlgoHero.Juego.Core
                 {
                     Nota nota = this.iter.Siguiente();
                     this.estado = (!this.estado);
-                    //return new Nota(Tono.Silencio, nota.Figura);
-                    return null;
+                    return new Nota(Tono.Silencio, nota.Figura);
                 }
             }
         }
