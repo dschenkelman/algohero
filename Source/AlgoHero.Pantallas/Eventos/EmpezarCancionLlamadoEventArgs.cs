@@ -10,6 +10,7 @@ namespace AlgoHero.Pantallas.Eventos
         {
             Cancion = cancion;
             Nivel = nivel;
+            //Nivel.AsignarCancion(Cancion);
         }
 
         public Cancion Cancion
