@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHero.Pantallas", "AlgoH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHero.Pantallas.Tests", "AlgoHero.Pantallas.Tests\AlgoHero.Pantallas.Tests.csproj", "{DB604F6A-5747-41A5-9F87-CFD7EDBE89E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHero.PuntuacionJuego.Tests", "AlgoHero.PuntuacionJuego.Tests\AlgoHero.PuntuacionJuego.Tests.csproj", "{9C8745E3-74D2-463B-9349-F0854C76155A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoHero.PuntuacionJuego", "AlgoHero.PuntuacionJuego\AlgoHero.PuntuacionJuego.csproj", "{26C6791C-60D2-4083-9069-5981CD72067B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,14 @@ Global
 		{DB604F6A-5747-41A5-9F87-CFD7EDBE89E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB604F6A-5747-41A5-9F87-CFD7EDBE89E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB604F6A-5747-41A5-9F87-CFD7EDBE89E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8745E3-74D2-463B-9349-F0854C76155A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8745E3-74D2-463B-9349-F0854C76155A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8745E3-74D2-463B-9349-F0854C76155A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8745E3-74D2-463B-9349-F0854C76155A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C6791C-60D2-4083-9069-5981CD72067B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C6791C-60D2-4083-9069-5981CD72067B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C6791C-60D2-4083-9069-5981CD72067B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C6791C-60D2-4083-9069-5981CD72067B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
