@@ -23,7 +23,5 @@ Paso a paso todo lo que puede hacer falta para correr la aplicación.
 
 ·Para correr el bagaje de tests podemos optar por correrlos a mano con NUnit (sinceramente no se si *VisualStudio* los corre por vos), o también podemos optar por usar algunos de los _scripts_ que estan en el repositorio, para uno necesitaremos *PowerShell* fácilmente adquirible del sitio de microsoft con un windows original, o podemos usa el script de *Python* para lo cual necesitaremos descargar e instalar el interprete de Python de este sitio: http://www.python.org/download/
 
-·*Creo que con esto ya estamos...* _Cualquier consulta se les ocurra el repositorio tiene nuestros mails._
-
-
+·*Creo que con esto ya estamos...* _Cualquier consulta que se les ocurra el repositorio tiene nuestros mails._
 
