@@ -14,9 +14,13 @@ namespace AlgoHero.Juego.Core
         private Cancion cancion;
         private bool estado;
 
-        public EstrategiaNivelMedio(Cancion cancion)
+        public EstrategiaNivelMedio()
         {
             this.estado = true;
+        }
+
+        public void AsignarCancion(Cancion cancion)
+        {
             this.cancion = cancion;
             this.iter = cancion.Partitura.ObtenerIterador();
         }

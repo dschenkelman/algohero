@@ -34,7 +34,8 @@ namespace AlgoHero.Juego.Tests.Core
             this.cancion = new Cancion("We will rock you", "Queen");
             this.cancion.Partitura = this.partitura;
 
-            var nivel = new EstrategiaNivelDificil(this.cancion);
+            var nivel = new EstrategiaNivelDificil();
+            nivel.AsignarCancion(this.cancion);
             Assert.IsFalse(nivel.EsFinalCancion());
 
             Assert.IsTrue(nivel.ObtenerSiguienteNota().Tonos.Contains(Tono.Fa));
@@ -52,7 +53,8 @@ namespace AlgoHero.Juego.Tests.Core
             this.cancion = new Cancion("We will rock you", "Queen");
             this.cancion.Partitura = this.partitura;
 
-            var nivel = new EstrategiaNivelDificil(this.cancion);
+            var nivel = new EstrategiaNivelDificil();
+            nivel.AsignarCancion(this.cancion);
             Assert.IsFalse(nivel.EsFinalCancion());
 
             Nota primerAcorde = nivel.ObtenerSiguienteNota();
@@ -86,7 +88,8 @@ namespace AlgoHero.Juego.Tests.Core
             this.cancion.Partitura = this.partitura;
 
             IControladorTeclas control = new MockControladorTeclas();
-            IEstrategiaNivel nivel = new EstrategiaNivelDificil(this.cancion);
+            IEstrategiaNivel nivel = new EstrategiaNivelDificil();
+            nivel.AsignarCancion(this.cancion);
 
             nivel.AsignarTonos(control);
             ITecla teclaUno = control.ObtenerTecla(0);
@@ -112,7 +115,8 @@ namespace AlgoHero.Juego.Tests.Core
             this.cancion = new Cancion("We will rock you", "Queen");
             this.cancion.Partitura = this.partitura;
 
-            var nivel = new EstrategiaNivelDificil(this.cancion);
+            var nivel = new EstrategiaNivelDificil();
+            nivel.AsignarCancion(this.cancion);
             nivel.ObtenerSiguienteNota();
             nivel.ObtenerSiguienteNota();
             nivel.ObtenerSiguienteNota();

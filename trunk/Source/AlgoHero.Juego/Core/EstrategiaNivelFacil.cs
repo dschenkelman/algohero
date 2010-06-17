@@ -15,14 +15,18 @@ namespace AlgoHero.Juego.Core
         private int estado;
         private int max_estado;
 
-        public EstrategiaNivelFacil(Cancion cancion) 
+        public EstrategiaNivelFacil() 
         {
             this.estado = 0;
-            this.cancion = cancion;
             this.max_estado = 3;
-            this.iter = cancion.Partitura.ObtenerIterador();
-        }        
+        }
 
+        public void AsignarCancion(Cancion cancion)
+        {
+            this.cancion = cancion;
+            this.iter = cancion.Partitura.ObtenerIterador();
+        }
+        
         public bool EsFinalCancion()
         {
             return (!this.iter.TieneSiguiente);

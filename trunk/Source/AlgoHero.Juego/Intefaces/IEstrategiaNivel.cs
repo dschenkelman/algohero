@@ -8,5 +8,6 @@ namespace AlgoHero.Juego.Intefaces
         Nota ObtenerSiguienteNota();
         bool EsFinalCancion();
         void AsignarTonos(IControladorTeclas controlador);
+        void AsignarCancion(Cancion cancion);
     }
 }

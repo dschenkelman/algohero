@@ -13,7 +13,11 @@ namespace AlgoHero.Juego.Core
         private IIterador<Nota> iter;
         private Cancion cancion;
 
-        public EstrategiaNivelDificil(Cancion cancion)
+        public EstrategiaNivelDificil()
+        {
+        }
+
+        public void AsignarCancion(Cancion cancion)
         {
             this.cancion = cancion;
             this.iter = cancion.Partitura.ObtenerIterador();
