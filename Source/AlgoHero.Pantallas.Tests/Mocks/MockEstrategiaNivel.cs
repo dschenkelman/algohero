@@ -12,6 +12,11 @@ namespace AlgoHero.Pantallas.Tests.Mocks
             throw new NotImplementedException();
         }
 
+        public void AsignarCancion(Cancion cancion)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool EsFinalCancion()
         {
             throw new NotImplementedException();
