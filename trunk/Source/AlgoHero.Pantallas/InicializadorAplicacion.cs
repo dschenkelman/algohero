@@ -55,6 +55,15 @@ namespace AlgoHero.Pantallas
             {
                 return this.niveles;
             }
+
+            #region Miembros de IProveedorNiveles
+
+            ObservableCollection<Nivel> IProveedorNiveles.ObtenerNiveles()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            #endregion
         }
     }
 }
