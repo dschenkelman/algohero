@@ -1,0 +1,15 @@
+#summary Como usar la wiki
+#labels etiqueta,uses,usowiki
+
+= Introduction =
+
+Vas a wiki, respetas el formato, todo sale lindo!! :P
+mas intro..
+
+
+= Details =
+
+Entre asteriscos hacen *negria* entre guiones bajos hacen _bastardilla_
+se hacen automaticamente los links creo...
+link del instalador para win de nunit 2.4.8 framework 2.0 :
+http://sourceforge.net/projects/nunit/files/NUnit%20Version%202/NUnit-2.4.8-net-2.0.msi/download
