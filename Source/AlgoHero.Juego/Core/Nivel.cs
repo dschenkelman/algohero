@@ -1,5 +1,4 @@
-﻿using System;
-using AlgoHero.Juego.Intefaces;
+﻿using AlgoHero.Juego.Intefaces;
 using AlgoHero.MusicEntities.Core;
 
 namespace AlgoHero.Juego.Core

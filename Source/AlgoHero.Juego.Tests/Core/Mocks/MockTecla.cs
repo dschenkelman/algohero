@@ -5,7 +5,7 @@ using AlgoHero.Interface;
 using AlgoHero.Interface.Enums;
 
 
-namespace AlgoHero.Nivel.Tests.Core
+namespace AlgoHero.Juego.Tests.Core.Mocks
 {
     public class MockTecla : ITecla
     {
@@ -43,5 +43,4 @@ namespace AlgoHero.Nivel.Tests.Core
         public int CantidadTonos { get; private set; }
         public EntidadEntrada EntidadEntrada { get; private set; }
     }
-
 }

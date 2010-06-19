@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using AlgoHero.Juego.Intefaces;
+﻿using AlgoHero.Juego.Intefaces;
 using System.Collections.ObjectModel;
 
 namespace AlgoHero.Juego.Core
@@ -11,9 +9,9 @@ namespace AlgoHero.Juego.Core
 
         public ProveedorNiveles()
         {
-            Nivel facil = new Nivel("Facil", null);
-            Nivel medio = new Nivel("Medio", null);
-            Nivel dificil = new Nivel("Dificil", null);
+            Nivel facil = new Nivel("Facil", new EstrategiaNivelFacil());
+            Nivel medio = new Nivel("Medio", new EstrategiaNivelMedio());
+            Nivel dificil = new Nivel("Dificil", new EstrategiaNivelDificil());
             this.niveles = new ObservableCollection<Nivel>();
 
             this.niveles.Add(facil);

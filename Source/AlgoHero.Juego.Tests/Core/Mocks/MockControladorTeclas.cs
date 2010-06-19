@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using AlgoHero.Interface;
-using AlgoHero.Nivel.Tests.Core;
 
 namespace AlgoHero.Juego.Tests.Core.Mocks
 {
