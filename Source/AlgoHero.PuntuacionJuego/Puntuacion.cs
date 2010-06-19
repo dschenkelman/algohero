@@ -7,11 +7,14 @@ namespace AlgoHero.PuntuacionJuego
 {
     public class Puntuacion
     {
-        public Puntuacion()
+        private string nivel;
+
+        public Puntuacion(string nivelJuego)
         {
             this.Multiplicador = 1;
             this.PuntosAcumulados = 0;
             this.RachaDeNotasAcertadas = 0;
+            this.nivel = nivelJuego;
         }
 
         public void AcertarNota()
@@ -33,7 +36,17 @@ namespace AlgoHero.PuntuacionJuego
 
         private bool VerificarCambioMultiplicador()
         {
-            return this.RachaDeNotasAcertadas % 10 == 0; // cada vez que acierta 10 teclas, aumenta el multiplicador (cambiar segun nivel!)
+            switch (this.nivel.ToLower())
+            {
+                case "facil":
+                    return this.RachaDeNotasAcertadas % 5 == 0;
+                case "medio":
+                    return this.RachaDeNotasAcertadas % 10 == 0;
+                case "dificil":
+                    return this.RachaDeNotasAcertadas % 15 == 0;
+                default:   
+                    throw new ArgumentException();
+            }
         }
 
         public int Multiplicador { get; private set; }

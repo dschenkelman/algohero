@@ -14,7 +14,7 @@ namespace AlgoHero.PuntuacionJuego.Tests
         [SetUp]
         public void TestInitialize()
         {
-            puntuacionActual = new Puntuacion();
+            puntuacionActual = new Puntuacion("medio");
         }
 
         [Test]
@@ -50,6 +50,22 @@ namespace AlgoHero.PuntuacionJuego.Tests
             Assert.AreEqual(1, puntuacionActual.Multiplicador);
             Assert.AreEqual(0, puntuacionActual.RachaDeNotasAcertadas);
             Assert.AreEqual(puntosAcum, puntuacionActual.PuntosAcumulados);
+        }
+
+        [Test]
+        public void AumentarMultiplicadorFuncionaCorrectamente()
+        {
+            Assert.AreEqual(1, puntuacionActual.Multiplicador);
+
+            for (int i = 0; i < 9; i++)
+            {
+                puntuacionActual.AcertarNota();
+            }
+            Assert.AreEqual(1, puntuacionActual.Multiplicador);
+
+            puntuacionActual.AcertarNota();
+
+            Assert.AreEqual(2, puntuacionActual.Multiplicador);
         }
     }
 }
