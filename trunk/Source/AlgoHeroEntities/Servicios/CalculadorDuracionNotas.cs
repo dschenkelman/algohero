@@ -12,9 +12,14 @@ namespace AlgoHero.MusicEntities.Servicios
          * de la cancion y la nota. Depende de la figura de la nota.*/
         public double CalcularDuracion(TiempoCancion tiempoCancion, Nota nota)
         {
+            return this.CalcularDuracion(tiempoCancion, nota.Figura);
+        }
+
+        public double CalcularDuracion(TiempoCancion tiempoCancion, FiguraMusical figura)
+        {
             double tiempoBlanca = tiempoCancion.DuracionCompas / tiempoCancion.CantidadBlancas;
-            
-            switch (nota.Figura)
+
+            switch (figura)
             {
                 case FiguraMusical.Redonda:
                     return tiempoBlanca * 2;
@@ -26,14 +31,9 @@ namespace AlgoHero.MusicEntities.Servicios
                     return tiempoBlanca / 4;
                 case FiguraMusical.Semicorchea:
                     return tiempoBlanca / 8;
-                case FiguraMusical.Fusa:
-                    return tiempoBlanca / 16;
-                case FiguraMusical.Semifusa:
-                    return tiempoBlanca / 32;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
         }
-        
     }
 }

@@ -89,6 +89,18 @@
       <DependentUpon>MenuPrincipalView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal\MenuPrincipalViewModel.cs" />
+    <Compile Include="PlayerCancion\NotasVisuales\NotaVisual1.xaml.cs">
+      <DependentUpon>NotaVisual1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerCancion\NotasVisuales\NotaVisual2.xaml.cs">
+      <DependentUpon>NotaVisual2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerCancion\NotasVisuales\NotaVisual3.xaml.cs">
+      <DependentUpon>NotaVisual3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerCancion\NotasVisuales\NotaVisual4.xaml.cs">
+      <DependentUpon>NotaVisual4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PlayerCancion\PlayerCancionViewModel.cs" />
     <Compile Include="PlayerCancion\VistaPlayerCancion.xaml.cs">
       <DependentUpon>VistaPlayerCancion.xaml</DependentUpon>
@@ -122,6 +134,22 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MenuPrincipal\MenuPrincipalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayerCancion\NotasVisuales\NotaVisual1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayerCancion\NotasVisuales\NotaVisual2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayerCancion\NotasVisuales\NotaVisual3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayerCancion\NotasVisuales\NotaVisual4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
