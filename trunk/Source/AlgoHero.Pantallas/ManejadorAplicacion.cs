@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using AlgoHero.Juego.Core;
 using AlgoHero.Juego.Intefaces;
 using AlgoHero.Pantallas.MenuPrincipal;
@@ -8,13 +9,13 @@ using AlgoHero.Pantallas.PlayerCancion;
 
 namespace AlgoHero.Pantallas
 {
-    public class InicializadorAplicacion
+    public class ManejadorAplicacion
     {
         public void Iniciar()
         {
             ProveedorCancionXml proveedorCancionesDirectorio = new ProveedorCancionXml();
             //TODO: Cambiar para usar el proveedor de verdad
-            IProveedorNiveles proveedorNiveles = new MockProveedorNiveles();
+            IProveedorNiveles proveedorNiveles = new ProveedorNiveles();
 
             VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
 
@@ -31,7 +32,17 @@ namespace AlgoHero.Pantallas
             menuPrincipalViewModel.EmpezarCancionLlamado += playerCancionViewModel.EmpezarCancion;
 
             manejadorVentanaPrincipal.CambiarContenido(menuPrincipal);
+
+            ventanaPrincipal.Closing += this.CerrandoVentanaPrincipal;
+
             ventanaPrincipal.Show();
+
+            this.AplicacionCorriendo = true;
+        }
+
+        public void CerrandoVentanaPrincipal(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.AplicacionCorriendo = false;
         }
 
         /*Crear un nuevo proveedor niveles y borrar esta clase.*/
@@ -55,15 +66,11 @@ namespace AlgoHero.Pantallas
             {
                 return this.niveles;
             }
+        }
 
-            #region Miembros de IProveedorNiveles
-
-            ObservableCollection<Nivel> IProveedorNiveles.ObtenerNiveles()
-            {
-                throw new System.NotImplementedException();
-            }
-
-            #endregion
+        public bool AplicacionCorriendo
+        {
+            get; private set;
         }
     }
 }

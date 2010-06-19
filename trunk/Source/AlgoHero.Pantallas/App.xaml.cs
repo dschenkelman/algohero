@@ -10,7 +10,7 @@ namespace AlgoHero.Pantallas
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            new InicializadorAplicacion().Iniciar();
+            new ManejadorAplicacion().Iniciar();
         }
     }
 }
