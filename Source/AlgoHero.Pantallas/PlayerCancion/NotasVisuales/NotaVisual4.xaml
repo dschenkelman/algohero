@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="AlgoHero.Pantallas.PlayerCancion.NotasVisuales.NotaVisual4"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Ellipse Width="40" Height="40">
+        <Ellipse.Fill>
+            <RadialGradientBrush>
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="Cyan" Offset="0.9"/>
+                <GradientStop Color="White" Offset="0.1"/>
+            </RadialGradientBrush>
+        </Ellipse.Fill>
+    </Ellipse>
+</UserControl>

@@ -89,23 +89,5 @@ namespace AlgoHeroMusic.Entities.Tests.Core
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(0.25, segundos);
         }
-
-        [Test]
-        public void CalcularDuracionNotaMusicalFusaDevuelveValorCorrecto()
-        {
-            var tiempoCancion = new TiempoCancion(4, 2);
-            var nota = new Nota(this.tonos, FiguraMusical.Fusa);
-            double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
-            Assert.AreEqual(0.125, segundos);
-        }
-
-        [Test]
-        public void CalcularDuracionNotaMusicalSemifusaDevuelveValorCorrecto()
-        {
-            var tiempoCancion = new TiempoCancion(4, 2);
-            var nota = new Nota(this.tonos, FiguraMusical.Semifusa);
-            double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
-            Assert.AreEqual(0.0625, segundos);
-        }
     }
 }

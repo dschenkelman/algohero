@@ -45,29 +45,6 @@ namespace AlgoHero.Pantallas
             this.AplicacionCorriendo = false;
         }
 
-        /*Crear un nuevo proveedor niveles y borrar esta clase.*/
-        private class MockProveedorNiveles : IProveedorNiveles
-        {
-            private ObservableCollection<Nivel> niveles;
-
-            public MockProveedorNiveles()
-            {
-                Nivel facil = new Nivel("Facil", null);
-                Nivel medio = new Nivel("Medio", null);
-                Nivel dificil = new Nivel("Dificil", null);
-                niveles = new ObservableCollection<Nivel>();
-
-                this.niveles.Add(facil);
-                this.niveles.Add(medio);
-                this.niveles.Add(dificil);
-            }
-
-            public ObservableCollection<Nivel> ObtenerNiveles()
-            {
-                return this.niveles;
-            }
-        }
-
         public bool AplicacionCorriendo
         {
             get; private set;

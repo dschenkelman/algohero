@@ -50,6 +50,7 @@ namespace AlgoHero.Pantallas.Tests
             Assert.AreEqual(vistaPlayerCancion, manejadorVentanaPrincipal.Contenido);
         }
 
+
         private class MockVistaPlayerCancion : IVistaPlayerCancion
         {
 
