@@ -17,8 +17,8 @@ namespace AlgoHero.PuntuacionJuego
         public void AcertarNota()
         {
             this.RachaDeNotasAcertadas++;
-            this.PuntosAcumulados++; // suponiendo que cada nota acertada da 1 punto
-
+            this.PuntosAcumulados += this.Multiplicador; 
+            //si el mult es uno un punto por nota, si es dos, dos... etc
             if (this.VerificarCambioMultiplicador())
             {
                 this.Multiplicador++;
