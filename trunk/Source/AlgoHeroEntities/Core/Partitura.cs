@@ -25,16 +25,9 @@ namespace AlgoHero.MusicEntities.Core
             get { return this.compases.Count; }
         }
 
-        /*Devuelve la duracion del compas. Depende del tiempo de la cancion.*/
-        public double DuracionCompas
+        public TiempoCancion TiempoCancion
         {
-            get { return this.tiempoCancion.DuracionCompas; }
-        }
-
-        /*Devuelve la cantidad de blancas por compas. Depende del tiempo de la cancion.*/
-        public double CantidadBlancasPorCompas
-        {
-            get { return this.tiempoCancion.CantidadBlancas; }
+            get { return this.tiempoCancion; }
         }
 
         /*Agrega un compas a la partitura. Si el compas no esta completo lanza una excepcion ExcepcionCompasInvalido.*/

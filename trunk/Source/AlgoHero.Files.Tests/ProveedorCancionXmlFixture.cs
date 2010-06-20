@@ -38,8 +38,8 @@ namespace AlgoHero.Files.Tests
             IProveedorCancion proveedor = new ProveedorCancionXml();
             Cancion cancion = proveedor.ObtenerCancionConPartitura(pathCancion);
 
-            Assert.AreEqual(4, cancion.Partitura.DuracionCompas);
-            Assert.AreEqual(2, cancion.Partitura.CantidadBlancasPorCompas);
+            Assert.AreEqual(4, cancion.Partitura.TiempoCancion.DuracionCompas);
+            Assert.AreEqual(2, cancion.Partitura.TiempoCancion.CantidadBlancas);
         }
 
         [Test]

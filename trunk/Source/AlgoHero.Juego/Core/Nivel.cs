@@ -1,4 +1,5 @@
-﻿using AlgoHero.Juego.Intefaces;
+﻿using System;
+using AlgoHero.Juego.Intefaces;
 using AlgoHero.MusicEntities.Core;
 
 namespace AlgoHero.Juego.Core
@@ -24,6 +25,19 @@ namespace AlgoHero.Juego.Core
         public string Descripcion
         {
             get; private set;
+        }
+
+        public bool EsFinalCancion
+        {
+            get
+            {
+                return this.estrategiaNivel.EsFinalCancion();
+            }
+        }
+
+        public Nota ObtenerSiguienteNota()
+        {
+            return this.estrategiaNivel.ObtenerSiguienteNota();
         }
     }
 }
