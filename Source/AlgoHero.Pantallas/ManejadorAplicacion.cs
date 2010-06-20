@@ -6,6 +6,7 @@ using AlgoHero.Pantallas.MenuPrincipal;
 using AlgoHero.Files;
 using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.Pantallas.PlayerCancion;
+using AlgoHero.MusicEntities.Servicios;
 
 namespace AlgoHero.Pantallas
 {
@@ -27,7 +28,7 @@ namespace AlgoHero.Pantallas
 
             IVistaPlayerCancion vistaPlayerCancion = new VistaPlayerCancion();
             IPlayerCancionViewModel playerCancionViewModel = 
-                new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancionesDirectorio, null);
+                new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancionesDirectorio, new CalculadorDuracionNotas());
 
             menuPrincipalViewModel.EmpezarCancionLlamado += playerCancionViewModel.EmpezarCancion;
 
