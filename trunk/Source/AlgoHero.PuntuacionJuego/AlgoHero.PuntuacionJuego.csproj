@@ -48,6 +48,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puntuacion.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlgoHero.Juego\AlgoHero.Juego.csproj">
+      <Project>{EFBA1611-F98C-471A-8EC7-312F641BB256}</Project>
+      <Name>AlgoHero.Juego</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
