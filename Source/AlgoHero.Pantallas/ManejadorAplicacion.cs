@@ -27,7 +27,7 @@ namespace AlgoHero.Pantallas
 
             IVistaPlayerCancion vistaPlayerCancion = new VistaPlayerCancion();
             IPlayerCancionViewModel playerCancionViewModel = 
-                new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancionesDirectorio);
+                new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancionesDirectorio, null);
 
             menuPrincipalViewModel.EmpezarCancionLlamado += playerCancionViewModel.EmpezarCancion;
 

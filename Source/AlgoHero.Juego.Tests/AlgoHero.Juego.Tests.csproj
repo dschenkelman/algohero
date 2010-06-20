@@ -46,6 +46,7 @@
     <Compile Include="Core\EstrategiaNivelMedioFixture.cs" />
     <Compile Include="Core\Mocks\MockControladorTeclas.cs" />
     <Compile Include="Core\Mocks\MockTecla.cs" />
+    <Compile Include="Core\NivelTests.cs" />
     <Compile Include="Core\ProveedorNivelesTests.cs" />
     <Compile Include="Entrada\ControladorTeclasTests.cs" />
     <Compile Include="Entrada\MapeoTecladoEntidadesEntradaTests.cs" />
