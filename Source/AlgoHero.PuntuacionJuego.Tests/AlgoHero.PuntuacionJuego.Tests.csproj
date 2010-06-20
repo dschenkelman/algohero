@@ -50,6 +50,10 @@
     <Compile Include="PuntuacionTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlgoHero.Juego\AlgoHero.Juego.csproj">
+      <Project>{EFBA1611-F98C-471A-8EC7-312F641BB256}</Project>
+      <Name>AlgoHero.Juego</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AlgoHero.PuntuacionJuego\AlgoHero.PuntuacionJuego.csproj">
       <Project>{26C6791C-60D2-4083-9069-5981CD72067B}</Project>
       <Name>AlgoHero.PuntuacionJuego</Name>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using AlgoHero.Juego.Core;
 using NUnit.Framework;
 
 namespace AlgoHero.PuntuacionJuego.Tests
@@ -14,7 +11,9 @@ namespace AlgoHero.PuntuacionJuego.Tests
         [SetUp]
         public void TestInitialize()
         {
-            puntuacionActual = new Puntuacion("medio");
+            EstrategiaNivelMedio estrategiaNivel = new EstrategiaNivelMedio();
+            Nivel nivelJuego = new Nivel("medio", estrategiaNivel);
+            puntuacionActual = new Puntuacion(nivelJuego);
         }
 
         [Test]
