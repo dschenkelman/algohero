@@ -1,0 +1,85 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:App.xaml" caret="252" fromTop="1" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml.cs" caret="557" fromTop="20" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionViewModel.cs" caret="779" fromTop="0" />
+      <File id="299B301E-1976-4AD3-9948-CD4DD1D6BC33/f:Puntuacion.cs" caret="807" fromTop="19" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="0" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="299B301E-1976-4AD3-9948-CD4DD1D6BC33/f:Puntuacion.cs" caret="2066" fromTop="23" />
+      <File id="299B301E-1976-4AD3-9948-CD4DD1D6BC33/f:Puntuacion.cs" caret="1452" fromTop="20" />
+      <File id="299B301E-1976-4AD3-9948-CD4DD1D6BC33/f:Puntuacion.cs" caret="114" fromTop="6" />
+      <File id="299B301E-1976-4AD3-9948-CD4DD1D6BC33/f:Puntuacion.cs" caret="56" fromTop="2" />
+      <File id="299B301E-1976-4AD3-9948-CD4DD1D6BC33/f:Puntuacion.cs" caret="56" fromTop="2" />
+      <File id="299B301E-1976-4AD3-9948-CD4DD1D6BC33/f:Puntuacion.cs" caret="17" fromTop="1" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionViewModel.cs" caret="230" fromTop="8" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionViewModel.cs" caret="2307" fromTop="18" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:App.xaml" caret="205" fromTop="2" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionViewModel.cs" caret="466" fromTop="15" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionViewModel.cs" caret="2187" fromTop="22" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml.cs" caret="557" fromTop="20" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionViewModel.cs" caret="1905" fromTop="11" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="579" fromTop="1" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="579" fromTop="3" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="1827" fromTop="5" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="1827" fromTop="2" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="231" fromTop="2" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="1749" fromTop="3" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="1328" fromTop="1" />
+      <File id="A5A43360-5330-4FDC-B34C-88CA4229BA7E/f:PuntuacionView.xaml" caret="915" fromTop="2" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.4.8\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="private" priority="1" />
+      <Item value="public" priority="3" />
+      <Item value="PuntuacionViewModel`0" priority="3" />
+      <Item value="multiplicador" priority="0" />
+      <Item value="puntuacionJuego" priority="6" />
+      <Item value="this" priority="13" />
+      <Item value="return" priority="1" />
+      <Item value="if" priority="2" />
+      <Item value="Puntuacion`0" priority="2" />
+      <Item value="int" priority="1" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="new" priority="1" />
+      <Item value="PropertyChangedEventArgs`0" priority="0" />
+      <Item value="PropertyChangedEventArgs" priority="0" />
+      <Item value="puntuacion" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PuntuacionVista.PuntuacionViewModel">
+      <Item value="racha" priority="5" />
+      <Item value="puntosAcumulados" priority="3" />
+      <Item value="multiplicador" priority="2" />
+      <Item value="puntuacionJuego" priority="5" />
+      <Item value="PropertyChanged" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AlgoHero.PuntuacionJuego.Puntuacion">
+      <Item value="Multiplicador" priority="2" />
+      <Item value="PuntosAcumulados" priority="3" />
+      <Item value="RachaDeNotasAcertadas" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PuntuacionVista.PuntuacionView">
+      <Item value="DataContext" priority="2" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

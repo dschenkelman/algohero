@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuntuacionVista", "PuntuacionVista\PuntuacionVista.csproj", "{A5A43360-5330-4FDC-B34C-88CA4229BA7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuntuacionJuego", "PuntuacionJuego\PuntuacionJuego.csproj", "{299B301E-1976-4AD3-9948-CD4DD1D6BC33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5A43360-5330-4FDC-B34C-88CA4229BA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A43360-5330-4FDC-B34C-88CA4229BA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A43360-5330-4FDC-B34C-88CA4229BA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A43360-5330-4FDC-B34C-88CA4229BA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{299B301E-1976-4AD3-9948-CD4DD1D6BC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{299B301E-1976-4AD3-9948-CD4DD1D6BC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{299B301E-1976-4AD3-9948-CD4DD1D6BC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{299B301E-1976-4AD3-9948-CD4DD1D6BC33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

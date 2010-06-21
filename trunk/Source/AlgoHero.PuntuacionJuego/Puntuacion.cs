@@ -56,5 +56,6 @@ namespace AlgoHero.PuntuacionJuego
         public int Multiplicador { get; private set; }
         public int RachaDeNotasAcertadas { get; private set; }
         public int PuntosAcumulados { get; private set; }
+
     }
 }
