@@ -23,7 +23,7 @@ namespace AlgoHero.Juego.Tests.Core.Mocks
 
         public ITecla ObtenerTecla(int index)
         {
-            return this.Teclas[index];
+            return this.Teclas[index - 1];
         }
 
         public IEnumerable<ITecla> ObtenerTeclas()
@@ -33,7 +33,7 @@ namespace AlgoHero.Juego.Tests.Core.Mocks
 
         public ITecla ObtenerTecla(EntidadEntrada entidadEntrada)
         {
-            return this.Teclas[entidadEntrada.Codigo - 1];
+            return this.Teclas[entidadEntrada.Codigo];
         }
     }
 }

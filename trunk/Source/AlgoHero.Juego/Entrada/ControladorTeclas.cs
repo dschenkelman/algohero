@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AlgoHero.Interface;
+using AlgoHero.MusicEntities.Core;
 
 namespace AlgoHero.Juego.Entrada
 {
@@ -40,6 +41,11 @@ namespace AlgoHero.Juego.Entrada
         public IEnumerable<ITecla> ObtenerTeclas()
         {
             return this.teclas;
+        }
+
+        public IEnumerable<ITecla> ObtenerTeclas(Nota nota)
+        {
+            throw new NotImplementedException();
         }
     }
 }

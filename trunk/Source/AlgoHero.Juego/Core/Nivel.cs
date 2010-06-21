@@ -1,6 +1,7 @@
 ﻿using System;
 using AlgoHero.Juego.Intefaces;
 using AlgoHero.MusicEntities.Core;
+using AlgoHero.Interface;
 
 namespace AlgoHero.Juego.Core
 {
@@ -35,9 +36,15 @@ namespace AlgoHero.Juego.Core
             }
         }
 
+
         public Nota ObtenerSiguienteNota()
         {
             return this.estrategiaNivel.ObtenerSiguienteNota();
+        }
+
+        public void AsignarTeclas(IControladorTeclas controladorTeclas)
+        {
+            this.estrategiaNivel.AsignarTonos(controladorTeclas);
         }
     }
 }

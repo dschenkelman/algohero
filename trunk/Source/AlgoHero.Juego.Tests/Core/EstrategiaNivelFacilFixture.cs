@@ -88,8 +88,8 @@ namespace AlgoHero.Juego.Tests.Core
             nivel.AsignarCancion(this.cancion);
 
             nivel.AsignarTonos(control);
-            ITecla teclaUno = control.ObtenerTecla(0);
-            ITecla teclaDos = control.ObtenerTecla(1);
+            ITecla teclaUno = control.ObtenerTecla(1);
+            ITecla teclaDos = control.ObtenerTecla(2);
             ReadOnlyCollection<Tono> listaUno = teclaUno.ObtenerTonosAsociados();
             ReadOnlyCollection<Tono> listaDos = teclaDos.ObtenerTonosAsociados();
             Assert.IsTrue(listaUno.Contains(Tono.Do));

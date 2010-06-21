@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using AlgoHero.Interface;
+using AlgoHero.Interface.Enums;
 using AlgoHero.Juego.Entrada;
 using NUnit.Framework;
+using AlgoHero.MusicEntities.Core;
 
 namespace AlgoHero.Juego.Tests.Entrada
 {
