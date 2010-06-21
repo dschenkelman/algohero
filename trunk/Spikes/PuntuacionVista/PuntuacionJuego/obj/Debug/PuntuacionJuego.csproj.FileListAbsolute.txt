@@ -1,5 +1,0 @@
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionJuego\bin\Debug\PuntuacionJuego.dll
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionJuego\bin\Debug\PuntuacionJuego.pdb
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionJuego\obj\Debug\ResolveAssemblyReference.cache
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionJuego\obj\Debug\PuntuacionJuego.dll
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionJuego\obj\Debug\PuntuacionJuego.pdb
