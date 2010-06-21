@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Timers;
 using AlgoHero.Interface.Enums;
 using AlgoHero.Juego.Core;
 using AlgoHero.MusicEntities.Core;
@@ -10,6 +9,8 @@ using AlgoHero.Files.Interfaces;
 using AlgoHero.Pantallas.Eventos;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
 using AlgoHero.Juego.Intefaces;
+using System.Threading;
+using System.Diagnostics;
 
 namespace AlgoHero.Pantallas.Tests
 {
@@ -24,7 +25,7 @@ namespace AlgoHero.Pantallas.Tests
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }
-                , new Nivel("Nivel Test", new MockEstrategiaNivel())));
+                , new Nivel("Nivel Test", new MockEstrategiaNivelCancionFinita())));
 
             Assert.AreEqual("Cancion Recuperada", vm.CancionActual.Nombre);
         }
@@ -37,7 +38,7 @@ namespace AlgoHero.Pantallas.Tests
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }
-                , new Nivel("Nivel Test", new MockEstrategiaNivel())));
+                , new Nivel("Nivel Test", new MockEstrategiaNivelCancionFinita())));
 
             Assert.AreEqual("Nivel Test", vm.NivelActual.Descripcion);
         }
@@ -53,7 +54,7 @@ namespace AlgoHero.Pantallas.Tests
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }
-                , new Nivel("Nivel Test", new MockEstrategiaNivel())));
+                , new Nivel("Nivel Test", new MockEstrategiaNivelCancionFinita())));
 
             Assert.AreEqual(vistaPlayerCancion, manejadorVentanaPrincipal.Contenido);
         }
@@ -69,7 +70,7 @@ namespace AlgoHero.Pantallas.Tests
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo"){PathPartitura = "MiPath"}
-                , new Nivel("Nivel Test", new MockEstrategiaNivel())));
+                , new Nivel("Nivel Test", new MockEstrategiaNivelCancionFinita())));
 
             Assert.IsTrue(calculadorDuracionNotas.CalcularDuracionFueLlamado);
             Assert.AreEqual(FiguraMusical.Semicorchea, calculadorDuracionNotas.FiguraLlamado);
@@ -78,8 +79,8 @@ namespace AlgoHero.Pantallas.Tests
         [Test]
         public void ActualizarEstadoPideSiguienteNotaSoloSiNoEstaAlFinalDeLaCancion()
         {
-            MockEstrategiaNivel mockEstrategiaNivel = new MockEstrategiaNivel();
-            Nivel nivel = new Nivel("Mock", mockEstrategiaNivel);
+            MockEstrategiaNivelCancionFinita mockEstrategiaNivelCancionFinita = new MockEstrategiaNivelCancionFinita();
+            Nivel nivel = new Nivel("Mock", mockEstrategiaNivelCancionFinita);
             
             IVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
@@ -91,17 +92,69 @@ namespace AlgoHero.Pantallas.Tests
                 new Cancion("Jijiji", "Los redondos"){PathPartitura = "MiPath"}
                 , nivel));
 
-            for (int i = 0; i < 20; i++)
+            //loopear mucho para que se acaben las notas
+            for (int i = 0; i < 1000; i++)
             {
                 vm.ActualizarEstado(this, null);
             }
             
-            Assert.AreEqual(10, mockEstrategiaNivel.LlamadosObtenerNotas);
-            Assert.IsTrue(mockEstrategiaNivel.EsFinalCancion());
+            Assert.AreEqual(10, mockEstrategiaNivelCancionFinita.LlamadosObtenerNotas);
+            Assert.IsTrue(mockEstrategiaNivelCancionFinita.EsFinalCancion());
         }
 
+        [Test]
+        public void ActualizarEstadoPideSiguienteNotaCuandoTiempoEntreNotasEsIgualATiempoDesdeNotaAnterior()
+        {
+            MockEstrategiaNivelCancionInfinita mockEstrategiaNivelCancionInfinita = new MockEstrategiaNivelCancionInfinita();
+            Nivel nivel = new Nivel("Mock", mockEstrategiaNivelCancionInfinita);
 
-        private class MockEstrategiaNivel : IEstrategiaNivel
+            IVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancion, calculadorDuracionNotas);
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(
+                new Cancion("Jijiji", "Los redondos") { PathPartitura = "MiPath" }
+                , nivel));
+            
+            Thread.Sleep(2100);
+
+            Assert.AreEqual(3, mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas);
+        }
+
+        private class MockEstrategiaNivelCancionInfinita : IEstrategiaNivel
+        {
+
+            public int LlamadosObtenerNotas { get; set; }
+
+            #region IEstrategiaNivel Members
+
+            public Nota ObtenerSiguienteNota()
+            {
+                LlamadosObtenerNotas++;
+                return new Nota(Tono.Do, FiguraMusical.Negra);
+            }
+
+            public bool EsFinalCancion()
+            {
+                return false;
+            }
+
+            public void AsignarTonos(AlgoHero.Interface.IControladorTeclas controlador)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void AsignarCancion(Cancion cancion)
+            {
+
+            }
+
+            #endregion
+        }
+
+        private class MockEstrategiaNivelCancionFinita : IEstrategiaNivel
         {
             private int contador = 0;
 
@@ -157,8 +210,15 @@ namespace AlgoHero.Pantallas.Tests
             {
                 this.CalcularDuracionFueLlamado = true;
                 this.FiguraLlamado = figuraMusical;
-
-                return 1;
+                if (figuraMusical == FiguraMusical.Negra)
+                {
+                    return 1;
+                }
+                else if(figuraMusical == FiguraMusical.Semicorchea)
+                {
+                    return 0.25;
+                }
+                return 0;
             }
 
             public bool CalcularDuracionFueLlamado

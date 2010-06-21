@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlgoHero.MusicEntities.Core
+﻿namespace AlgoHero.MusicEntities.Core
 {
     public class Cancion
     {

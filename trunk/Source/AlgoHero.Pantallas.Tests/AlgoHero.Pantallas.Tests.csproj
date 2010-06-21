@@ -61,6 +61,7 @@
     <Compile Include="Mocks\MockProveedorNiveles.cs" />
     <Compile Include="PlayerCancionViewModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimerDePrecisionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlgoHero.Files\AlgoHero.Files.csproj">

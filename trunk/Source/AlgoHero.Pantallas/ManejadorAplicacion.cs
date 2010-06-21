@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using AlgoHero.Juego.Core;
+﻿using AlgoHero.Juego.Core;
 using AlgoHero.Juego.Intefaces;
 using AlgoHero.Pantallas.MenuPrincipal;
 using AlgoHero.Files;
@@ -15,7 +13,7 @@ namespace AlgoHero.Pantallas
         public void Iniciar()
         {
             ProveedorCancionXml proveedorCancionesDirectorio = new ProveedorCancionXml();
-            //TODO: Cambiar para usar el proveedor de verdad
+            
             IProveedorNiveles proveedorNiveles = new ProveedorNiveles();
 
             VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
