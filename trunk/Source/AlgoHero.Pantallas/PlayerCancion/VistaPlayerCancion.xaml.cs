@@ -5,7 +5,6 @@ using AlgoHero.Interface;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.Pantallas.PlayerCancion.NotasVisuales;
-using System.Windows;
 using System.Windows.Threading;
 
 namespace AlgoHero.Pantallas.PlayerCancion
@@ -41,7 +40,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
         {
             foreach (var tecla in teclas)
             {
-                Dispatcher.BeginInvoke(new ConvocarNotaVisualInterno(this.AgregarNotaVisualInterno), DispatcherPriority.ApplicationIdle, nota, tecla);
+                Dispatcher.BeginInvoke(new ConvocarNotaVisualInterno(this.AgregarNotaVisualInterno), DispatcherPriority.Send, nota, tecla);
             }
         }
 
@@ -87,5 +86,32 @@ namespace AlgoHero.Pantallas.PlayerCancion
                     throw new ArgumentException();
             }
         }
+
+        #region IVistaPlayerCancion Members
+
+
+        public delegate void InvocarActualizarNotaVisual();
+
+        public void Actualizar()
+        {
+            Dispatcher.BeginInvoke(new InvocarActualizarNotaVisual(this.ActualizarInterno), DispatcherPriority.Send);
+        }
+
+        private void ActualizarInterno()
+        {
+            int cantidadEntradas = this.listaNotasEntrada.Count;
+            for (int i = 0; i < cantidadEntradas; i++)
+            {
+                List<INotaVisual> notasEntrada = this.listaNotasEntrada[i];
+                int cantidadNotas = notasEntrada.Count;
+                for (int j = 0; j < cantidadNotas; j++)
+                {
+                    notasEntrada[j].Actualizar();
+                    this.UpdateLayout();
+                }
+            }
+        }
+
+        #endregion
     }
 }

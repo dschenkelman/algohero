@@ -172,6 +172,32 @@ namespace AlgoHero.Pantallas.Tests
         }
 
 
+        [Test]
+        public void ActualizarEstadoActualizarVista()
+        {
+            MockEstrategiaNivelCancionFinita mockEstrategiaNivelCancionFinita = new MockEstrategiaNivelCancionFinita();
+            Nivel nivel = new Nivel("Mock", mockEstrategiaNivelCancionFinita);
+
+            MockVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                new MockMapeoTecladoEntidadesEntrada());
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(
+                new Cancion("Jijiji", "Los redondos") { PathPartitura = "MiPath" }
+                , nivel));
+
+            //loopear mucho para que se acaben las notas
+            vm.ActualizarEstado(this, null);
+
+            Assert.IsTrue(vistaPlayerCancion.ActualizarFueLlamado);
+        }
+
+
         //Hay que correr el test separado de los demas
         [Test]
         public void ActualizarEstadoPideSiguienteNotaCuandoTiempoEntreNotasEsIgualATiempoDesdeNotaAnterior()
@@ -365,9 +391,19 @@ namespace AlgoHero.Pantallas.Tests
                 get; set;
             }
 
+            public bool ActualizarFueLlamado
+            {
+                get; set;
+            }
+
             public void AgregarNotaVisual(Nota nota, IEnumerable<ITecla> teclas)
             {
                 this.AgregarNotaVisualFueLlamado = true;
+            }
+
+            public void Actualizar()
+            {
+                this.ActualizarFueLlamado = true;
             }
         }
 
