@@ -35,5 +35,12 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
             Canvas.SetTop(this, alturaAnterior + this.ActualHeight / 5);
         }
 
+        public bool PuedeBorrarse()
+        {
+            return NotaVisual.PuedeBorrarse(this);
+        }
+
+      
+
     }
 }

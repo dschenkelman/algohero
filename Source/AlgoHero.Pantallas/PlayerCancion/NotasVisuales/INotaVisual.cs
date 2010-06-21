@@ -7,5 +7,6 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
         Nota NotaRelacionada { get; }
         void AgregarACanvas(Canvas canvas);
         void Actualizar();
+        bool PuedeBorrarse();
     }
 }
