@@ -5,6 +5,7 @@ using AlgoHero.Files;
 using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.Pantallas.PlayerCancion;
 using AlgoHero.MusicEntities.Servicios;
+using AlgoHero.Juego.Entrada;
 
 namespace AlgoHero.Pantallas
 {
@@ -13,7 +14,7 @@ namespace AlgoHero.Pantallas
         public void Iniciar()
         {
             ProveedorCancionXml proveedorCancionesDirectorio = new ProveedorCancionXml();
-            
+         
             IProveedorNiveles proveedorNiveles = new ProveedorNiveles();
 
             VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
@@ -26,7 +27,7 @@ namespace AlgoHero.Pantallas
 
             IVistaPlayerCancion vistaPlayerCancion = new VistaPlayerCancion();
             IPlayerCancionViewModel playerCancionViewModel = 
-                new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancionesDirectorio, new CalculadorDuracionNotas());
+                new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancionesDirectorio, new CalculadorDuracionNotas(), new MapeoTecladoEntidadesEntrada());
 
             menuPrincipalViewModel.EmpezarCancionLlamado += playerCancionViewModel.EmpezarCancion;
 

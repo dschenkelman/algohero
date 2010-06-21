@@ -89,6 +89,7 @@
       <DependentUpon>MenuPrincipalView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal\MenuPrincipalViewModel.cs" />
+    <Compile Include="PlayerCancion\NotasVisuales\INotaVisual.cs" />
     <Compile Include="PlayerCancion\NotasVisuales\NotaVisual1.xaml.cs">
       <DependentUpon>NotaVisual1.xaml</DependentUpon>
     </Compile>

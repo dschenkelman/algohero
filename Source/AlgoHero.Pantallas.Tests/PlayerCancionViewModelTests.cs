@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+using AlgoHero.Interface;
 using AlgoHero.Interface.Enums;
 using AlgoHero.Juego.Core;
 using AlgoHero.MusicEntities.Core;
@@ -10,7 +14,6 @@ using AlgoHero.Pantallas.Eventos;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
 using AlgoHero.Juego.Intefaces;
 using System.Threading;
-using System.Diagnostics;
 
 namespace AlgoHero.Pantallas.Tests
 {
@@ -21,7 +24,11 @@ namespace AlgoHero.Pantallas.Tests
         public void HandlearElEventoEmpezarCancionObtieneCancionConPartitura()
         {
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null, new MockManejadorVentanaPrincipal(), proveedorCancion, new MockCalculadorDuracionNotas());
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null,
+                new MockManejadorVentanaPrincipal(),
+                proveedorCancion,
+                new MockCalculadorDuracionNotas(),
+                new MockMapeoTecladoEntidadesEntrada());
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }
@@ -30,11 +37,16 @@ namespace AlgoHero.Pantallas.Tests
             Assert.AreEqual("Cancion Recuperada", vm.CancionActual.Nombre);
         }
 
+
         [Test]
         public void HandlearElEventoEmpezarCancionGuardaNivel()
         {
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null, new MockManejadorVentanaPrincipal(), proveedorCancion, new MockCalculadorDuracionNotas());
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null,
+                new MockManejadorVentanaPrincipal(),
+                proveedorCancion,
+                new MockCalculadorDuracionNotas(),
+                new MockMapeoTecladoEntidadesEntrada());
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }
@@ -44,13 +56,38 @@ namespace AlgoHero.Pantallas.Tests
         }
 
         [Test]
+        public void HandlearElEventoEmpezarCancionLlamaAMetodosNivel()
+        {
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null,
+                new MockManejadorVentanaPrincipal(),
+                proveedorCancion,
+                new MockCalculadorDuracionNotas(),
+                new MockMapeoTecladoEntidadesEntrada());
+
+            MockEstrategiaNivelCancionFinita estrategiaNivelCancionFinita =  new MockEstrategiaNivelCancionFinita();
+            
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
+                (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }
+                , new Nivel("Nivel Test", estrategiaNivelCancionFinita)));
+
+            Assert.IsTrue(estrategiaNivelCancionFinita.AsignarCancionLlamado);
+            Assert.IsTrue(estrategiaNivelCancionFinita.AsignarTonosLlamado);
+        }
+
+        [Test]
         public void AlEmpezarCancionCambiaContenidoDeVentanaPrincipal()
         {
             IVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
             MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
             MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancion, calculadorDuracionNotas);
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion,
+                manejadorVentanaPrincipal,
+                proveedorCancion,
+                calculadorDuracionNotas,
+                new MockMapeoTecladoEntidadesEntrada());
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo") { PathPartitura = "MiPath" }
@@ -66,7 +103,10 @@ namespace AlgoHero.Pantallas.Tests
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
             MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
             MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancion, calculadorDuracionNotas);
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                new MockMapeoTecladoEntidadesEntrada());
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs
                 (new Cancion("Mi Cancion", "Mi Grupo"){PathPartitura = "MiPath"}
@@ -86,7 +126,10 @@ namespace AlgoHero.Pantallas.Tests
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
             MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
             MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancion, calculadorDuracionNotas);
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                new MockMapeoTecladoEntidadesEntrada());
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(
                 new Cancion("Jijiji", "Los redondos"){PathPartitura = "MiPath"}
@@ -103,6 +146,34 @@ namespace AlgoHero.Pantallas.Tests
         }
 
         [Test]
+        public void ActualizarEstadoAgregaNotaANotasVisualesDeVista()
+        {
+            MockEstrategiaNivelCancionFinita mockEstrategiaNivelCancionFinita = new MockEstrategiaNivelCancionFinita();
+            Nivel nivel = new Nivel("Mock", mockEstrategiaNivelCancionFinita);
+
+            MockVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                new MockMapeoTecladoEntidadesEntrada());
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(
+                new Cancion("Jijiji", "Los redondos") { PathPartitura = "MiPath" }
+                , nivel));
+
+            //loopear mucho para que se acaben las notas
+            vm.ActualizarEstado(this, null);
+            
+
+            Assert.IsTrue(vistaPlayerCancion.AgregarNotaVisualFueLlamado);
+        }
+
+
+        //Hay que correr el test separado de los demas
+        [Test]
         public void ActualizarEstadoPideSiguienteNotaCuandoTiempoEntreNotasEsIgualATiempoDesdeNotaAnterior()
         {
             MockEstrategiaNivelCancionInfinita mockEstrategiaNivelCancionInfinita = new MockEstrategiaNivelCancionInfinita();
@@ -112,7 +183,10 @@ namespace AlgoHero.Pantallas.Tests
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
             MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
             MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancion, calculadorDuracionNotas);
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                new MockMapeoTecladoEntidadesEntrada());
 
             vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(
                 new Cancion("Jijiji", "Los redondos") { PathPartitura = "MiPath" }
@@ -120,7 +194,49 @@ namespace AlgoHero.Pantallas.Tests
             
             Thread.Sleep(2100);
 
-            Assert.AreEqual(3, mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas);
+            Assert.GreaterOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas ,2);
+            Assert.LessOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas, 4);
+        }
+        
+        //Hay que correr el test separado de los demas. Para hacerlo sacar el atributo ignore.
+        [Test]
+        public void ActualizarEstadoPideSiguienteNotaCuandoTiempoEntreNotasEsIgualATiempoDesdeNotaAnterior2()
+        {
+            MockEstrategiaNivelCancionInfinita mockEstrategiaNivelCancionInfinita = new MockEstrategiaNivelCancionInfinita();
+            Nivel nivel = new Nivel("Mock", mockEstrategiaNivelCancionInfinita);
+
+            IVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                new MockMapeoTecladoEntidadesEntrada());
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(
+                new Cancion("Jijiji", "Los redondos") { PathPartitura = "MiPath" }
+                , nivel));
+
+            Thread.Sleep(5100);
+
+            Assert.GreaterOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas, 5);
+            Assert.LessOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas, 7);
+        }
+
+
+
+        private class MockMapeoTecladoEntidadesEntrada : IMapeoTecladoEntidadesEntrada
+        {
+            public EntidadEntrada ObtenerEntidadEntrada(Key key)
+            {
+                return new EntidadEntrada(1);
+            }
+
+            public ReadOnlyCollection<EntidadEntrada> ObtenerEntidadesEntrada()
+            {
+                return new ReadOnlyCollection<EntidadEntrada>(new List<EntidadEntrada>() { new EntidadEntrada(1) });
+            }
         }
 
         private class MockEstrategiaNivelCancionInfinita : IEstrategiaNivel
@@ -141,9 +257,9 @@ namespace AlgoHero.Pantallas.Tests
                 return false;
             }
 
-            public void AsignarTonos(AlgoHero.Interface.IControladorTeclas controlador)
+            public void AsignarTonos(IControladorTeclas controlador)
             {
-                throw new NotImplementedException();
+                
             }
 
             public void AsignarCancion(Cancion cancion)
@@ -159,6 +275,16 @@ namespace AlgoHero.Pantallas.Tests
             private int contador = 0;
 
             public int LlamadosObtenerNotas { get; set; }
+
+            public bool AsignarTonosLlamado
+            {
+                get; set;
+            }
+
+            public bool AsignarCancionLlamado
+            {
+                get; set;
+            }
 
             #region IEstrategiaNivel Members
 
@@ -186,14 +312,14 @@ namespace AlgoHero.Pantallas.Tests
                 return false;
             }
 
-            public void AsignarTonos(AlgoHero.Interface.IControladorTeclas controlador)
+            public void AsignarTonos(IControladorTeclas controlador)
             {
-                throw new NotImplementedException();
+                this.AsignarCancionLlamado = true;
             }
 
             public void AsignarCancion(Cancion cancion)
             {
-                
+                this.AsignarTonosLlamado = true;
             }
 
             #endregion
@@ -234,7 +360,15 @@ namespace AlgoHero.Pantallas.Tests
         
         private class MockVistaPlayerCancion : IVistaPlayerCancion
         {
+            public bool AgregarNotaVisualFueLlamado
+            {
+                get; set;
+            }
 
+            public void AgregarNotaVisual(Nota nota, IEnumerable<ITecla> teclas)
+            {
+                this.AgregarNotaVisualFueLlamado = true;
+            }
         }
 
         private class MockProveedorCancionXml : IProveedorCancion

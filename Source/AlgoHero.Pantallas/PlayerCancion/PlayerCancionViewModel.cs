@@ -1,12 +1,15 @@
-﻿using AlgoHero.Files.Interfaces;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AlgoHero.Files.Interfaces;
+using AlgoHero.Interface;
 using AlgoHero.Interface.Enums;
 using AlgoHero.Juego.Core;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Eventos;
 using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
+using AlgoHero.Juego.Entrada;
 using System.Timers;
-using AlgoHero.Pantallas.PlayerCancion.Utilitarios;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {
@@ -18,16 +21,19 @@ namespace AlgoHero.Pantallas.PlayerCancion
         private readonly ICalculadorDuracionNotas calculadorDuracionNotas;
         private decimal intervaloActualizacion;
         private decimal segundosProximaNota;
-        private TimerDePrecision timer;
+        private Timer timer;
+        private readonly IControladorTeclas controladorTeclas;
 
         public PlayerCancionViewModel(IVistaPlayerCancion vistaPlayerCancion, 
             IManejadorVentanaPrincipal manejadorVentanaPrincipal,
-            IProveedorCancion proveedorCancion, ICalculadorDuracionNotas calculadorDuracionNotas)
+            IProveedorCancion proveedorCancion, ICalculadorDuracionNotas calculadorDuracionNotas,
+            IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada)
         {
             this.vistaPlayerCancion = vistaPlayerCancion;
             this.manejadorVentanaPrincipal = manejadorVentanaPrincipal;
             this.proveedorCancion = proveedorCancion;
             this.calculadorDuracionNotas = calculadorDuracionNotas;
+            this.controladorTeclas = new ControladorTeclas(mapeoTecladoEntidadesEntrada);
         }
 
         public Cancion CancionActual
@@ -53,23 +59,43 @@ namespace AlgoHero.Pantallas.PlayerCancion
             EmpezarCiclo();
         }
 
-        public void ActualizarEstado(object sender, IntervaloConsumidoEventArgs e)
+        public void ActualizarEstado(object sender, ElapsedEventArgs e)
         {
             this.segundosProximaNota -= this.intervaloActualizacion;
 
-            if (!this.NivelActual.EsFinalCancion && this.segundosProximaNota == 0m)
+            if (!this.NivelActual.EsFinalCancion && this.segundosProximaNota <= this.intervaloActualizacion)
             {
                 Nota nota = this.NivelActual.ObtenerSiguienteNota();
                 this.segundosProximaNota = (decimal) nota.CalcularTiempoProximaNota(this.CancionActual.Partitura.TiempoCancion);
+
+                IEnumerable<ITecla> teclasRelacionadas = ObtenerTeclasRelacionadas(nota);
+
+                this.vistaPlayerCancion.AgregarNotaVisual(nota, teclasRelacionadas);
             }
         }
 
+       
         #region MetodosPrivados
+        private IEnumerable<ITecla> ObtenerTeclasRelacionadas(Nota nota)
+        {
+            IEnumerable<ITecla> teclas = this.controladorTeclas.ObtenerTeclas();
+
+            List<ITecla> teclasAUsar = new List<ITecla>();
+
+            foreach (Tono tono in nota.Tonos)
+            {
+                Tono tonoLocal = tono;
+                teclasAUsar.AddRange(teclas.Where(t => t.ObtenerTonosAsociados().Contains(tonoLocal)));
+            }
+
+            return teclasAUsar;
+        }
+        
         private void EmpezarCiclo()
         {
-            this.timer = new TimerDePrecision((int) (this.intervaloActualizacion * 1000));
-            this.timer.IntervaloConsumido += ActualizarEstado;
-            this.timer.Comenzar();
+            this.timer = new Timer((double) (this.intervaloActualizacion * 1000));
+            this.timer.Elapsed += ActualizarEstado;
+            this.timer.Start();
         }
 
         private void CalcularIntervaloActualizacion()
@@ -92,6 +118,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.CancionActual = proveedorCancion.ObtenerCancionConPartitura(args.Cancion.PathPartitura);
             this.NivelActual = args.Nivel;
             this.NivelActual.AsignarCancion(this.CancionActual);
+            this.NivelActual.AsignarTeclas(this.controladorTeclas);
         }
         #endregion
 

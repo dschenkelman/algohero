@@ -1,9 +1,9 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using AlgoHero.Juego.Intefaces;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Interface;
 using AlgoHero.Juego.Core;
+using AlgoHero.Juego.Tests.Core.Mocks;
 
 namespace AlgoHero.Juego.Tests.Core
 {
@@ -39,6 +39,17 @@ namespace AlgoHero.Juego.Tests.Core
             Assert.IsTrue(estrategiaNivel.EsFinalCancionFueLlamado);
         }
 
+        [Test]
+        public void AsignarTeclasLlamaEstrategiaNivel()
+        {
+            MockEstrategiaNivel estrategiaNivel = new MockEstrategiaNivel();
+            Nivel nivel = new Nivel("Mock", estrategiaNivel);
+
+            nivel.AsignarTeclas(new MockControladorTeclas());
+
+            Assert.IsTrue(estrategiaNivel.AsignarTeclasFueLlamado);
+        }
+
         private class MockEstrategiaNivel : IEstrategiaNivel
         {
             #region IEstrategiaNivel Members
@@ -57,7 +68,7 @@ namespace AlgoHero.Juego.Tests.Core
 
             public void AsignarTonos(IControladorTeclas controlador)
             {
-                throw new System.NotImplementedException();
+                this.AsignarTeclasFueLlamado = true;
             }
 
             public void AsignarCancion(Cancion cancion)
@@ -74,6 +85,11 @@ namespace AlgoHero.Juego.Tests.Core
 
             public bool EsFinalCancionFueLlamado
             { 
+                get; set;
+            }
+
+            public bool AsignarTeclasFueLlamado
+            {
                 get; set;
             }
         }

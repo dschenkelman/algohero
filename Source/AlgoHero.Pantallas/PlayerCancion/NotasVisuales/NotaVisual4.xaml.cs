@@ -1,27 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
+using AlgoHero.MusicEntities.Core;
 
 namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
 {
     /// <summary>
     /// Interaction logic for NotaVisual4.xaml
     /// </summary>
-    public partial class NotaVisual4 : UserControl
+    public partial class NotaVisual4 : UserControl, INotaVisual
     {
-        public NotaVisual4()
+        public NotaVisual4(Nota nota)
         {
+            this.NotaRelacionada = nota;
             InitializeComponent();
         }
+
+        public Nota NotaRelacionada
+        {
+            get; private set;
+        }
+
+        public void AgregarACanvas(Canvas canvas)
+        {
+            canvas.Children.Add(this);
+            Canvas.SetLeft(this, 10);
+            Canvas.SetRight(this, 10);
+        }
+
     }
 }
