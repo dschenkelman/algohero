@@ -105,7 +105,6 @@
     </Compile>
     <Compile Include="PlayerCancion\PlayerCancionViewModel.cs" />
     <Compile Include="PlayerCancion\Utilitarios\IntervaloConsumidoEventArgs.cs" />
-    <Compile Include="PlayerCancion\Utilitarios\TimerDePrecision.cs" />
     <Compile Include="PlayerCancion\VistaPlayerCancion.xaml.cs">
       <DependentUpon>VistaPlayerCancion.xaml</DependentUpon>
     </Compile>

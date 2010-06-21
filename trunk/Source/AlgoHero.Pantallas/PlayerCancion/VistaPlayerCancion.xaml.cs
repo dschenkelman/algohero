@@ -106,8 +106,15 @@ namespace AlgoHero.Pantallas.PlayerCancion
                 int cantidadNotas = notasEntrada.Count;
                 for (int j = 0; j < cantidadNotas; j++)
                 {
-                    notasEntrada[j].Actualizar();
+                    INotaVisual notaActual = notasEntrada[j];
+                    notaActual.Actualizar();
                     this.UpdateLayout();
+                    if (notaActual.PuedeBorrarse())
+                    {
+                        notasEntrada.RemoveAt(j);
+                        j--;
+                        cantidadNotas--;
+                    }
                 }
             }
         }

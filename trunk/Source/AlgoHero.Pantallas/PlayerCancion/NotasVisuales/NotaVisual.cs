@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 using System.Windows;
 
 namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
@@ -17,6 +18,31 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
         {
             double alturaAnterior = Canvas.GetTop(notaVisual);
             Canvas.SetTop(notaVisual, alturaAnterior + notaVisual.ActualHeight / 5);
+        }
+
+        public static bool PuedeBorrarse(FrameworkElement notaVisual)
+        {
+            Canvas canvasPadre = notaVisual.Parent as Canvas;
+            if (canvasPadre != null)
+            {
+                double alturaActual = Canvas.GetTop(notaVisual);
+                if (alturaActual > canvasPadre.ActualHeight)
+                {
+                    return true;   
+                }
+                return false;
+            }
+            throw new InvalidOperationException();
+        }
+
+        public static void Borrar(FrameworkElement notaVisual)
+        {
+            Canvas canvasPadre = notaVisual.Parent as Canvas;
+            if (canvasPadre != null)
+            {
+                canvasPadre.Children.Remove(notaVisual);
+            }
+            throw new InvalidOperationException();
         }
     }
 }

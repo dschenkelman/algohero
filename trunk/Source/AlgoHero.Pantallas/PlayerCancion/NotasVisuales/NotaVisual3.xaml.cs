@@ -30,5 +30,10 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
             NotaVisual.Actualizar(this);
         }
 
+        public bool PuedeBorrarse()
+        {
+            return NotaVisual.PuedeBorrarse(this);
+        }
+
     }
 }

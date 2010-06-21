@@ -1,6 +1,5 @@
 ﻿using System.Windows.Controls;
 using AlgoHero.MusicEntities.Core;
-using System.Windows;
 
 namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
 {
@@ -29,5 +28,11 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
         {
             NotaVisual.Actualizar(this);
         }
+
+        public bool PuedeBorrarse()
+        {
+            return NotaVisual.PuedeBorrarse(this);
+        }
+
     }
 }
