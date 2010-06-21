@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AlgoHero.Files.Interfaces;
 using AlgoHero.Interface;
@@ -10,15 +11,19 @@ using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
 using AlgoHero.Juego.Entrada;
 using System.Timers;
+using System.Windows.Input;
+using Microsoft.Practices.Composite.Presentation.Commands;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {
     public class PlayerCancionViewModel : IPlayerCancionViewModel
     {
+        private bool estaActiva;
         private readonly IVistaPlayerCancion vistaPlayerCancion;
         private readonly IManejadorVentanaPrincipal manejadorVentanaPrincipal;
         private readonly IProveedorCancion proveedorCancion;
         private readonly ICalculadorDuracionNotas calculadorDuracionNotas;
+        private readonly IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada;
         private decimal intervaloActualizacion;
         private decimal segundosProximaNota;
         private Timer timer;
@@ -33,7 +38,38 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.manejadorVentanaPrincipal = manejadorVentanaPrincipal;
             this.proveedorCancion = proveedorCancion;
             this.calculadorDuracionNotas = calculadorDuracionNotas;
+            this.mapeoTecladoEntidadesEntrada = mapeoTecladoEntidadesEntrada;
             this.controladorTeclas = new ControladorTeclas(mapeoTecladoEntidadesEntrada);
+            this.vistaPlayerCancion.AsignarDataContext(this);
+        }
+
+        public bool PuedeApretarTecla(Key teclaApretada)
+        {
+            return true;
+        }
+
+        public DelegateCommand<Key> ComandoTeclaApretada
+        {
+            get; set;
+        }
+
+        public void TeclaApretada(object sender, KeyEventArgs eventArgs)
+        {
+            if(estaActiva)
+            {
+                EntidadEntrada entidad = this.mapeoTecladoEntidadesEntrada.ObtenerEntidadEntrada(eventArgs.Key);
+                
+                //si la tecla esta mapeada a una entidad de entrada
+                if (entidad != null)
+                {
+                    bool presionadoCorrecto = this.vistaPlayerCancion.TieneNotaAPresionar(entidad);
+                    if (presionadoCorrecto)
+                    {
+                        //TODO: Agregar funcionalidad puntajes
+                    }
+                }
+            }
+            
         }
 
         public Cancion CancionActual
@@ -50,6 +86,8 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         public void EmpezarCancion(object sender, EmpezarCancionLlamadoEventArgs args)
         {
+            ActivarVista(true);
+            
             GuardarDatosRecibidos(args);
 
             MostrarVentanaPlayer();
@@ -58,6 +96,8 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
             EmpezarCiclo();
         }
+
+
 
         public void ActualizarEstado(object sender, ElapsedEventArgs e)
         {
@@ -76,7 +116,6 @@ namespace AlgoHero.Pantallas.PlayerCancion
             }
         }
 
-       
         #region MetodosPrivados
         private IEnumerable<ITecla> ObtenerTeclasRelacionadas(Nota nota)
         {
@@ -121,6 +160,11 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.NivelActual = args.Nivel;
             this.NivelActual.AsignarCancion(this.CancionActual);
             this.NivelActual.AsignarTeclas(this.controladorTeclas);
+        }
+
+        private void ActivarVista(bool estado)
+        {
+            this.estaActiva = estado;
         }
         #endregion
 

@@ -8,5 +8,6 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
         void AgregarACanvas(Canvas canvas);
         void Actualizar();
         bool PuedeBorrarse();
+        bool HayQuePresionar();
     }
 }

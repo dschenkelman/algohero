@@ -6,8 +6,11 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
 {
     public static class NotaVisual
     {
-        //Factor de velocidad de movimiento de notas. 
+        // Factor de velocidad de movimiento de notas. Cuanto menor es van mas rapido
         public const int FACTOR_VELOCIDAD = 5;
+
+        // Factor de error. Cuanto menor es mayor precision se requiere.
+        public const int FACTOR_ERROR = 12;
         
         public static void AgregarACanvas(Canvas canvas, FrameworkElement notaVisual)
         {
@@ -44,6 +47,26 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
             if (canvasPadre != null)
             {
                 canvasPadre.Children.Remove(notaVisual);
+            }
+            throw new InvalidOperationException();
+        }
+
+        public static bool HayQuePresionar(FrameworkElement notaVisual)
+        {
+            Canvas canvasPadre = notaVisual.Parent as Canvas;
+            if (canvasPadre != null)
+            {
+                double alturaActual = Canvas.GetTop(notaVisual);
+
+                double alturaDesdeBase = canvasPadre.ActualHeight - notaVisual.ActualHeight;
+
+                double diferencia = Math.Abs(alturaActual - alturaDesdeBase);
+
+                if (diferencia < FACTOR_ERROR)
+                {
+                    return true;
+                }
+                return false;
             }
             throw new InvalidOperationException();
         }
