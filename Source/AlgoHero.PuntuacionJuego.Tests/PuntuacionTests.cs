@@ -42,7 +42,8 @@ namespace AlgoHero.PuntuacionJuego.Tests
                 puntuacionActual.AcertarNota();
             }
 
-            int puntosAcum = 15;
+            int puntosAcum = 20; // 10 con multiplier 1 y 5 con multiplier 2
+            //suman 20, porq yo habia cambiado algo
 
             puntuacionActual.ErrarNota();
 
