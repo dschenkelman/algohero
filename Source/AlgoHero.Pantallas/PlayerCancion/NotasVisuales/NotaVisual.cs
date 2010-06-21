@@ -6,6 +6,9 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
 {
     public static class NotaVisual
     {
+        //Factor de velocidad de movimiento de notas. 
+        public const int FACTOR_VELOCIDAD = 5;
+        
         public static void AgregarACanvas(Canvas canvas, FrameworkElement notaVisual)
         {
             canvas.Children.Add(notaVisual);
@@ -17,7 +20,7 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
         public static void Actualizar(FrameworkElement notaVisual)
         {
             double alturaAnterior = Canvas.GetTop(notaVisual);
-            Canvas.SetTop(notaVisual, alturaAnterior + notaVisual.ActualHeight / 5);
+            Canvas.SetTop(notaVisual, alturaAnterior + notaVisual.ActualHeight / FACTOR_VELOCIDAD);
         }
 
         public static bool PuedeBorrarse(FrameworkElement notaVisual)
