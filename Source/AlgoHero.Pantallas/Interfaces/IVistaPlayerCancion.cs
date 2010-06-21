@@ -7,5 +7,6 @@ namespace AlgoHero.Pantallas.Interfaces
     public interface IVistaPlayerCancion
     {
         void AgregarNotaVisual(Nota nota, IEnumerable<ITecla> teclas);
+        void Actualizar();
     }
 }

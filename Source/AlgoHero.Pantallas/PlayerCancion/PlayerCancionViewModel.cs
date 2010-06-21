@@ -61,6 +61,8 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         public void ActualizarEstado(object sender, ElapsedEventArgs e)
         {
+            this.vistaPlayerCancion.Actualizar();
+
             this.segundosProximaNota -= this.intervaloActualizacion;
 
             if (!this.NivelActual.EsFinalCancion && this.segundosProximaNota <= this.intervaloActualizacion)
