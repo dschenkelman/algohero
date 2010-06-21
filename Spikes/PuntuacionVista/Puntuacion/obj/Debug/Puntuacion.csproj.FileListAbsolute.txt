@@ -1,5 +1,0 @@
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\Puntuacion\bin\Debug\Puntuacion.dll
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\Puntuacion\bin\Debug\Puntuacion.pdb
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\Puntuacion\obj\Debug\ResolveAssemblyReference.cache
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\Puntuacion\obj\Debug\Puntuacion.dll
-C:\Gonzalo\Cosas raras\C#\PuntuacionVista\Puntuacion\obj\Debug\Puntuacion.pdb
