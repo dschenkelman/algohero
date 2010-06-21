@@ -21,7 +21,7 @@ namespace AlgoHero.Juego.Tests.Core
         [SetUp]
         public void TestInitialize()
         {
-            var tiempoCancion = new TiempoCancion(4, 2);
+            var tiempoCancion = new TiempoCancion(4, 4);
             this.CrearCompasCompleto(tiempoCancion);
             this.CrearCompasCompletoConAcordes(tiempoCancion);
             this.partitura = new Partitura(tiempoCancion);

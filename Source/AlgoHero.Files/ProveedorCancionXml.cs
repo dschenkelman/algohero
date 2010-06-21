@@ -74,9 +74,9 @@ namespace AlgoHero.Files
         {
             XmlNode nodoTiempoCancion = documento.SelectSingleNode("/xml/cancion/tiempo");
             double duracionCompas = Convert.ToDouble(nodoTiempoCancion.Attributes["duracionCompasSegundos"].Value);
-            int cantidadBlancas = Convert.ToInt32(nodoTiempoCancion.Attributes["cantidadBlancas"].Value);
+            int cantidadNegras = Convert.ToInt32(nodoTiempoCancion.Attributes["cantidadNegras"].Value);
 
-            return new TiempoCancion(duracionCompas, cantidadBlancas);
+            return new TiempoCancion(duracionCompas, cantidadNegras);
         }
 
         /*Agrega a la partitura los compases leidos a partir del XmlDocument, asignandoles el TiempoCancion.*/

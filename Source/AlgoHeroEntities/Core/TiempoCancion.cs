@@ -6,20 +6,20 @@ namespace AlgoHero.MusicEntities.Core
     public class TiempoCancion
     {
         /*Crea un nuevo TiempoCancion a partir de la duracion del compas y la cantidad de blancas por compas.*/
-        public TiempoCancion(double duracionCompas, double cantidadBlancas)
+        public TiempoCancion(double duracionCompas, double cantidadNegras)
         {
             if (duracionCompas <= 0)
             {
                 throw new ArgumentException(Resources.DuracionCompasIncorrecta);
             }
 
-            if (cantidadBlancas <= 0)
+            if (cantidadNegras <= 0)
             {
                 throw new ArgumentException(Resources.DuracionCompasIncorrecta);
             }
 
             this.DuracionCompas = duracionCompas;
-            this.CantidadBlancas = cantidadBlancas;
+            this.CantidadNegras = cantidadNegras;
         }
 
         public double DuracionCompas
@@ -27,7 +27,7 @@ namespace AlgoHero.MusicEntities.Core
             get; private set;
         }
 
-        public double CantidadBlancas
+        public double CantidadNegras
         {
             get; private set;
         }

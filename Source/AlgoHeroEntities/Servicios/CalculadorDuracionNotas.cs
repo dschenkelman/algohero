@@ -17,20 +17,20 @@ namespace AlgoHero.MusicEntities.Servicios
 
         public double CalcularDuracion(TiempoCancion tiempoCancion, FiguraMusical figura)
         {
-            double tiempoBlanca = tiempoCancion.DuracionCompas / tiempoCancion.CantidadBlancas;
+            double tiempoNegra = tiempoCancion.DuracionCompas / tiempoCancion.CantidadNegras;
 
             switch (figura)
             {
                 case FiguraMusical.Redonda:
-                    return tiempoBlanca * 2;
+                    return tiempoNegra * 4;
                 case FiguraMusical.Blanca:
-                    return tiempoBlanca;
+                    return tiempoNegra * 2;
                 case FiguraMusical.Negra:
-                    return tiempoBlanca / 2;
+                    return tiempoNegra;
                 case FiguraMusical.Corchea:
-                    return tiempoBlanca / 4;
+                    return tiempoNegra / 2;
                 case FiguraMusical.Semicorchea:
-                    return tiempoBlanca / 8;
+                    return tiempoNegra / 4;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

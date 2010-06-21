@@ -1,6 +1,6 @@
 <xml>
 	<cancion nombre="Hotel California" autor="Eagles">
-		<tiempo duracionCompasSegundos="4" cantidadBlancas="2"/>
+		<tiempo duracionCompasSegundos="4" cantidadNegras="4"/>
     <compases>
       <compas>
         <notas>
