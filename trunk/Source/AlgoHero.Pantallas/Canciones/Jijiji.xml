@@ -1,6 +1,6 @@
 <xml>
   <cancion nombre="Jijiji" autor="Redonditos De Ricota">
-    <tiempo duracionCompasSegundos="2,667" cantidadBlancas="2" />
+    <tiempo duracionCompasSegundos="2,667" cantidadNegras="4" />
     <compases>
       <compas> 
         <notas>
