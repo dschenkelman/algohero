@@ -1,0 +1,39 @@
+﻿<Window x:Class="PuntuacionVista.PuntuacionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="PuntuacionView" Height="248" Width="180">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="0">
+            <Border BorderBrush="Gold">
+                <TextBlock Text="Puntos" Foreground="Gold" FontSize="20" HorizontalAlignment="Center"/>
+            </Border>
+            <Border BorderBrush="Gold">
+                <TextBlock Text="0" Foreground="Gold" FontSize="14" HorizontalAlignment="Center"/>
+            </Border>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="2">
+            <Border BorderBrush="Gold">
+                <TextBlock Text="Racha" Foreground="Gold" FontSize="20" HorizontalAlignment="Center"/>
+            </Border>
+            <Border BorderBrush="Gold">
+                <TextBlock Text="0" Foreground="Gold" FontSize="14" HorizontalAlignment="Center"/>
+            </Border>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="4">
+            <Border BorderBrush="Gold">
+                <TextBlock Text="Multiplicador" Foreground="Gold" FontSize="20" HorizontalAlignment="Center"/>
+            </Border>
+            <Border BorderBrush="Gold">
+                <TextBlock Text="1" Foreground="Gold" FontSize="14" HorizontalAlignment="Center"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

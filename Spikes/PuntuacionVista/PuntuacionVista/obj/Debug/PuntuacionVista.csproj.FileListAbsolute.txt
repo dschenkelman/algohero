@@ -1,0 +1,16 @@
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\bin\Debug\PuntuacionVista.exe
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\bin\Debug\PuntuacionVista.pdb
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\ResolveAssemblyReference.cache
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionView.baml
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionView.g.cs
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\App.g.cs
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionVista_MarkupCompile.cache
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionVista.g.resources
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionVista.Properties.Resources.resources
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionVista.csproj.GenerateResource.Cache
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionVista.exe
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionVista.pdb
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\bin\Debug\PuntuacionJuego.dll
+C:\Gonzalo\Cosas raras\C#\PuntuacionVista\PuntuacionVista\bin\Debug\PuntuacionJuego.pdb
+C:\Gonzalo\UBA-UNLP\Materias (UBA)\Programacion III\GuitarHero\Spikes\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionVista.exe
+C:\Gonzalo\UBA-UNLP\Materias (UBA)\Programacion III\GuitarHero\Spikes\PuntuacionVista\PuntuacionVista\obj\Debug\PuntuacionVista.pdb

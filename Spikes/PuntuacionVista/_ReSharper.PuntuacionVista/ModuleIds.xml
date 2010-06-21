@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="A5A43360-5330-4FDC-B34C-88CA4229BA7E" ModuleId="PuntuacionVista" />
+  <Module PersistentId="C4380FF8-BABE-4A96-B6AC-976CF8B0C8E3" ModuleId="Puntuacion" />
+  <Module PersistentId="299B301E-1976-4AD3-9948-CD4DD1D6BC33" ModuleId="PuntuacionJuego" />
+</Modules>
