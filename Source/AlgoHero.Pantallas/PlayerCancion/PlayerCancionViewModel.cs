@@ -6,6 +6,7 @@ using AlgoHero.Pantallas.Eventos;
 using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
 using System.Timers;
+using AlgoHero.Pantallas.PlayerCancion.Utilitarios;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {
@@ -15,8 +16,9 @@ namespace AlgoHero.Pantallas.PlayerCancion
         private readonly IManejadorVentanaPrincipal manejadorVentanaPrincipal;
         private readonly IProveedorCancion proveedorCancion;
         private readonly ICalculadorDuracionNotas calculadorDuracionNotas;
-        private double intervaloActualizacion;
-        private Timer timer;
+        private decimal intervaloActualizacion;
+        private decimal segundosProximaNota;
+        private TimerDePrecision timer;
 
         public PlayerCancionViewModel(IVistaPlayerCancion vistaPlayerCancion, 
             IManejadorVentanaPrincipal manejadorVentanaPrincipal,
@@ -51,21 +53,23 @@ namespace AlgoHero.Pantallas.PlayerCancion
             EmpezarCiclo();
         }
 
-        public void ActualizarEstado(object sender, ElapsedEventArgs e)
+        public void ActualizarEstado(object sender, IntervaloConsumidoEventArgs e)
         {
-            if (!this.NivelActual.EsFinalCancion)
+            this.segundosProximaNota -= this.intervaloActualizacion;
+
+            if (!this.NivelActual.EsFinalCancion && this.segundosProximaNota == 0m)
             {
-                this.NivelActual.ObtenerSiguienteNota();
+                Nota nota = this.NivelActual.ObtenerSiguienteNota();
+                this.segundosProximaNota = (decimal) nota.CalcularTiempoProximaNota(this.CancionActual.Partitura.TiempoCancion);
             }
         }
-
 
         #region MetodosPrivados
         private void EmpezarCiclo()
         {
-            this.timer = new Timer(this.intervaloActualizacion / 1000);
-            this.timer.Elapsed += ActualizarEstado;
-            this.timer.Start();
+            this.timer = new TimerDePrecision((int) (this.intervaloActualizacion * 1000));
+            this.timer.IntervaloConsumido += ActualizarEstado;
+            this.timer.Comenzar();
         }
 
         private void CalcularIntervaloActualizacion()
@@ -74,7 +78,8 @@ namespace AlgoHero.Pantallas.PlayerCancion
                 (this.CancionActual.Partitura.TiempoCancion,FiguraMusical.Semicorchea);
 
             //en segundos
-            this.intervaloActualizacion = (tiempoSemicorchea/10);
+            this.intervaloActualizacion = (decimal) (tiempoSemicorchea/10);
+            this.segundosProximaNota = this.intervaloActualizacion;
         }
 
         private void MostrarVentanaPlayer()
