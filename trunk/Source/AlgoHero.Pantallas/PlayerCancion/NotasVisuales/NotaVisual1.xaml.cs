@@ -1,6 +1,4 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using AlgoHero.MusicEntities.Core;
 
 namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
@@ -25,16 +23,12 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
 
         public void AgregarACanvas(Canvas canvas)
         {
-            canvas.Children.Add(this);
-            Canvas.SetTop(this, 0);
-            Canvas.SetLeft(this, 10);
-            Canvas.SetRight(this, 10);
+            NotaVisual.AgregarACanvas(canvas, this);
         }
 
         public void Actualizar()
         {
-            double alturaAnterior = Canvas.GetTop(this);
-            Canvas.SetTop(this, alturaAnterior + this.ActualHeight / 5);
+            NotaVisual.Actualizar(this);
         }
     }
 }
