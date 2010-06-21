@@ -33,6 +33,7 @@ namespace AlgoHero.Pantallas
 
             manejadorVentanaPrincipal.CambiarContenido(menuPrincipal);
 
+            ventanaPrincipal.KeyDown += playerCancionViewModel.TeclaApretada;
             ventanaPrincipal.Closing += this.CerrandoVentanaPrincipal;
 
             ventanaPrincipal.Show();

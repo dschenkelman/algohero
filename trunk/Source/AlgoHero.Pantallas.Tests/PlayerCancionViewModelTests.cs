@@ -14,6 +14,8 @@ using AlgoHero.Pantallas.Eventos;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
 using AlgoHero.Juego.Intefaces;
 using System.Threading;
+using System.Windows;
+using System.Collections;
 
 namespace AlgoHero.Pantallas.Tests
 {
@@ -21,10 +23,25 @@ namespace AlgoHero.Pantallas.Tests
     public class PlayerCancionViewModelTests
     {
         [Test]
+        public void ConstruirViewModelSeteaDataContextDeView()
+        {
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockVistaPlayerCancion vista = new MockVistaPlayerCancion();
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(vista,
+                new MockManejadorVentanaPrincipal(),
+                proveedorCancion,
+                new MockCalculadorDuracionNotas(),
+                new MockMapeoTecladoEntidadesEntrada());
+
+            Assert.IsTrue(vista.DataContextFueSeteado);
+            Assert.AreEqual(vm, vista.DataContextSeteado);
+        }
+        
+        [Test]
         public void HandlearElEventoEmpezarCancionObtieneCancionConPartitura()
         {
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null,
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(new MockVistaPlayerCancion(),
                 new MockManejadorVentanaPrincipal(),
                 proveedorCancion,
                 new MockCalculadorDuracionNotas(),
@@ -42,7 +59,7 @@ namespace AlgoHero.Pantallas.Tests
         public void HandlearElEventoEmpezarCancionGuardaNivel()
         {
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null,
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(new MockVistaPlayerCancion(),
                 new MockManejadorVentanaPrincipal(),
                 proveedorCancion,
                 new MockCalculadorDuracionNotas(),
@@ -59,7 +76,7 @@ namespace AlgoHero.Pantallas.Tests
         public void HandlearElEventoEmpezarCancionLlamaAMetodosNivel()
         {
             IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
-            IPlayerCancionViewModel vm = new PlayerCancionViewModel(null,
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(new MockVistaPlayerCancion(),
                 new MockManejadorVentanaPrincipal(),
                 proveedorCancion,
                 new MockCalculadorDuracionNotas(),
@@ -256,12 +273,18 @@ namespace AlgoHero.Pantallas.Tests
         {
             public EntidadEntrada ObtenerEntidadEntrada(Key key)
             {
+                this.ObtenerEntidadEntradaFueLlamado = true;
                 return new EntidadEntrada(1);
             }
 
             public ReadOnlyCollection<EntidadEntrada> ObtenerEntidadesEntrada()
             {
                 return new ReadOnlyCollection<EntidadEntrada>(new List<EntidadEntrada>() { new EntidadEntrada(1) });
+            }
+
+            public bool ObtenerEntidadEntradaFueLlamado
+            {
+                get; set;
             }
         }
 
@@ -396,6 +419,16 @@ namespace AlgoHero.Pantallas.Tests
                 get; set;
             }
 
+            public bool DataContextFueSeteado
+            {
+                get; set;
+            }
+
+            public object DataContextSeteado
+            {
+                get; set;
+            }
+
             public void AgregarNotaVisual(Nota nota, IEnumerable<ITecla> teclas)
             {
                 this.AgregarNotaVisualFueLlamado = true;
@@ -404,6 +437,17 @@ namespace AlgoHero.Pantallas.Tests
             public void Actualizar()
             {
                 this.ActualizarFueLlamado = true;
+            }
+
+            public void AsignarDataContext(IPlayerCancionViewModel model)
+            {
+                this.DataContextFueSeteado = true;
+                this.DataContextSeteado = model;
+            }
+
+            public bool TieneNotaAPresionar(EntidadEntrada entrada)
+            {
+                throw new NotImplementedException();
             }
         }
 

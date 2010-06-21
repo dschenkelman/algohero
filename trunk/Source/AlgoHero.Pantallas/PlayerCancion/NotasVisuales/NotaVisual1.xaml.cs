@@ -37,6 +37,11 @@ namespace AlgoHero.Pantallas.PlayerCancion.NotasVisuales
             return NotaVisual.PuedeBorrarse(this);
         }
 
+        public bool HayQuePresionar()
+        {
+            return NotaVisual.HayQuePresionar(this);
+        }
+
         
     }
 }

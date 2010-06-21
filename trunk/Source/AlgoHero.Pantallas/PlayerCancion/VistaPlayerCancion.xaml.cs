@@ -6,6 +6,7 @@ using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.Pantallas.PlayerCancion.NotasVisuales;
 using System.Windows.Threading;
+using System.Windows.Documents;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {
@@ -41,6 +42,71 @@ namespace AlgoHero.Pantallas.PlayerCancion
             foreach (var tecla in teclas)
             {
                 Dispatcher.BeginInvoke(new ConvocarNotaVisualInterno(this.AgregarNotaVisualInterno), DispatcherPriority.Send, nota, tecla);
+            }
+        }
+
+        
+        public delegate void InvocarActualizarNotaVisual();
+
+        public void Actualizar()
+        {
+            Dispatcher.BeginInvoke(new InvocarActualizarNotaVisual(this.ActualizarInterno), DispatcherPriority.Send);
+        }
+
+        public void AsignarDataContext(IPlayerCancionViewModel model)
+        {
+            this.DataContext = model;
+        }
+
+        public bool TieneNotaAPresionar(EntidadEntrada entidadEntrada)
+        {
+            List<INotaVisual> notas = this.ObtenerNotasDeTecla(entidadEntrada);
+            if (notas.Count > 0)
+            {
+                // la primer nota es la que esta mas abajo
+                // si alguna se puede presionar es la ultima
+                INotaVisual primerNota = notas[0];
+                return primerNota.HayQuePresionar();
+            }
+            return false;
+        }
+
+        private List<INotaVisual> ObtenerNotasDeTecla(EntidadEntrada entrada)
+        {
+            switch (entrada.Codigo)
+            {
+                case 1:
+                    return this.notasEntrada1;
+                case 2:
+                    return this.notasEntrada2;
+                case 3:
+                    return this.notasEntrada3;
+                case 4:
+                    return this.notasEntrada4;
+                default:
+                    throw new ArgumentException();
+            }
+        }
+
+        private void ActualizarInterno()
+        {
+            int cantidadEntradas = this.listaNotasEntrada.Count;
+            for (int i = 0; i < cantidadEntradas; i++)
+            {
+                List<INotaVisual> notasEntrada = this.listaNotasEntrada[i];
+                int cantidadNotas = notasEntrada.Count;
+                for (int j = 0; j < cantidadNotas; j++)
+                {
+                    INotaVisual notaActual = notasEntrada[j];
+                    notaActual.Actualizar();
+                    this.UpdateLayout();
+                    if (notaActual.PuedeBorrarse())
+                    {
+                        notasEntrada.RemoveAt(j);
+                        j--;
+                        cantidadNotas--;
+                    }
+                }
             }
         }
 
@@ -87,38 +153,6 @@ namespace AlgoHero.Pantallas.PlayerCancion
             }
         }
 
-        #region IVistaPlayerCancion Members
 
-
-        public delegate void InvocarActualizarNotaVisual();
-
-        public void Actualizar()
-        {
-            Dispatcher.BeginInvoke(new InvocarActualizarNotaVisual(this.ActualizarInterno), DispatcherPriority.Send);
-        }
-
-        private void ActualizarInterno()
-        {
-            int cantidadEntradas = this.listaNotasEntrada.Count;
-            for (int i = 0; i < cantidadEntradas; i++)
-            {
-                List<INotaVisual> notasEntrada = this.listaNotasEntrada[i];
-                int cantidadNotas = notasEntrada.Count;
-                for (int j = 0; j < cantidadNotas; j++)
-                {
-                    INotaVisual notaActual = notasEntrada[j];
-                    notaActual.Actualizar();
-                    this.UpdateLayout();
-                    if (notaActual.PuedeBorrarse())
-                    {
-                        notasEntrada.RemoveAt(j);
-                        j--;
-                        cantidadNotas--;
-                    }
-                }
-            }
-        }
-
-        #endregion
     }
 }
