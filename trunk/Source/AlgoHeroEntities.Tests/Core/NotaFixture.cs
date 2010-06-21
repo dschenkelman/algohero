@@ -48,7 +48,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         [Test]
         public void CalcularDuracionNotaMusicalRedondaDevuelveValorCorrecto()
         {
-            var tiempoCancion = new TiempoCancion(4, 2);
+            var tiempoCancion = new TiempoCancion(4, 4);
             var nota = new Nota(this.tonos, FiguraMusical.Redonda);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(4, segundos);
@@ -57,7 +57,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         [Test]
         public void CalcularDuracionNotaMusicalBlancaDevuelveValorCorrecto()
         {
-            var tiempoCancion = new TiempoCancion(4, 2);
+            var tiempoCancion = new TiempoCancion(4, 4);
             var nota = new Nota(this.tonos, FiguraMusical.Blanca);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(2, segundos);
@@ -66,7 +66,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         [Test]
         public void CalcularDuracionNotaMusicalNegraDevuelveValorCorrecto()
         {
-            var tiempoCancion = new TiempoCancion(4, 2);
+            var tiempoCancion = new TiempoCancion(4, 4);
             var nota = new Nota(this.tonos, FiguraMusical.Negra);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(1, segundos);
@@ -75,7 +75,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         [Test]
         public void CalcularDuracionNotaMusicalCorcheaDevuelveValorCorrecto()
         {
-            var tiempoCancion = new TiempoCancion(4, 2);
+            var tiempoCancion = new TiempoCancion(4, 4);
             var nota = new Nota(this.tonos, FiguraMusical.Corchea);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(0.5, segundos);
@@ -84,7 +84,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         [Test]
         public void CalcularDuracionNotaMusicalSemicorcheaDevuelveValorCorrecto()
         {
-            var tiempoCancion = new TiempoCancion(4, 2);
+            var tiempoCancion = new TiempoCancion(4, 4);
             var nota = new Nota(this.tonos, FiguraMusical.Semicorchea);
             double segundos = nota.CalcularTiempoProximaNota(tiempoCancion);
             Assert.AreEqual(0.25, segundos);

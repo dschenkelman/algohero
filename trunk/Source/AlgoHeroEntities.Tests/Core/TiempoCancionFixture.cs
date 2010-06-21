@@ -40,7 +40,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var tiempoCancion = new TiempoCancion(1.5, 2);
             Assert.AreEqual(1.5, tiempoCancion.DuracionCompas);
-            Assert.AreEqual(2, tiempoCancion.CantidadBlancas);
+            Assert.AreEqual(2, tiempoCancion.CantidadNegras);
         }
 
         [Test]
@@ -48,7 +48,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         {
             var tiempoCancion = new TiempoCancion(1.5, 0.6);
             Assert.AreEqual(1.5, tiempoCancion.DuracionCompas);
-            Assert.AreEqual(0.6, tiempoCancion.CantidadBlancas);
+            Assert.AreEqual(0.6, tiempoCancion.CantidadNegras);
         }
 
     }

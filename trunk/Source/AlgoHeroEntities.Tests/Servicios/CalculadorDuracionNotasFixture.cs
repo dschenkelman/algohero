@@ -13,7 +13,7 @@ namespace AlgoHeroMusic.Entities.Tests.Servicios
         public void CalcularDuracionNotaDevuelveValorCorrecto()
        {
            var calculador = new CalculadorDuracionNotas();
-           var tiempoCancion = new TiempoCancion(4, 2);
+           var tiempoCancion = new TiempoCancion(4, 4);
            var nota = new Nota(Tono.Do, FiguraMusical.Redonda);
            double segundos = calculador.CalcularDuracion(tiempoCancion, nota);
            Assert.AreEqual(4, segundos);
@@ -23,7 +23,7 @@ namespace AlgoHeroMusic.Entities.Tests.Servicios
        public void CalcularDuracionNotaPasandoFiguraDevuelveValorCorrecto()
        {
            var calculador = new CalculadorDuracionNotas();
-           var tiempoCancion = new TiempoCancion(4, 2);
+           var tiempoCancion = new TiempoCancion(4, 4);
            double segundos = calculador.CalcularDuracion(tiempoCancion, FiguraMusical.Semicorchea);
            Assert.AreEqual(0.25, segundos);
        }

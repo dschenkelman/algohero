@@ -19,7 +19,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         [SetUp]
         public void TestInitialize()
         {
-            var tiempoCancion = new TiempoCancion(4, 2);
+            var tiempoCancion = new TiempoCancion(4, 4);
             this.CrearCompasCompleto(tiempoCancion);
             this.CrearOtroCompasCompleto(tiempoCancion);
             this.CrearCompasIncompleto(tiempoCancion);

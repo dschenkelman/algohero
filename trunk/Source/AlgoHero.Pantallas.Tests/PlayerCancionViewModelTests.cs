@@ -220,7 +220,7 @@ namespace AlgoHero.Pantallas.Tests
             
             Thread.Sleep(2100);
 
-            Assert.GreaterOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas ,2);
+            Assert.GreaterOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas , 2);
             Assert.LessOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas, 4);
         }
         
@@ -420,7 +420,7 @@ namespace AlgoHero.Pantallas.Tests
                 {
                     return new Cancion("Cancion Recuperada", "Recuperada")
                                {
-                                   Partitura = new Partitura(new TiempoCancion(4, 2))
+                                   Partitura = new Partitura(new TiempoCancion(4, 4))
                                };
                 }
                 return null;

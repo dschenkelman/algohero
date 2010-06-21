@@ -15,7 +15,7 @@ namespace AlgoHeroMusic.Entities.Tests.Core
         [SetUp]
         public void TestInitialize()
         {
-            this.tiempoCancion = new TiempoCancion(4, 2);
+            this.tiempoCancion = new TiempoCancion(4, 4);
             this.compas = new Compas(this.tiempoCancion);
         }
 
