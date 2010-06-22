@@ -7,6 +7,7 @@ namespace AlgoHero.Interface
     {
         void AgregarTonoAsociado(Tono tono);
         Tono ObtenerTono(int index);
+        void ResetearTonosAsignados();
         ReadOnlyCollection<Tono> ObtenerTonosAsociados();
         int CantidadTonos { get; }
         EntidadEntrada EntidadEntrada { get; }

@@ -35,6 +35,11 @@ namespace AlgoHero.Juego.Tests.Core.Mocks
             return this.tonosAsociados[index];
         }
 
+        public void ResetearTonosAsignados()
+        {
+            this.tonosAsociados = new List<Tono>();
+        }
+
         public ReadOnlyCollection<Tono> ObtenerTonosAsociados()
         {
             return this.tonosAsociados.AsReadOnly();
