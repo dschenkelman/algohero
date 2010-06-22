@@ -1,5 +1,7 @@
-﻿using AlgoHero.MusicEntities.Core;
+﻿using System;
+using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Eventos;
+using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.Pantallas.MenuPrincipal;
 using AlgoHero.Pantallas.Tests.Mocks;
 using NUnit.Framework;
@@ -53,5 +55,6 @@ namespace AlgoHero.Pantallas.Tests
             Assert.AreEqual(vm.CancionActual, cancionPublicada);
             Assert.AreEqual(vm.NivelActual, nivelPublicado);
         }
+
     }
 }

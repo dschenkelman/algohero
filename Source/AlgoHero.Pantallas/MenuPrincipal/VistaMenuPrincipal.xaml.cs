@@ -8,9 +8,10 @@ namespace AlgoHero.Pantallas.MenuPrincipal
     /// </summary>
     public partial class VistaMenuPrincipal : UserControl
     {
-        public VistaMenuPrincipal(IMenuPrincipalViewModel model)
+        public VistaMenuPrincipal(IMenuPrincipalViewModel viewModel)
         {
-            this.DataContext = model;
+            this.DataContext = viewModel;
+            viewModel.AsignarVista(this);
             InitializeComponent();
         }
     }

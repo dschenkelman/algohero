@@ -9,6 +9,8 @@ using System;
 using AlgoHero.Pantallas.Eventos;
 using AlgoHero.Pantallas.Interfaces;
 using Microsoft.Practices.Composite.Presentation.Commands;
+using System.Windows;
+using System.Windows.Threading;
 
 namespace AlgoHero.Pantallas.MenuPrincipal
 {
@@ -49,6 +51,7 @@ namespace AlgoHero.Pantallas.MenuPrincipal
         }
 
         private Nivel nivelActual;
+        private VistaMenuPrincipal vistaMenuPrincipal;
 
         public Nivel NivelActual
         {
@@ -112,5 +115,24 @@ namespace AlgoHero.Pantallas.MenuPrincipal
         }
 
         public event EventHandler<EmpezarCancionLlamadoEventArgs> EmpezarCancionLlamado;
+        
+        public void CancionTermino(object sender, EventArgs e)
+        {
+            Application.Current.Dispatcher.BeginInvoke(
+                new InvocarActivarVista(this.ActivarVista), 
+                DispatcherPriority.SystemIdle);
+        }
+
+        public void AsignarVista(VistaMenuPrincipal vista)
+        {
+            this.vistaMenuPrincipal = vista;
+        }
+
+        public delegate void InvocarActivarVista();
+
+        private void ActivarVista()
+        {
+            this.manejadorVentanaPrincipal.CambiarContenido(this.vistaMenuPrincipal);
+        }
     }
 }
