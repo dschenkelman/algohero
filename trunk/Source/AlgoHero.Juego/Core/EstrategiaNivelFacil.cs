@@ -60,6 +60,10 @@ namespace AlgoHero.Juego.Core
 
         public void AsignarTonos(IControladorTeclas controlador)
         {
+            foreach (ITecla tecla in controlador.ObtenerTeclas())
+            {
+                tecla.ResetearTonosAsignados();
+            }
             OrganizadorDeTonos organizador = new OrganizadorDeTonos(this.cancion);
             List<Tono> listaOrdenada = organizador.OrdenarNotas(organizador.ContarApacionesDeCadaTono());
             int estado = 0;
