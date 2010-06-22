@@ -10,5 +10,6 @@ namespace AlgoHero.Pantallas.Interfaces
         void Actualizar();
         void AsignarDataContext(IPlayerCancionViewModel model);
         bool TieneNotaAPresionar(EntidadEntrada entrada);
+        bool TieneNotasAMostrar();
     }
 }

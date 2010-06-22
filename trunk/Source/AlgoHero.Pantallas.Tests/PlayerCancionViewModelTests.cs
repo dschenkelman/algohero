@@ -14,8 +14,6 @@ using AlgoHero.Pantallas.Eventos;
 using AlgoHero.MusicEntities.Servicios.Interfaces;
 using AlgoHero.Juego.Intefaces;
 using System.Threading;
-using System.Windows;
-using System.Collections;
 
 namespace AlgoHero.Pantallas.Tests
 {
@@ -214,8 +212,114 @@ namespace AlgoHero.Pantallas.Tests
             Assert.IsTrue(vistaPlayerCancion.ActualizarFueLlamado);
         }
 
+        [Test]
+        public void ActualizarEstadoPublicaEventoCancionFinalizadaSiNoHayMasNotasEnPantallaYNoHayMasNotasEnCancion()
+        {
+            MockEstrategiaNivelSinNotas mockEstrategiaNivelCancionFinita = new MockEstrategiaNivelSinNotas();
+            Nivel nivel = new Nivel("Mock", mockEstrategiaNivelCancionFinita);
 
-        //Hay que correr el test separado de los demas
+            MockVistaPlayerCancionSinNotasEnVista vistaPlayerCancion = new MockVistaPlayerCancionSinNotasEnVista();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+            IPlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                new MockMapeoTecladoEntidadesEntrada());
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(
+                new Cancion("Jijiji", "Los redondos") { PathPartitura = "MiPath" }
+                , nivel));
+
+            bool eventoLlamado = false;
+            
+            vm.CancionTerminada += delegate
+                                       {
+                                           eventoLlamado = true;
+                                       };
+
+            vm.ActualizarEstado(this, null);
+
+            Assert.IsTrue(eventoLlamado);
+        }
+
+        [Test]
+        public void TeclaApretadaObtieneEntidadEntradaDeMapeo()
+        {
+            MockEstrategiaNivelCancionFinita mockEstrategiaNivelCancionFinita = new MockEstrategiaNivelCancionFinita();
+            Nivel nivel = new Nivel("Facil", mockEstrategiaNivelCancionFinita);
+
+            MockVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada = new MockMapeoTecladoEntidadesEntrada();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+            
+            //la marco como activa para que la llamada al método haga algo
+            PlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                mapeoTecladoEntidadesEntrada);
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(new Cancion("Mock", "Mock") { PathPartitura = "MiPath" }, nivel));
+            vm.TeclaApretadaConVentanaActiva(Key.S);
+
+            Assert.IsTrue(mapeoTecladoEntidadesEntrada.ObtenerEntidadEntradaFueLlamado);
+            Assert.AreEqual(Key.S, mapeoTecladoEntidadesEntrada.TeclaLlamado);
+        }
+
+        [Test]
+        public void TeclaApretadaAumentaPuntuacionSiAcerto()
+        {
+            MockEstrategiaNivelCancionFinita mockEstrategiaNivelCancionFinita = new MockEstrategiaNivelCancionFinita();
+            Nivel nivel = new Nivel("Facil", mockEstrategiaNivelCancionFinita);
+
+            MockVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada = new MockMapeoTecladoEntidadesEntrada();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+
+            //la marco como activa para que la llamada al método haga algo
+            PlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                mapeoTecladoEntidadesEntrada);
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(new Cancion("Mock", "Mock") { PathPartitura = "MiPath" }, nivel));
+            vm.TeclaApretadaConVentanaActiva(Key.S);
+
+            Assert.AreEqual(1, vm.PuntuacionCancion.PuntosAcumulados);
+            Assert.AreEqual(1, vm.PuntuacionCancion.RachaDeNotasAcertadas);
+        }
+
+        [Test]
+        public void TeclaApretadaNoAumentaPuntucacionSiNoAcerto()
+        {
+            MockEstrategiaNivelCancionFinita mockEstrategiaNivelCancionFinita = new MockEstrategiaNivelCancionFinita();
+            Nivel nivel = new Nivel("Facil", mockEstrategiaNivelCancionFinita);
+
+            MockVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada = new MockMapeoTecladoEntidadesEntrada();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+
+            //la marco como activa para que la llamada al método haga algo
+            PlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                mapeoTecladoEntidadesEntrada);
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(new Cancion("Mock", "Mock") { PathPartitura = "MiPath" }, nivel));
+            vm.TeclaApretadaConVentanaActiva(Key.D);
+
+            Assert.AreEqual(0, vm.PuntuacionCancion.PuntosAcumulados);
+            Assert.AreEqual(0, vm.PuntuacionCancion.RachaDeNotasAcertadas);
+        }
+
+
+        //Hay que correr el test separado de los demas a veces.
         [Test]
         public void ActualizarEstadoPideSiguienteNotaCuandoTiempoEntreNotasEsIgualATiempoDesdeNotaAnterior()
         {
@@ -241,7 +345,7 @@ namespace AlgoHero.Pantallas.Tests
             Assert.LessOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas, 4);
         }
         
-        //Hay que correr el test separado de los demas. Para hacerlo sacar el atributo ignore.
+        //Hay que correr el test separado de los demas a veces.
         [Test]
         public void ActualizarEstadoPideSiguienteNotaCuandoTiempoEntreNotasEsIgualATiempoDesdeNotaAnterior2()
         {
@@ -267,13 +371,41 @@ namespace AlgoHero.Pantallas.Tests
             Assert.LessOrEqual(mockEstrategiaNivelCancionInfinita.LlamadosObtenerNotas, 7);
         }
 
+        #region Mocks
+        private class MockEstrategiaNivelSinNotas : IEstrategiaNivel
+        {
+            public Nota ObtenerSiguienteNota()
+            {
+                return null;
+            }
 
+            public bool EsFinalCancion()
+            {
+                return true;
+            }
+
+            public void AsignarTonos(IControladorTeclas controlador)
+            {
+                
+            }
+
+            public void AsignarCancion(Cancion cancion)
+            {
+                
+            }
+        }
 
         private class MockMapeoTecladoEntidadesEntrada : IMapeoTecladoEntidadesEntrada
         {
             public EntidadEntrada ObtenerEntidadEntrada(Key key)
             {
                 this.ObtenerEntidadEntradaFueLlamado = true;
+                this.TeclaLlamado = key;
+                if (key == (Key.S))
+                {
+                    return new EntidadEntrada(2);
+                }
+
                 return new EntidadEntrada(1);
             }
 
@@ -283,6 +415,11 @@ namespace AlgoHero.Pantallas.Tests
             }
 
             public bool ObtenerEntidadEntradaFueLlamado
+            {
+                get; set;
+            }
+
+            public Key TeclaLlamado
             {
                 get; set;
             }
@@ -447,8 +584,50 @@ namespace AlgoHero.Pantallas.Tests
 
             public bool TieneNotaAPresionar(EntidadEntrada entrada)
             {
-                throw new NotImplementedException();
+                if (entrada.Codigo % 2 == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
+
+            public bool TieneNotasAMostrar()
+            {
+                return true;
+            }
+        }
+
+        private class MockVistaPlayerCancionSinNotasEnVista : IVistaPlayerCancion
+        {
+            #region IVistaPlayerCancion Members
+
+            public void AgregarNotaVisual(Nota nota, IEnumerable<ITecla> teclas)
+            {
+            }
+
+            public void Actualizar()
+            {
+            }
+
+            public void AsignarDataContext(IPlayerCancionViewModel model)
+            {
+            
+            }
+
+            public bool TieneNotaAPresionar(EntidadEntrada entrada)
+            {
+                return false;
+            }
+
+            public bool TieneNotasAMostrar()
+            {
+                return false;
+            }
+
+            #endregion
         }
 
         private class MockProveedorCancionXml : IProveedorCancion
@@ -483,5 +662,6 @@ namespace AlgoHero.Pantallas.Tests
                 this.Contenido = control;
             }
         }
+        #endregion
     }
 }

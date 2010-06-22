@@ -79,6 +79,10 @@
       <Project>{98EF13B4-40EE-44EE-8CCF-AB3B51EEFD63}</Project>
       <Name>AlgoHero.Pantallas</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AlgoHero.PuntuacionJuego\AlgoHero.PuntuacionJuego.csproj">
+      <Project>{26C6791C-60D2-4083-9069-5981CD72067B}</Project>
+      <Name>AlgoHero.PuntuacionJuego</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AlgoHeroEntities\AlgoHero.MusicEntities.csproj">
       <Project>{801DF353-3C2D-4940-9042-7001F3F96C4A}</Project>
       <Name>AlgoHero.MusicEntities</Name>
