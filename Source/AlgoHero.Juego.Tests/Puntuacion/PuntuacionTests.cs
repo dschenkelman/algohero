@@ -5,19 +5,19 @@ using AlgoHero.MusicEntities.Core;
 using NUnit.Framework;
 using AlgoHero.Juego.Intefaces;
 
-namespace AlgoHero.PuntuacionJuego.Tests
+namespace AlgoHero.Juego.Tests.Puntuacion
 {
     [TestFixture]
     public class PuntuacionTests
     {
-        private Puntuacion puntuacionActual;
+        private Juego.Puntuacion.Puntuacion puntuacionActual;
 
         [SetUp]
         public void TestInitialize()
         {
             MockEstrategiaNivel estrategiaNivel = new MockEstrategiaNivel();
             Nivel nivelJuego = new Nivel("medio", estrategiaNivel);
-            puntuacionActual = new Puntuacion(nivelJuego);
+            puntuacionActual = new Juego.Puntuacion.Puntuacion(nivelJuego);
         }
 
         [Test]

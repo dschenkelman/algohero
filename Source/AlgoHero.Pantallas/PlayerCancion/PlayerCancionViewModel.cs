@@ -5,6 +5,7 @@ using AlgoHero.Files.Interfaces;
 using AlgoHero.Interface;
 using AlgoHero.Interface.Enums;
 using AlgoHero.Juego.Core;
+using AlgoHero.Juego.Puntuacion;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Eventos;
 using AlgoHero.Pantallas.Interfaces;
@@ -12,7 +13,6 @@ using AlgoHero.MusicEntities.Servicios.Interfaces;
 using AlgoHero.Juego.Entrada;
 using System.Timers;
 using System.Windows.Input;
-using AlgoHero.PuntuacionJuego;
 using System.ComponentModel;
 
 namespace AlgoHero.Pantallas.PlayerCancion

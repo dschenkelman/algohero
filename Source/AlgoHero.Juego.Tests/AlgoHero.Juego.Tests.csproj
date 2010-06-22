@@ -51,6 +51,7 @@
     <Compile Include="Entrada\ControladorTeclasTests.cs" />
     <Compile Include="Entrada\MapeoTecladoEntidadesEntradaTests.cs" />
     <Compile Include="Entrada\TeclaTests.cs" />
+    <Compile Include="Puntuacion\PuntuacionTests.cs" />
     <Compile Include="Servicios\OrganizadorDeTonosFixture.cs" />
   </ItemGroup>
   <ItemGroup>
