@@ -13,10 +13,12 @@ using AlgoHero.Juego.Entrada;
 using System.Timers;
 using System.Windows.Input;
 using Microsoft.Practices.Composite.Presentation.Commands;
+using AlgoHero.PuntuacionJuego;
+using System.ComponentModel;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {
-    public class PlayerCancionViewModel : IPlayerCancionViewModel
+    public class PlayerCancionViewModel : IPlayerCancionViewModel, INotifyPropertyChanged
     {
         private bool estaActiva;
         private readonly IVistaPlayerCancion vistaPlayerCancion;
@@ -43,6 +45,8 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.vistaPlayerCancion.AsignarDataContext(this);
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        
         public bool PuedeApretarTecla(Key teclaApretada)
         {
             return true;
@@ -65,11 +69,22 @@ namespace AlgoHero.Pantallas.PlayerCancion
                     bool presionadoCorrecto = this.vistaPlayerCancion.TieneNotaAPresionar(entidad);
                     if (presionadoCorrecto)
                     {
-                        //TODO: Agregar funcionalidad puntajes
+                        this.PuntuacionCancion.AcertarNota();
                     }
+                    else
+                    {
+                        this.PuntuacionCancion.ErrarNota();
+                    }
+                    this.PropertyChanged(this, new PropertyChangedEventArgs("PuntuacionCancion"));
                 }
             }
             
+        }
+
+        public Puntuacion PuntuacionCancion
+        {
+            get;
+            set;
         }
 
         public Cancion CancionActual
@@ -94,10 +109,10 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
             CalcularIntervaloActualizacion();
 
+            IniciarPuntuacion();
+
             EmpezarCiclo();
         }
-
-
 
         public void ActualizarEstado(object sender, ElapsedEventArgs e)
         {
@@ -166,8 +181,14 @@ namespace AlgoHero.Pantallas.PlayerCancion
         {
             this.estaActiva = estado;
         }
-        #endregion
 
+        private void IniciarPuntuacion()
+        {
+            this.PuntuacionCancion = new Puntuacion(this.NivelActual);
+        }
+
+
+        #endregion
 
     }
 }
