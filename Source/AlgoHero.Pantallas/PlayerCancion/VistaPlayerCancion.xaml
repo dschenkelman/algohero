@@ -188,7 +188,7 @@
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" MinWidth="250"/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>

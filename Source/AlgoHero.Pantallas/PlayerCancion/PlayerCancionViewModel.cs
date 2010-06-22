@@ -238,7 +238,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         private void IniciarPuntuacion()
         {
-            this.PuntuacionCancion = new Puntuacion(this.NivelActual);
+            this.PuntuacionCancion = new Puntuacion();
             this.PublicarCambioPuntuacionCancion();
         }
     }
