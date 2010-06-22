@@ -52,7 +52,6 @@ namespace AlgoHero.Pantallas.Tests
             Assert.AreEqual("Cancion Recuperada", vm.CancionActual.Nombre);
         }
 
-
         [Test]
         public void HandlearElEventoEmpezarCancionGuardaNivel()
         {
@@ -186,7 +185,6 @@ namespace AlgoHero.Pantallas.Tests
             Assert.IsTrue(vistaPlayerCancion.AgregarNotaVisualFueLlamado);
         }
 
-
         [Test]
         public void ActualizarEstadoActualizarVista()
         {
@@ -268,6 +266,33 @@ namespace AlgoHero.Pantallas.Tests
             Assert.AreEqual(Key.S, mapeoTecladoEntidadesEntrada.TeclaLlamado);
         }
 
+        //TODO:Correr este test
+        [Test]
+        [Ignore]
+        public void TeclaApretadaCambiaFondoTeclaSiEstaRegistradaConEntrada()
+        {
+            MockEstrategiaNivelCancionFinita mockEstrategiaNivelCancionFinita = new MockEstrategiaNivelCancionFinita();
+            Nivel nivel = new Nivel("Facil", mockEstrategiaNivelCancionFinita);
+
+            MockVistaPlayerCancion vistaPlayerCancion = new MockVistaPlayerCancion();
+            IProveedorCancion proveedorCancion = new MockProveedorCancionXml();
+            MockManejadorVentanaPrincipal manejadorVentanaPrincipal = new MockManejadorVentanaPrincipal();
+            MockMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada = new MockMapeoTecladoEntidadesEntrada();
+            MockCalculadorDuracionNotas calculadorDuracionNotas = new MockCalculadorDuracionNotas();
+
+            //la marco como activa para que la llamada al método haga algo
+            PlayerCancionViewModel vm = new PlayerCancionViewModel(
+                vistaPlayerCancion, manejadorVentanaPrincipal,
+                proveedorCancion, calculadorDuracionNotas,
+                mapeoTecladoEntidadesEntrada);
+
+            vm.EmpezarCancion(this, new EmpezarCancionLlamadoEventArgs(new Cancion("Mock", "Mock") { PathPartitura = "MiPath" }, nivel));
+            vm.TeclaApretadaConVentanaActiva(Key.S);
+
+            Assert.IsTrue(vistaPlayerCancion.MarcarTeclaApretadaFueLlamado);
+            Assert.AreEqual(1, vistaPlayerCancion.CodigoEntidadEntradaAMarcar);
+        }
+
         [Test]
         public void TeclaApretadaAumentaPuntuacionSiAcerto()
         {
@@ -317,7 +342,6 @@ namespace AlgoHero.Pantallas.Tests
             Assert.AreEqual(0, vm.PuntuacionCancion.PuntosAcumulados);
             Assert.AreEqual(0, vm.PuntuacionCancion.RachaDeNotasAcertadas);
         }
-
 
         //Hay que correr el test separado de los demas a veces.
         [Test]
@@ -411,17 +435,17 @@ namespace AlgoHero.Pantallas.Tests
 
             public ReadOnlyCollection<EntidadEntrada> ObtenerEntidadesEntrada()
             {
-                return new ReadOnlyCollection<EntidadEntrada>(new List<EntidadEntrada>() { new EntidadEntrada(1) });
+                return new ReadOnlyCollection<EntidadEntrada>(new List<EntidadEntrada> { new EntidadEntrada(1) });
             }
 
             public bool ObtenerEntidadEntradaFueLlamado
             {
-                get; set;
+                get; private set;
             }
 
             public Key TeclaLlamado
             {
-                get; set;
+                get; private set;
             }
         }
 
@@ -482,10 +506,7 @@ namespace AlgoHero.Pantallas.Tests
                 {
                     return new Nota(Tono.Do, FiguraMusical.Negra);
                 }
-                else
-                {
-                    return new Nota(Tono.Re, FiguraMusical.Semicorchea);
-                }
+                return new Nota(Tono.Re, FiguraMusical.Semicorchea);
             }
 
             public bool EsFinalCancion()
@@ -546,6 +567,7 @@ namespace AlgoHero.Pantallas.Tests
         
         private class MockVistaPlayerCancion : IVistaPlayerCancion
         {
+            #region Propiedades
             public bool AgregarNotaVisualFueLlamado
             {
                 get; set;
@@ -565,6 +587,17 @@ namespace AlgoHero.Pantallas.Tests
             {
                 get; set;
             }
+
+            public int CodigoEntidadEntradaAMarcar
+            {
+                get; private set;
+            }
+
+            public bool MarcarTeclaApretadaFueLlamado
+            {
+                get; private set;
+            }
+            #endregion
 
             public void AgregarNotaVisual(Nota nota, IEnumerable<ITecla> teclas)
             {
@@ -588,10 +621,7 @@ namespace AlgoHero.Pantallas.Tests
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
 
             public bool TieneNotasAMostrar()
