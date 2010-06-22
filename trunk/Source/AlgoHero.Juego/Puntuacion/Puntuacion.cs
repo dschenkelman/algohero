@@ -1,7 +1,7 @@
 ﻿using System;
 using AlgoHero.Juego.Core;
 
-namespace AlgoHero.PuntuacionJuego
+namespace AlgoHero.Juego.Puntuacion
 {
     public class Puntuacion
     {
