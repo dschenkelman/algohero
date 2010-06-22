@@ -38,5 +38,15 @@ namespace AlgoHero.Juego.Tests.Entrada
             tecla.AgregarTonoAsociado(Tono.Do);
             tecla.AgregarTonoAsociado(Tono.Do);
         }
+
+        [Test]
+        public void ResetearTodosLosTonosDeUnaTecla()
+        {
+            var tecla = new Tecla(new EntidadEntrada(1));
+            tecla.AgregarTonoAsociado(Tono.Do);
+            tecla.AgregarTonoAsociado(Tono.Re);
+            tecla.ResetearTonosAsignados();
+            Assert.IsEmpty(tecla.ObtenerTonosAsociados());
+        }
     }
 }

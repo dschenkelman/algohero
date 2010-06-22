@@ -25,6 +25,11 @@ namespace AlgoHero.Juego.Entrada
             this.tonos.Add(tono);
         }
 
+        public void ResetearTonosAsignados() 
+        {
+            this.tonos = new List<Tono>();
+        }
+
         public int CantidadTonos
         {
             get
