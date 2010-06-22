@@ -85,8 +85,8 @@
     <Compile Include="Interfaces\IVentanaPrincipal.cs" />
     <Compile Include="Interfaces\IVistaPlayerCancion.cs" />
     <Compile Include="ManejadorVentanaPrincipal.cs" />
-    <Compile Include="MenuPrincipal\MenuPrincipalView.xaml.cs">
-      <DependentUpon>MenuPrincipalView.xaml</DependentUpon>
+    <Compile Include="MenuPrincipal\VistaMenuPrincipal.xaml.cs">
+      <DependentUpon>VistaMenuPrincipal.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal\MenuPrincipalViewModel.cs" />
     <Compile Include="PlayerCancion\NotasVisuales\INotaVisual.cs" />
@@ -136,7 +136,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MenuPrincipal\MenuPrincipalView.xaml">
+    <Page Include="MenuPrincipal\VistaMenuPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

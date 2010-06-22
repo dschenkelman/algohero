@@ -131,16 +131,22 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
             if (this.NivelActual.EsFinalCancion && !this.vistaPlayerCancion.TieneNotasAMostrar())
             {
-                this.timer.Stop();
-                this.timer = null;
-                if (this.CancionTerminada != null)
-                {
-                    this.CancionTerminada(this, new EventArgs());
-                }
+                TerminarCancion();
             }
         }
 
         #region MetodosPrivados
+
+        private void TerminarCancion()
+        {
+            this.timer.Stop();
+            this.timer = null;
+            this.ActivarVista(false);
+            if (this.CancionTerminada != null)
+            {
+                this.CancionTerminada(this, new EventArgs());
+            }
+        }
         private IEnumerable<ITecla> ObtenerTeclasRelacionadas(Nota nota)
         {
             IEnumerable<ITecla> teclas = this.controladorTeclas.ObtenerTeclas();

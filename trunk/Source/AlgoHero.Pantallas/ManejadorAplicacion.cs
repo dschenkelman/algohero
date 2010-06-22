@@ -30,6 +30,7 @@ namespace AlgoHero.Pantallas
                 new PlayerCancionViewModel(vistaPlayerCancion, manejadorVentanaPrincipal, proveedorCancionesDirectorio, new CalculadorDuracionNotas(), new MapeoTecladoEntidadesEntrada());
 
             menuPrincipalViewModel.EmpezarCancionLlamado += playerCancionViewModel.EmpezarCancion;
+            playerCancionViewModel.CancionTerminada += menuPrincipalViewModel.CancionTermino;
 
             manejadorVentanaPrincipal.CambiarContenido(menuPrincipal);
 
