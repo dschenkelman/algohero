@@ -71,6 +71,20 @@ namespace AlgoHero.Pantallas.PlayerCancion
             return false;
         }
 
+        public bool TieneNotasAMostrar()
+        {
+
+            for (int i = 0; i < this.listaNotasEntrada.Count; i++)
+            {
+                if (this.listaNotasEntrada[i].Count != 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+
+        }
+
         private List<INotaVisual> ObtenerNotasDeTecla(EntidadEntrada entrada)
         {
             switch (entrada.Codigo)

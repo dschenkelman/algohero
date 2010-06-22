@@ -1,4 +1,5 @@
-﻿using System.Timers;
+﻿using System;
+using System.Timers;
 using System.Windows.Input;
 using AlgoHero.Juego.Core;
 using AlgoHero.Pantallas.Eventos;
@@ -13,5 +14,6 @@ namespace AlgoHero.Pantallas.Interfaces
         void TeclaApretada(object sender, KeyEventArgs teclaApretada);
         Cancion CancionActual { get; }
         Nivel NivelActual { get; }
+        event EventHandler<EventArgs> CancionTerminada;
     }
 }

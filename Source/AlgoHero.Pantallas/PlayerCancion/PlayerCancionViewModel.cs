@@ -12,7 +12,6 @@ using AlgoHero.MusicEntities.Servicios.Interfaces;
 using AlgoHero.Juego.Entrada;
 using System.Timers;
 using System.Windows.Input;
-using Microsoft.Practices.Composite.Presentation.Commands;
 using AlgoHero.PuntuacionJuego;
 using System.ComponentModel;
 
@@ -47,38 +46,36 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         public event PropertyChangedEventHandler PropertyChanged;
         
-        public bool PuedeApretarTecla(Key teclaApretada)
-        {
-            return true;
-        }
-
-        public DelegateCommand<Key> ComandoTeclaApretada
-        {
-            get; set;
-        }
-
         public void TeclaApretada(object sender, KeyEventArgs eventArgs)
         {
             if(estaActiva)
             {
-                EntidadEntrada entidad = this.mapeoTecladoEntidadesEntrada.ObtenerEntidadEntrada(eventArgs.Key);
-                
-                //si la tecla esta mapeada a una entidad de entrada
-                if (entidad != null)
+                TeclaApretadaConVentanaActiva(eventArgs.Key);   
+            }
+        }
+
+        public void TeclaApretadaConVentanaActiva(Key tecla)
+        {
+            EntidadEntrada entidad = this.mapeoTecladoEntidadesEntrada.ObtenerEntidadEntrada(tecla);
+
+            //si la tecla esta mapeada a una entidad de entrada
+            if (entidad != null)
+            {
+                bool presionadoCorrecto = this.vistaPlayerCancion.TieneNotaAPresionar(entidad);
+                if (presionadoCorrecto)
                 {
-                    bool presionadoCorrecto = this.vistaPlayerCancion.TieneNotaAPresionar(entidad);
-                    if (presionadoCorrecto)
-                    {
-                        this.PuntuacionCancion.AcertarNota();
-                    }
-                    else
-                    {
-                        this.PuntuacionCancion.ErrarNota();
-                    }
+                    this.PuntuacionCancion.AcertarNota();
+                }
+                else
+                {
+                    this.PuntuacionCancion.ErrarNota();
+                }
+
+                if (this.PropertyChanged != null)
+                {
                     this.PropertyChanged(this, new PropertyChangedEventArgs("PuntuacionCancion"));
                 }
             }
-            
         }
 
         public Puntuacion PuntuacionCancion
@@ -98,6 +95,8 @@ namespace AlgoHero.Pantallas.PlayerCancion
             get;
             private set;
         }
+
+        public event EventHandler<EventArgs> CancionTerminada;
 
         public void EmpezarCancion(object sender, EmpezarCancionLlamadoEventArgs args)
         {
@@ -128,6 +127,16 @@ namespace AlgoHero.Pantallas.PlayerCancion
                 IEnumerable<ITecla> teclasRelacionadas = ObtenerTeclasRelacionadas(nota);
 
                 this.vistaPlayerCancion.AgregarNotaVisual(nota, teclasRelacionadas);
+            }
+
+            if (this.NivelActual.EsFinalCancion && !this.vistaPlayerCancion.TieneNotasAMostrar())
+            {
+                this.timer.Stop();
+                this.timer = null;
+                if (this.CancionTerminada != null)
+                {
+                    this.CancionTerminada(this, new EventArgs());
+                }
             }
         }
 
