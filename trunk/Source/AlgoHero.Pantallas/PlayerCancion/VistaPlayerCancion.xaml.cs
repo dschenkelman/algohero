@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Media;
 using AlgoHero.Interface;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Interfaces;
@@ -134,19 +135,25 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         private static INotaVisual ObtenerNotaVisualDeTecla(Nota nota, ITecla tecla)
         {
+            Color colorNota;
             switch (tecla.EntidadEntrada.Codigo)
             {
                 case 1:
-                    return new NotaVisual1(nota);
+                    colorNota = Colors.Green;
+                    break;
                 case 2:
-                    return new NotaVisual2(nota);
+                    colorNota = Colors.Red;
+                    break;
                 case 3:
-                    return new NotaVisual3(nota);
+                    colorNota = Colors.Yellow;
+                    break;
                 case 4:
-                    return new NotaVisual4(nota);
+                    colorNota = Colors.Cyan;
+                    break;
                 default:
                     throw new ArgumentException();
             }
+            return new NotaVisual(nota, colorNota);
         }
 
         private Canvas ObtenerCanvasDeTecla(ITecla tecla)
