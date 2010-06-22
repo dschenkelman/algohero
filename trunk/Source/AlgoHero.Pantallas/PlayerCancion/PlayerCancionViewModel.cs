@@ -5,7 +5,6 @@ using AlgoHero.Files.Interfaces;
 using AlgoHero.Interface;
 using AlgoHero.Interface.Enums;
 using AlgoHero.Juego.Core;
-using AlgoHero.Juego.Puntuacion;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Eventos;
 using AlgoHero.Pantallas.Interfaces;
@@ -14,6 +13,10 @@ using AlgoHero.Juego.Entrada;
 using System.Timers;
 using System.Windows.Input;
 using System.ComponentModel;
+using AlgoHero.Juego.Puntos;
+using AlgoHero.Pantallas.Puntos;
+using System.Windows;
+using System.Windows.Threading;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {
@@ -144,15 +147,43 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         private void TerminarCancion()
         {
-            this.timer.Stop();
-            this.timer = null;
+            ReiniciarTimer();
             this.ActivarVista(false);
-            this.PuntuacionCancion.Reiniciar();
-            this.PublicarCambioPuntuacionCancion();
+            MostrarDialogoPuntuacion();
+            PublicarCancionTerminada();
+        }
+
+        private void PublicarCancionTerminada()
+        {
             if (this.CancionTerminada != null)
             {
                 this.CancionTerminada(this, new EventArgs());
             }
+        }
+
+        private void ReiniciarTimer()
+        {
+            this.timer.Stop();
+            this.timer = null;
+        }
+
+        private void MostrarDialogoPuntuacion()
+        {
+            if (Application.Current != null)
+            {
+                Application.Current.Dispatcher.BeginInvoke(
+                    new InvocadorMostrarPuntuacionInterno(this.MostrarPuntuacionInterno),
+                    DispatcherPriority.Send);
+            }
+        }
+
+        public delegate void InvocadorMostrarPuntuacionInterno();
+
+        private void MostrarPuntuacionInterno()
+        {
+
+            DialogoPuntuacion dialogoPuntuacion = new DialogoPuntuacion(this.PuntuacionCancion);
+            dialogoPuntuacion.ShowDialog();
         }
 
         private IEnumerable<ITecla> ObtenerTeclasRelacionadas(Nota nota)
@@ -208,10 +239,8 @@ namespace AlgoHero.Pantallas.PlayerCancion
         private void IniciarPuntuacion()
         {
             this.PuntuacionCancion = new Puntuacion(this.NivelActual);
+            this.PublicarCambioPuntuacionCancion();
         }
-
-
-        #endregion
-
     }
+    #endregion
 }

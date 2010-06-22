@@ -6,7 +6,6 @@ using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Interfaces;
 using AlgoHero.Pantallas.PlayerCancion.NotasVisuales;
 using System.Windows.Threading;
-using System.Windows.Documents;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {

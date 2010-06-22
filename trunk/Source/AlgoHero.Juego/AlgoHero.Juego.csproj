@@ -52,7 +52,7 @@
     <Compile Include="Excepciones\ExcepcionFinalDeCancion.cs" />
     <Compile Include="Intefaces\IEstrategiaNivel.cs" />
     <Compile Include="Intefaces\IProveedorNiveles.cs" />
-    <Compile Include="Puntuacion\Puntuacion.cs" />
+    <Compile Include="Puntos\Puntuacion.cs" />
     <Compile Include="Servicios\OrganizadorDeTonos.cs" />
   </ItemGroup>
   <ItemGroup>
