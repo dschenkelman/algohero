@@ -1,6 +1,6 @@
 ﻿<Window  x:Class="AlgoHero.Pantallas.VentanaPrincipal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="Algo Hero" ResizeMode="CanMinimize">
+    Title="Algo Hero" ResizeMode="CanMinimize" Width="750" >
     <ContentControl x:Name="Contenido"/>
 </Window>

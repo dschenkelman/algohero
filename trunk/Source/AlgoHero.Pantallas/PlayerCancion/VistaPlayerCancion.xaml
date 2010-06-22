@@ -188,7 +188,8 @@
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" MinWidth="250"/> 
+            <ColumnDefinition Width="*" MinWidth="250"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
@@ -251,7 +252,41 @@
                 </Canvas>
             </Border>
         </Grid>
-        <StackPanel Orientation="Horizontal" Grid.Column="1">
+        <Grid Background="Black" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Row="0">
+                <Border BorderBrush="Gold">
+                    <TextBlock Text="Puntos" Foreground="Gold" FontSize="20" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Gold">
+                    <TextBlock Text="{Binding PuntuacionCancion.PuntosAcumulados}" Foreground="Gold" FontSize="14" HorizontalAlignment="Center"/>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Row="2">
+                <Border BorderBrush="Gold">
+                    <TextBlock Text="Racha" Foreground="Gold" FontSize="20" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Gold">
+                    <TextBlock Text="{Binding PuntuacionCancion.RachaDeNotasAcertadas}" Foreground="Gold" FontSize="14" HorizontalAlignment="Center"/>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Row="4">
+                <Border BorderBrush="Gold">
+                    <TextBlock Text="Multiplicador" Foreground="Gold" FontSize="20" HorizontalAlignment="Center"/>
+                </Border>
+                <Border BorderBrush="Gold">
+                    <TextBlock Text="{Binding PuntuacionCancion.Multiplicador}" Foreground="Gold" FontSize="14" HorizontalAlignment="Center"/>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Column="2">
             <Slider Margin="50" Ticks="0,1,2,3,4,5" Maximum="5" Minimum="0" Foreground="Gold"
             Style="{StaticResource styleSlider3D}"
             TickPlacement="Both" TickFrequency="5" />
