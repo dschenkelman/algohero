@@ -57,5 +57,11 @@ namespace AlgoHero.PuntuacionJuego
         public int RachaDeNotasAcertadas { get; private set; }
         public int PuntosAcumulados { get; private set; }
 
+        public void Reiniciar()
+        {
+            this.Multiplicador = 1;
+            this.PuntosAcumulados = 0;
+            this.RachaDeNotasAcertadas = 0;
+        }
     }
 }
