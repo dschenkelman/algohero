@@ -71,10 +71,15 @@ namespace AlgoHero.Pantallas.PlayerCancion
                     this.PuntuacionCancion.ErrarNota();
                 }
 
-                if (this.PropertyChanged != null)
-                {
-                    this.PropertyChanged(this, new PropertyChangedEventArgs("PuntuacionCancion"));
-                }
+                PublicarCambioPuntuacionCancion();
+            }
+        }
+
+        private void PublicarCambioPuntuacionCancion()
+        {
+            if (this.PropertyChanged != null)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs("PuntuacionCancion"));
             }
         }
 
@@ -142,11 +147,14 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.timer.Stop();
             this.timer = null;
             this.ActivarVista(false);
+            this.PuntuacionCancion.Reiniciar();
+            this.PublicarCambioPuntuacionCancion();
             if (this.CancionTerminada != null)
             {
                 this.CancionTerminada(this, new EventArgs());
             }
         }
+
         private IEnumerable<ITecla> ObtenerTeclasRelacionadas(Nota nota)
         {
             IEnumerable<ITecla> teclas = this.controladorTeclas.ObtenerTeclas();

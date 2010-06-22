@@ -1,5 +1,9 @@
-﻿using AlgoHero.Juego.Core;
+﻿using System;
+using AlgoHero.Interface;
+using AlgoHero.Juego.Core;
+using AlgoHero.MusicEntities.Core;
 using NUnit.Framework;
+using AlgoHero.Juego.Intefaces;
 
 namespace AlgoHero.PuntuacionJuego.Tests
 {
@@ -11,7 +15,7 @@ namespace AlgoHero.PuntuacionJuego.Tests
         [SetUp]
         public void TestInitialize()
         {
-            EstrategiaNivelMedio estrategiaNivel = new EstrategiaNivelMedio();
+            MockEstrategiaNivel estrategiaNivel = new MockEstrategiaNivel();
             Nivel nivelJuego = new Nivel("medio", estrategiaNivel);
             puntuacionActual = new Puntuacion(nivelJuego);
         }
@@ -66,6 +70,45 @@ namespace AlgoHero.PuntuacionJuego.Tests
             puntuacionActual.AcertarNota();
 
             Assert.AreEqual(2, puntuacionActual.Multiplicador);
+        }
+
+        [Test]
+        public void ReiniciarPuntuacionReinicializaValores()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                puntuacionActual.AcertarNota();
+            }
+
+            puntuacionActual.Reiniciar();
+
+            Assert.AreEqual(1, puntuacionActual.Multiplicador);
+            Assert.AreEqual(0, puntuacionActual.RachaDeNotasAcertadas);
+            Assert.AreEqual(0, puntuacionActual.PuntosAcumulados);
+        }
+
+
+        private class MockEstrategiaNivel : IEstrategiaNivel
+        {
+            public Nota ObtenerSiguienteNota()
+            {
+                throw new NotImplementedException();
+            }
+
+            public bool EsFinalCancion()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void AsignarCancion(Cancion cancion)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void AsignarTonos(IControladorTeclas controlador)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
