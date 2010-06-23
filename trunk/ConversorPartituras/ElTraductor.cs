@@ -39,21 +39,21 @@ namespace Traductor
 
             XmlNode tempo = compases[0].SelectSingleNode("./direction/sound");
             double tempoEnNegras = Convert.ToDouble(tempo.Attributes["tempo"].Value);
-            double tempoEnBlancas = tempoEnNegras / (double)2;
             
             double beats = Convert.ToDouble(beats_str);
             double tipo = Convert.ToDouble(tipo_str);
             
-            while (tipo > 2)
+            while (tipo > 4)
             {
                 tipo /= 2;
                 beats /= 2;
             }
-            if(tipo < 2){
+            while (tipo < 4)
+            {
                 tipo *= 2;
                 beats *= 2;
             }
-            double segundosPorCompas = (beats * 60) / tempoEnBlancas;
+            double segundosPorCompas = ( (double)(beats * 60) ) / (double)tempoEnNegras;
             List<Double> list = new List<double>();
             list.Add(Math.Round(segundosPorCompas, 3,MidpointRounding.ToEven));
             list.Add(beats);
@@ -82,7 +82,7 @@ namespace Traductor
             segundos.Value = Convert.ToString(double_segundos);
             tiempo.Attributes.Append(segundos);
 
-            XmlAttribute blancas = destino.CreateAttribute("cantidadBlancas");
+            XmlAttribute blancas = destino.CreateAttribute("cantidadNegras");
             blancas.Value = Convert.ToString(double_blancas);
             tiempo.Attributes.Append(blancas);
 
@@ -113,6 +113,7 @@ namespace Traductor
             {
 
                 XmlElement compas_out = destino.CreateElement("", "compas", "");
+                XmlElement notas_out = destino.CreateElement("", "notas", "");
                 XmlNodeList notas = compas.SelectNodes("./note");
                 List<XmlElement> lista_notas = new List<XmlElement>();
                 foreach (XmlNode nota in notas)
@@ -130,7 +131,6 @@ namespace Traductor
                     {
                         //si es rest(silencio) tira excepcion porq no existe inner text para null
                         string valor = nota.SelectSingleNode("./pitch/step").InnerText;
-                        bool sostenido = false;
                         if (nota.SelectSingleNode("./pitch/alter") != null)
                             valor_out.Value = this.ConvertirTono(valor, true);
                         else
@@ -156,8 +156,9 @@ namespace Traductor
                 }
                 foreach(XmlElement nota_o in lista_notas)
                 {
-                    compas_out.AppendChild(nota_o);
+                    notas_out.AppendChild(nota_o);
                 }
+                compas_out.AppendChild(notas_out);
                 Console.Write("|");
                 compases.AppendChild(compas_out);
             }

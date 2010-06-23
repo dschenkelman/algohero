@@ -7,5 +7,7 @@ namespace AlgoHero.MusicEntities.Servicios.Interfaces
     {
         double CalcularDuracion(TiempoCancion tiempoCancion, Nota nota);
         double CalcularDuracion(TiempoCancion tiempoCancion, FiguraMusical figuraMusical);
+        double RelacionDeFigura(FiguraMusical figura);
+        double RelacionDeFigura(Nota nota);
     }
 }
