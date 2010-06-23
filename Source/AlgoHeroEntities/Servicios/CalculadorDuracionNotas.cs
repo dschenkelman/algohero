@@ -19,21 +19,32 @@ namespace AlgoHero.MusicEntities.Servicios
         {
             double tiempoNegra = tiempoCancion.DuracionCompas / tiempoCancion.CantidadNegras;
 
+            return (tiempoNegra * this.RelacionDeFigura(figura));
+
+        }
+        
+        public double RelacionDeFigura(FiguraMusical figura)
+        {
             switch (figura)
             {
                 case FiguraMusical.Redonda:
-                    return tiempoNegra * 4;
+                    return 4.0;
                 case FiguraMusical.Blanca:
-                    return tiempoNegra * 2;
+                    return 2.0;
                 case FiguraMusical.Negra:
-                    return tiempoNegra;
+                    return 1.0;
                 case FiguraMusical.Corchea:
-                    return tiempoNegra / 2;
+                    return 0.5;
                 case FiguraMusical.Semicorchea:
-                    return tiempoNegra / 4;
+                    return 0.25;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        public double RelacionDeFigura(Nota nota)
+        {
+            return this.RelacionDeFigura(nota.Figura);
         }
     }
 }

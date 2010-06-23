@@ -554,6 +554,35 @@ namespace AlgoHero.Pantallas.Tests
                 return 0;
             }
 
+            public double RelacionDeFigura(FiguraMusical figuraMusical) 
+            {
+                if (figuraMusical == FiguraMusical.Negra)
+                {
+                    return 1;
+                }
+                else if (figuraMusical == FiguraMusical.Semicorchea)
+                {
+                    return 0.25;
+                }
+                return 0;
+            }
+
+
+            public double RelacionDeFigura(Nota nota)
+            {
+                FiguraMusical figuraMusical = nota.Figura;
+                if (figuraMusical == FiguraMusical.Negra)
+                {
+                    return 1.0;
+                }
+                else if (figuraMusical == FiguraMusical.Semicorchea)
+                {
+                    return 0.25;
+                }
+                return 0;
+            }
+            
+
             public bool CalcularDuracionFueLlamado
             {
                 get; set;
