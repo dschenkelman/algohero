@@ -1413,7 +1413,7 @@
             <tono valor="Mi" />
             <tono valor="La" />
           </nota>
-          <nota forma="corchea">
+          <nota forma="negra">
             <tono valor="La" />
             <tono valor="Mi" />
             <tono valor="La" />
@@ -3073,8 +3073,7 @@
       <compas>
         <notas>
           <nota forma="corchea">
-            <tono
-              valor="Sol" />
+            <tono valor="Sol" />
           </nota>
           <nota forma="semicorchea">
             <tono valor="Fa" />

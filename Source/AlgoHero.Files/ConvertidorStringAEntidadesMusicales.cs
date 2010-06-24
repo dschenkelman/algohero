@@ -27,6 +27,8 @@ namespace AlgoHero.Files
                     return Tono.FaSostenido;
                 case "sol":
                     return Tono.Sol;
+                case "sol#":
+                    return Tono.SolSostenido;
                 case "la":
                     return Tono.La;
                 case "la#":

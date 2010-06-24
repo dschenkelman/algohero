@@ -6,7 +6,7 @@
         Re, ReSostenido,
         Mi,
         Fa, FaSostenido,
-        Sol,
+        Sol, SolSostenido,
         La, LaSostenido,
         Si,
         Silencio
