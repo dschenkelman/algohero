@@ -35,6 +35,11 @@ namespace AlgoHero.Juego.Reproductor
         /* Este metodo comienza a reproducir la cancion*/
         public void ReproducirCancion()
         {
+            if(this.pathCancion == null)
+            {
+                throw new ArgumentException();
+            }
+
             Play(this.pathCancion, new System.IntPtr(), PlaySoundFlags.SND_ASYNC);
         }
 
