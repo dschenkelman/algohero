@@ -50,6 +50,10 @@ namespace AlgoHero.MusicEntities.Core
             get { return this.tonos.AsReadOnly(); }
         }
 
+        public double ProporcionFigura
+        { 
+            get { return this.calculadorDuracion.RelacionDeFigura(this); }
+        }
         #endregion
         
         /*En base al tiempo de la cancion calcula el tiempo entre la nota actual
@@ -58,5 +62,7 @@ namespace AlgoHero.MusicEntities.Core
         {
             return this.calculadorDuracion.CalcularDuracion(tiempoCancion, this);
         }
+
+       
     }
 }

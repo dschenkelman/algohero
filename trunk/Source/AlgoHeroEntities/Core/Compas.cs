@@ -11,6 +11,7 @@ namespace AlgoHero.MusicEntities.Core
         private TiempoCancion tiempoCancion;
         private double tiempoMaximoCompas;
         private double tiempoActualCompas;
+        private double tiempoEnNegras;
 
 
         /*Crea un nuevo compas asignando con el tiempo de cancion recibido como parametro.*/
@@ -18,6 +19,7 @@ namespace AlgoHero.MusicEntities.Core
         {
             this.notas = new List<Nota>();
             this.tiempoCancion = tiempoCancion;
+            this.tiempoEnNegras = 0;
             this.tiempoMaximoCompas = tiempoCancion.DuracionCompas;
             this.tiempoActualCompas = 0;
         }
@@ -28,7 +30,9 @@ namespace AlgoHero.MusicEntities.Core
         {
             this.tiempoActualCompas += 
                 nota.CalcularTiempoProximaNota(this.tiempoCancion);
-            if (tiempoActualCompas > tiempoMaximoCompas)
+            this.tiempoEnNegras += nota.ProporcionFigura;
+
+            if (this.tiempoEnNegras > this.tiempoCancion.CantidadNegras)
             {
                 throw new ExcepcionCompasInvalido();
             }
@@ -40,11 +44,11 @@ namespace AlgoHero.MusicEntities.Core
         {
             get { return this.notas.Count; }
         }
-
+      
         /*Devuelve si el compsa esta completo (segun el tiempo de la cancion).*/
         public bool EsCompleto
         {
-            get { return (this.tiempoMaximoCompas == this.tiempoActualCompas); }
+            get { return (this.tiempoEnNegras == this.tiempoCancion.CantidadNegras); }
         }
 
         /*Devuelve la nota del compas en la posicion recibida como parametro.*/
