@@ -13,5 +13,6 @@
         public string Autor { get; private set; }
         public Partitura Partitura{ get; set; }
         public string PathPartitura{ get; set; }
+        //public string PathMusica { get; set; } agregar y testear
     }
 }
