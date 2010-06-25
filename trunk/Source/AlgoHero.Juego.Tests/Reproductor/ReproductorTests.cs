@@ -24,7 +24,7 @@ namespace AlgoHero.Juego.Tests.Reproductor
         public void ReproductorMusicaReproduceCorrectamente()
         {
             Assert.AreEqual(false, this.reproductor.Reproduciendo);
-            string pathCancion = Path.Combine(Environment.CurrentDirectory, Path.Combine("Archivos Prueba", "Happy.wav"));
+            string pathCancion = "C:\\Gonzalo\\UBA-UNLP\\Materias (UBA)\\Programacion III\\GuitarHero\\Source\\AlgoHero.Juego.Tests\\Archivos Prueba\\Happy.wav";
             this.reproductor.ReproducirCancion(pathCancion);
             Assert.AreEqual(true, this.reproductor.Reproduciendo);
         }
@@ -34,6 +34,13 @@ namespace AlgoHero.Juego.Tests.Reproductor
         {
             this.reproductor.DetenerReproduccion();
             Assert.AreEqual(false, this.reproductor.Reproduciendo);
+        }
+
+        [Test]
+        [ExpectedException(ExceptionType = typeof(ArgumentException))]
+        public void ReproductorLanzaExcepcionSiNoEncuentraArchivo()
+        {
+            this.reproductor.ReproducirCancion("Jijiji.wav");
         }
     }
 }
