@@ -142,11 +142,19 @@ namespace Traductor
                     }
                     tono_out.Attributes.Append(valor_out);
 
+                    if (nota.SelectSingleNode("./dot") != null)
+                    {
+                        XmlAttribute puntillo = destino.CreateAttribute("puntillo");
+                        puntillo.Value = "ok";
+                        tono_out.Attributes.Append(puntillo);
+                    }
+
                     if (nota.SelectSingleNode("./chord") != null)
                     {
                         int indice = lista_notas.Count - 1;
                         lista_notas[indice].AppendChild(tono_out);
                     }
+                    
                     else
                     {
                         nota_out.AppendChild(tono_out);
