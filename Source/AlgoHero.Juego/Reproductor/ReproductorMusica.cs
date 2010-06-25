@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -34,10 +35,12 @@ namespace AlgoHero.Juego.Reproductor
         /* Este metodo comienza a reproducir la cancion*/
         public void ReproducirCancion(string pathCancion)
         {
-            if(!Play(pathCancion, new System.IntPtr(), PlaySoundFlags.SND_ASYNC))
+            if(!File.Exists(pathCancion))
             {
                 throw new ArgumentException();
             }
+
+            Play(pathCancion, new System.IntPtr(), PlaySoundFlags.SND_ASYNC);
             this.Reproduciendo = true;
         }
 
