@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using AlgoHero.Juego.Intefaces;
 
 namespace AlgoHero.Juego.Reproductor
 {
-    public class ReproductorMusica
+    public class ReproductorMusica : IReproductorMusica
     {
-        private string pathCancion;
+
+        public ReproductorMusica()
+        {
+            this.Reproduciendo = false;
+        }
 
         [System.Runtime.InteropServices.DllImport("winmm.DLL", EntryPoint = "PlaySound", SetLastError = true, CharSet = CharSet.Unicode, ThrowOnUnmappableChar = true)]
         private static extern bool Play(string szSound, System.IntPtr hMod, PlaySoundFlags flags);
@@ -26,28 +31,24 @@ namespace AlgoHero.Juego.Reproductor
             SND_RESOURCE = 0x00040004
         }
 
-        /* Este metodo recibe un string con el path de la cancion y lo asigna al atributo pathCancion de la clase*/
-        public void ElegirCancion(string pathArchivo)
-        {
-            this.pathCancion = pathArchivo;
-        }
-
         /* Este metodo comienza a reproducir la cancion*/
-        public void ReproducirCancion()
+        public void ReproducirCancion(string pathCancion)
         {
-            if(this.pathCancion == null)
+            if(!Play(pathCancion, new System.IntPtr(), PlaySoundFlags.SND_ASYNC))
             {
                 throw new ArgumentException();
             }
-
-            Play(this.pathCancion, new System.IntPtr(), PlaySoundFlags.SND_ASYNC);
+            this.Reproduciendo = true;
         }
 
         /* Este metodo detiene la reproduccion*/
         public void DetenerReproduccion()
         {
             Play(null, new System.IntPtr(), PlaySoundFlags.SND_ASYNC);
+            this.Reproduciendo = false;
         }
+
+        public bool Reproduciendo { get; private set; }
 
     }
 }

@@ -52,6 +52,7 @@
     <Compile Include="Excepciones\ExcepcionFinalDeCancion.cs" />
     <Compile Include="Intefaces\IEstrategiaNivel.cs" />
     <Compile Include="Intefaces\IProveedorNiveles.cs" />
+    <Compile Include="Intefaces\IReproductorMusica.cs" />
     <Compile Include="Puntos\Puntuacion.cs" />
     <Compile Include="Reproductor\ReproductorMusica.cs" />
     <Compile Include="Servicios\OrganizadorDeTonos.cs" />
