@@ -24,7 +24,8 @@ namespace AlgoHero.Juego.Tests.Reproductor
         public void ReproductorMusicaReproduceCorrectamente()
         {
             Assert.AreEqual(false, this.reproductor.Reproduciendo);
-            string pathCancion = "C:\\Gonzalo\\UBA-UNLP\\Materias (UBA)\\Programacion III\\GuitarHero\\Source\\AlgoHero.Juego.Tests\\Archivos Prueba\\Happy.wav";
+            string pathCancion = Path.Combine(Environment.CurrentDirectory,
+            Path.Combine("Archivos Prueba", "Happy.wav"));
             this.reproductor.ReproducirCancion(pathCancion);
             Assert.AreEqual(true, this.reproductor.Reproduciendo);
         }
