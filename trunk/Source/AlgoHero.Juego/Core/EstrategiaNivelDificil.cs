@@ -17,17 +17,20 @@ namespace AlgoHero.Juego.Core
         {
         }
 
+        /* Este metodo recibe por parametro una cancion, la asigna al atributo cancion y crea un iterador para la cancion.*/
         public void AsignarCancion(Cancion cancion)
         {
             this.cancion = cancion;
             this.iter = cancion.Partitura.ObtenerIterador();
         }
 
+        /* Este metodo verifica si la cancion llego al final. */
         public bool EsFinalCancion()
         {
             return (!this.iter.TieneSiguiente);
         }
 
+        /* Este metodo obtiene la siguiente nota de la cancion. */
         public Nota ObtenerSiguienteNota()
         {
             if (this.EsFinalCancion())
@@ -40,6 +43,7 @@ namespace AlgoHero.Juego.Core
             }
         }
 
+        /* Este metodo recibe un IControladorTeclas por parametro, y asigna los tonos a las difernetes teclas. */
         public void AsignarTonos(IControladorTeclas controlador)
         {
             foreach (ITecla tecla in controlador.ObtenerTeclas())

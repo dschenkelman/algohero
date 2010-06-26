@@ -9,11 +9,13 @@ namespace AlgoHero.Juego.Servicios
     {
         private IIterador<Nota> iter;
 
+        /* Constructor. Recibe una Cancion y crea un OrganizadorDeTonos. Crea un iterador para la partitura de la cancion. */
         public OrganizadorDeTonos(Cancion cancion)
         {
             this.iter = cancion.Partitura.ObtenerIterador();
         }
 
+        /* Este tono cuenta las apariciones de cada tono en la cancion, y devuelve una lista con los tonos y la cantidad de apariciones*/
         public List<TonoConCantidad> ContarApacionesDeCadaTono()
         {
             var diccionario = new Dictionary<Tono, int>();
@@ -41,6 +43,7 @@ namespace AlgoHero.Juego.Servicios
             return tonosConCantidad;
         }
 
+        /* Este metodo recibe una lista de tonos con su cantidad de apariciones, la ordena, y la devuelve. */
         public List<Tono> OrdenarNotas(List<TonoConCantidad> lista)
         {
             lista.Sort(
@@ -60,8 +63,10 @@ namespace AlgoHero.Juego.Servicios
             return salida;
         }
 
+        /* Clase interna. Representa un tono y una cantidad de apariciones del tono. */
         public class TonoConCantidad
         {
+            /* Constructor. Crea un nuevo TonoConCantidad. */
             public TonoConCantidad(Tono tono, int cant)
             {
                 this.Tono = tono;

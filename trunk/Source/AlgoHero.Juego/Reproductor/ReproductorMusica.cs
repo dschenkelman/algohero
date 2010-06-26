@@ -10,7 +10,7 @@ namespace AlgoHero.Juego.Reproductor
 {
     public class ReproductorMusica : IReproductorMusica
     {
-
+        /* Constructor. Crea un nuevo reproductor de musica. */
         public ReproductorMusica()
         {
             this.Reproduciendo = false;

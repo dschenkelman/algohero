@@ -23,6 +23,7 @@ namespace AlgoHero.MusicEntities.Servicios
 
         }
         
+        /* Devuelve la relacion en tiempo de una figura musical con respecto a una negra. */
         public double RelacionDeFigura(FiguraMusical figura)
         {
             switch (figura)
@@ -46,6 +47,7 @@ namespace AlgoHero.MusicEntities.Servicios
             }
         }
 
+        /* Devuelve la relacion en tiempo de una nota con una negra. */
         public double RelacionDeFigura(Nota nota)
         {
             return this.RelacionDeFigura(nota.Figura);

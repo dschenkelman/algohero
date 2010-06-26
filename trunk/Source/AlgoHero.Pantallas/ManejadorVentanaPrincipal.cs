@@ -8,6 +8,7 @@ namespace AlgoHero.Pantallas
     {
         private readonly IVentanaPrincipal ventanaPrincipal;
 
+        /* Constructor. Crea un nuevo ManejadorVentanaPrincipal. */
         public ManejadorVentanaPrincipal(IVentanaPrincipal ventanaPrincipal)
         {
             this.ventanaPrincipal = ventanaPrincipal;
