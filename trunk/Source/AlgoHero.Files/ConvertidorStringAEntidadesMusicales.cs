@@ -58,6 +58,10 @@ namespace AlgoHero.Files
                     return FiguraMusical.Corchea;
                 case "semicorchea":
                     return FiguraMusical.Semicorchea;
+                case "fusa":
+                    return FiguraMusical.Corchea;
+                case "semifusa":
+                    return FiguraMusical.Semicorchea;
                 default:
                     throw new ArgumentException();
 

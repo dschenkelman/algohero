@@ -37,6 +37,10 @@ namespace AlgoHero.MusicEntities.Servicios
                     return 0.5;
                 case FiguraMusical.Semicorchea:
                     return 0.25;
+                case FiguraMusical.Fusa:
+                    return 0.125;
+                case FiguraMusical.Semifusa:
+                    return 0.0625;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
