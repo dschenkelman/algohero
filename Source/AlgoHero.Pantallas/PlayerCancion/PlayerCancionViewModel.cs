@@ -106,6 +106,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         public event EventHandler<EventArgs> CancionTerminada;
 
+        /* Este metodo da comienzo a la cancion. */
         public void EmpezarCancion(object sender, EmpezarCancionLlamadoEventArgs args)
         {
             ActivarVista(true);
@@ -121,6 +122,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
             EmpezarCiclo();
         }
 
+        /* Este metodo actualiza el estado de la vista. */
         public void ActualizarEstado(object sender, ElapsedEventArgs e)
         {
             this.vistaPlayerCancion.Actualizar();
@@ -186,6 +188,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
             dialogoPuntuacion.ShowDialog();
         }
 
+        /* Devuelve las teclas relacionadas a una nota. */
         private IEnumerable<ITecla> ObtenerTeclasRelacionadas(Nota nota)
         {
             IEnumerable<ITecla> teclas = this.controladorTeclas.ObtenerTeclas();
@@ -201,6 +204,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
             return teclasAUsar;
         }
         
+        /* Este metodo comienza el ciclo del juego. */
         private void EmpezarCiclo()
         {
             this.timer = new Timer((double) (this.intervaloActualizacion * 1000));

@@ -11,6 +11,7 @@ namespace AlgoHero.Pantallas
 {
     public class ManejadorAplicacion
     {
+        /* Inicia la aplicacion. */
         public void Iniciar()
         {
             ProveedorCancionXml proveedorCancionesDirectorio = new ProveedorCancionXml();

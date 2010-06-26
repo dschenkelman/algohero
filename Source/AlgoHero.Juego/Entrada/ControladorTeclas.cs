@@ -11,6 +11,7 @@ namespace AlgoHero.Juego.Entrada
         private readonly IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada;
         private List<ITecla> teclas;
 
+        /* Constructor. Crea un nuevo controlador de teclas. */
         public ControladorTeclas(IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada)
         {
             this.mapeoTecladoEntidadesEntrada = mapeoTecladoEntidadesEntrada;
@@ -27,6 +28,7 @@ namespace AlgoHero.Juego.Entrada
             get { return this.teclas.Count; }
         }
 
+        /* Este metodo recibe un codigo de entidad entrada y devuelve una tecla asociada. */
         public ITecla ObtenerTecla(int codigoEntidadEntrada)
         {
             ITecla tecla =  this.teclas.FirstOrDefault(t => t.EntidadEntrada.Codigo == codigoEntidadEntrada);
@@ -38,6 +40,7 @@ namespace AlgoHero.Juego.Entrada
             return tecla;
         }
 
+        /* Este metodo devuelve una coleccion de las teclas. */
         public IEnumerable<ITecla> ObtenerTeclas()
         {
             return this.teclas;
