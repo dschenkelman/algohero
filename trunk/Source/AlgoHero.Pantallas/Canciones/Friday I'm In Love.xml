@@ -1,6 +1,6 @@
 <xml>
   <cancion nombre="Friday I'm In Love" autor="The Cure">
-    <tiempo duracionCompasSegundos="1,778" cantidadNegras="4" />
+    <tiempo duracionCompasSegundos="2" cantidadNegras="4" />
     <compases>
       <compas>
         <notas>

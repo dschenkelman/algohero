@@ -1,6 +1,6 @@
 <xml>
   <cancion nombre="The Naked Gun" autor="Theme Song">
-    <tiempo duracionCompasSegundos="1,091" cantidadNegras="4" />
+    <tiempo duracionCompasSegundos="2" cantidadNegras="4" />
     <compases>
       <compas>
         <notas>
