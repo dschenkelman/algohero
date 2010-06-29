@@ -43,6 +43,7 @@ namespace AlgoHero.Pantallas
             this.AplicacionCorriendo = true;
         }
 
+        /* Este metodo cierra la ventana principal, establece la propiedad AplicacionCorriendo a false */
         public void CerrandoVentanaPrincipal(object sender, System.ComponentModel.CancelEventArgs e)
         {
             this.AplicacionCorriendo = false;

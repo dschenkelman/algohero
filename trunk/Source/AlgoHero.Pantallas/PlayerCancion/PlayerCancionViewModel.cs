@@ -33,6 +33,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
         private Timer timer;
         private readonly IControladorTeclas controladorTeclas;
 
+        /* Constructor. */
         public PlayerCancionViewModel(IVistaPlayerCancion vistaPlayerCancion, 
             IManejadorVentanaPrincipal manejadorVentanaPrincipal,
             IProveedorCancion proveedorCancion, ICalculadorDuracionNotas calculadorDuracionNotas,
@@ -78,6 +79,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
             }
         }
 
+        /* En caso de modificarse la puntuacion, este metodo actualiza la vista.*/
         private void PublicarCambioPuntuacionCancion()
         {
             if (this.PropertyChanged != null)
@@ -147,6 +149,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         #region MetodosPrivados
 
+        /* Este metodo termina la cancion, reiniciando el timer, mostrando los puntos y cambiando la vista. */
         private void TerminarCancion()
         {
             ReiniciarTimer();
@@ -163,12 +166,14 @@ namespace AlgoHero.Pantallas.PlayerCancion
             }
         }
 
+        /* Este metodo reinicia del timer. */
         private void ReiniciarTimer()
         {
             this.timer.Stop();
             this.timer = null;
         }
 
+        /* Este metodo muestra el dialogo dep untuacion al finalizar el juego */
         private void MostrarDialogoPuntuacion()
         {
             if (Application.Current != null)
@@ -181,6 +186,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
 
         public delegate void InvocadorMostrarPuntuacionInterno();
 
+        /* Este metodo muestra el dialogo de puntuacion. */
         private void MostrarPuntuacionInterno()
         {
 
@@ -212,6 +218,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.timer.Start();
         }
 
+        /* Este metodo calcula el intervalo de actualizacion en segundos */
         private void CalcularIntervaloActualizacion()
         {
             double tiempoSemicorchea = this.calculadorDuracionNotas.CalcularDuracion
@@ -222,6 +229,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.segundosProximaNota = this.intervaloActualizacion;
         }
 
+        /* Este metodo cambia el contenido de la ventana principal. */
         private void MostrarVentanaPlayer()
         {
             this.manejadorVentanaPrincipal.CambiarContenido(this.vistaPlayerCancion);
@@ -235,11 +243,13 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.NivelActual.AsignarTeclas(this.controladorTeclas);
         }
 
+        /* Este metodo activa la vista. */
         private void ActivarVista(bool estado)
         {
             this.estaActiva = estado;
         }
 
+        /* Este metodo crea un nuevo objeto Puntuacion y lo publica en la vista. */
         private void IniciarPuntuacion()
         {
             this.PuntuacionCancion = new Puntuacion();
