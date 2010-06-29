@@ -20,6 +20,8 @@ namespace AlgoHero.Pantallas.MenuPrincipal
         private readonly IProveedorNiveles proveedorNiveles;
         private readonly IManejadorVentanaPrincipal manejadorVentanaPrincipal;
 
+        /* Constructor. Recibe un proveedor de canciones, otro de niveles, y un manejador de ventana principal. Agrega las
+         * canciones y los niveles. */
         public MenuPrincipalViewModel(IProveedorCancionesDirectorio proveedorCanciones, IProveedorNiveles proveedorNiveles,
             IManejadorVentanaPrincipal manejadorVentanaPrincipal)
         {
@@ -84,11 +86,13 @@ namespace AlgoHero.Pantallas.MenuPrincipal
             private set;
         }
 
+        /* Agrega los niveles del proveedor a la propiedad niveles. */
         private void AgregarNiveles()
         {
             this.Niveles = this.proveedorNiveles.ObtenerNiveles(); 
         }
 
+        /* Agrega las canciones del proveedor a la lista de canciones. */
         private void AgregarCancionesDeProveedor()
         {
             //TODO: Cambiar esto para poder configurar de donde vienen las canciones
@@ -100,6 +104,7 @@ namespace AlgoHero.Pantallas.MenuPrincipal
             }
         }
 
+        /* Devuelve true en caso de que exista un nivel actual y una cancion, es decir, pueda comenzar la cancion */
         private bool PuedeEmpezarCancion(object obj)
         {
             return (this.NivelActual != null && this.CancionActual != null);
