@@ -12,15 +12,14 @@ Esta guía servirá para agregar canciones que no estén en este repositorio
 
   * En [http://www.4shared.com/dir/g2ArOjQz/Canciones.html este sitio] Ud. podrá bajar las nuevas canciones que publicaremos. 
 
-  * Si quiere hacer una petición especial, primero busque en google la canción que desea 
-en midi, o como tablatura de guitar pro.
+  * Si quiere hacer una petición especial, primero busque en google la canción que desea en midi, o como tablatura de guitar pro.
 
 
 
 = ¿Que hay dentro del _`<archivo>`.rar_? =
 
 
-  * Hay una carpeta con el nombre de la canción, con todo lo necesario para jugar esa canción en AlgoHero2010
+  * Hay una carpeta con el nombre de la canción, con todo lo necesario para jugar esa canción en algoHero2010
 
 
 
@@ -53,9 +52,9 @@ en midi, o como tablatura de guitar pro.
   Los pasos son simples:
 
 
-    * Copiamos _*`<Cancion>`.xml*_ a _~/AlgoHero.Pantallas/Caciones_.
+    * Copiamos _*`<Cancion>`.xml*_ a _~/algoHero.Pantallas/Caciones_.
 
-    * Copiamos _*`<Cancion>`.wav*_ a _~/AlgoHero.Pantallas/Musica_.
+    * Copiamos _*`<Cancion>`.wav*_ a _~/algoHero.Pantallas/Musica_.
 
     * Abrimos el proyecto y agregamos (en sus respectivas carpetas) los nuevos archivos al proyecto.
 
@@ -65,7 +64,7 @@ en midi, o como tablatura de guitar pro.
 
     * Copiar en el dir...: _*"Copiar Si es Posterior"*_.
 
-    * Compilamos y las canciones nuevas estan listas para jugar.
+    * Compilamos y las canciones nuevas están listas para jugar.
 
 
 
