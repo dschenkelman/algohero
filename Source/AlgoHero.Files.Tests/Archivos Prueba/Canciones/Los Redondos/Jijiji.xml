@@ -1,5 +1,5 @@
 <xml>
-	<cancion nombre="Jijiji" autor="Los redondos">
+	<cancion nombre="Jijiji" autor="Los redondos" archivoMusica="Musica\jijiji.wav">
 		<tiempo duracionCompasSegundos="4" cantidadNegras="4"/>
     <compases>
       <compas>

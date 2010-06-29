@@ -55,6 +55,18 @@ namespace AlgoHero.Files.Tests
         }
 
         [Test]
+        public void ObtenerCancionDeArchivoObtieneNombreDelArchivoDeMusicaAReproducir()
+        {
+            string pathCancion = Path.Combine(Environment.CurrentDirectory,
+            Path.Combine(@"Archivos Prueba\Canciones\Queen", "WeWillRockYou.xml"));
+            string directorioCanciones = Path.Combine(Environment.CurrentDirectory, @"Archivos Prueba\Canciones");
+            IProveedorCancion proveedor = new ProveedorCancionXml();
+            Cancion cancion = proveedor.ObtenerCancionConPartitura(pathCancion);
+
+            Assert.AreEqual(@"Musica\wwry.wav", cancion.PathArchivoMusica);
+        }
+
+        [Test]
         public void ObtenerCancionDeArchivoDevuelveCompasesConNotasCorrectas()
         {
             string pathCancion = Path.Combine(Environment.CurrentDirectory,
