@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AlgoHero.Juego.Intefaces
 {
-    interface IReproductorMusica
+    public interface IReproductorMusica
     {
         void ReproducirCancion(string path);
         void DetenerReproduccion();

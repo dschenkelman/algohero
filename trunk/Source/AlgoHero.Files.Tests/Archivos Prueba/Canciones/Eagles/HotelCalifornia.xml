@@ -1,5 +1,5 @@
 <xml>
-	<cancion nombre="Hotel California" autor="Eagles">
+	<cancion nombre="Hotel California" autor="Eagles" archivoMusica="hc.wav">
 		<tiempo duracionCompasSegundos="4" cantidadNegras="4"/>
     <compases>
       <compas>

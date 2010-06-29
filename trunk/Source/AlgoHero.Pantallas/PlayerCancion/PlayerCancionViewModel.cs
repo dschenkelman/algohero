@@ -5,6 +5,7 @@ using AlgoHero.Files.Interfaces;
 using AlgoHero.Interface;
 using AlgoHero.Interface.Enums;
 using AlgoHero.Juego.Core;
+using AlgoHero.Juego.Intefaces;
 using AlgoHero.MusicEntities.Core;
 using AlgoHero.Pantallas.Eventos;
 using AlgoHero.Pantallas.Interfaces;
@@ -17,6 +18,7 @@ using AlgoHero.Juego.Puntos;
 using AlgoHero.Pantallas.Puntos;
 using System.Windows;
 using System.Windows.Threading;
+using System.IO;
 
 namespace AlgoHero.Pantallas.PlayerCancion
 {
@@ -28,22 +30,26 @@ namespace AlgoHero.Pantallas.PlayerCancion
         private readonly IProveedorCancion proveedorCancion;
         private readonly ICalculadorDuracionNotas calculadorDuracionNotas;
         private readonly IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada;
+        private readonly IReproductorMusica reproductorMusica;
         private decimal intervaloActualizacion;
         private decimal segundosProximaNota;
         private Timer timer;
         private readonly IControladorTeclas controladorTeclas;
 
         /* Constructor. */
-        public PlayerCancionViewModel(IVistaPlayerCancion vistaPlayerCancion, 
+        public PlayerCancionViewModel(IVistaPlayerCancion vistaPlayerCancion,
             IManejadorVentanaPrincipal manejadorVentanaPrincipal,
-            IProveedorCancion proveedorCancion, ICalculadorDuracionNotas calculadorDuracionNotas,
-            IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada)
+            IProveedorCancion proveedorCancion,
+            ICalculadorDuracionNotas calculadorDuracionNotas,
+            IMapeoTecladoEntidadesEntrada mapeoTecladoEntidadesEntrada,
+            IReproductorMusica reproductorMusica)
         {
             this.vistaPlayerCancion = vistaPlayerCancion;
             this.manejadorVentanaPrincipal = manejadorVentanaPrincipal;
             this.proveedorCancion = proveedorCancion;
             this.calculadorDuracionNotas = calculadorDuracionNotas;
             this.mapeoTecladoEntidadesEntrada = mapeoTecladoEntidadesEntrada;
+            this.reproductorMusica = reproductorMusica;
             this.controladorTeclas = new ControladorTeclas(mapeoTecladoEntidadesEntrada);
             this.vistaPlayerCancion.AsignarDataContext(this);
         }
@@ -122,8 +128,11 @@ namespace AlgoHero.Pantallas.PlayerCancion
             IniciarPuntuacion();
 
             EmpezarCiclo();
+
+            ReproducirCancion();
         }
 
+        
         /* Este metodo actualiza el estado de la vista. */
         public void ActualizarEstado(object sender, ElapsedEventArgs e)
         {
@@ -155,6 +164,7 @@ namespace AlgoHero.Pantallas.PlayerCancion
             ReiniciarTimer();
             this.ActivarVista(false);
             MostrarDialogoPuntuacion();
+            DetenerCancion();
             PublicarCancionTerminada();
         }
 
@@ -255,6 +265,20 @@ namespace AlgoHero.Pantallas.PlayerCancion
             this.PuntuacionCancion = new Puntuacion();
             this.PublicarCambioPuntuacionCancion();
         }
+
+        /*Comienza a reproducir la musica de la cancion seleccionada*/
+        private void ReproducirCancion()
+        {
+            string pathCompleto = Path.Combine(Environment.CurrentDirectory, this.CancionActual.PathArchivoMusica);
+            this.reproductorMusica.ReproducirCancion(pathCompleto);
+        }
+
+        private void DetenerCancion()
+        {
+            this.reproductorMusica.DetenerReproduccion();
+        }
+
+        #endregion
     }
-    #endregion
+
 }

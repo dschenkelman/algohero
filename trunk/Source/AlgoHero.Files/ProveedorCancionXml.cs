@@ -18,7 +18,8 @@ namespace AlgoHero.Files
             XmlNode nodoCancion = this.ObtenerNodoCancion(documento);
             string nombreCancion = nodoCancion.Attributes["nombre"].Value;
             string autorCancion = nodoCancion.Attributes["autor"].Value;
-            return new Cancion(nombreCancion, autorCancion){ PathPartitura = path};
+            string archivoMusica = nodoCancion.Attributes["archivoMusica"].Value;
+            return new Cancion(nombreCancion, autorCancion){ PathPartitura = path, PathArchivoMusica = archivoMusica};
         }
 
         /*Obtiene una Cancion con partitura  a partir del archivo pasado como parametro.*/

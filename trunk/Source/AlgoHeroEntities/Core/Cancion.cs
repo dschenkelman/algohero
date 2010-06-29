@@ -1,4 +1,6 @@
-﻿namespace AlgoHero.MusicEntities.Core
+﻿using System;
+
+namespace AlgoHero.MusicEntities.Core
 {
     public class Cancion
     {
@@ -13,6 +15,7 @@
         public string Autor { get; private set; }
         public Partitura Partitura{ get; set; }
         public string PathPartitura{ get; set; }
-        //public string PathMusica { get; set; } agregar y testear
+        public string PathArchivoMusica { get; set; }
+
     }
 }
