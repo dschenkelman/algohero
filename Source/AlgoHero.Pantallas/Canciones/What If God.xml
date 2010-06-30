@@ -1,0 +1,3512 @@
+<xml>
+  <cancion nombre="What If God(was one of us)" autor="Joan Osborn" archivoMusica="Musica\What If God.wav">
+    <tiempo duracionCompasSegundos="1,667" cantidadNegras="4" />
+    <compases>
+      <compas>
+        <notas>
+          <nota forma="blanca">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="negra">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Do#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="blanca">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="blanca">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="blanca">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="blanca">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="blanca">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="blanca">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Do#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Do#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Do#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Do#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="negra">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="blanca">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="negra">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="negra">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="negra">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="negra">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Do#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Do#" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Mi" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Sol#" />
+            <tono valor="Do#" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Fa#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Do#" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="Si" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="La" />
+            <tono valor="La" />
+            <tono valor="Re" />
+            <tono valor="Mi" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="redonda">
+            <tono valor="La" />
+            <tono valor="La" />
+            <tono valor="Re" />
+            <tono valor="Mi" />
+            <tono valor="Mi" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="negra">
+            <tono valor="Re" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="negra">
+            <tono valor="La" />
+            <tono valor="La" />
+            <tono valor="Re" />
+            <tono valor="Mi" />
+            <tono valor="Mi" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="La" />
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+        </notas>
+      </compas>
+      <compas>
+        <notas>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="semicorchea">
+            <tono valor="Silencio" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Do#" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="corchea">
+            <tono valor="Re" />
+            <tono valor="La" />
+          </nota>
+          <nota forma="negra">
+            <tono valor="Mi" />
+            <tono valor="La" />
+          </nota>
+        </notas>
+      </compas>
+    </compases>
+  </cancion>
+</xml>
