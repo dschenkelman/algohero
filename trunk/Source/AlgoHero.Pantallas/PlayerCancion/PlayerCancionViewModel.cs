@@ -232,10 +232,10 @@ namespace AlgoHero.Pantallas.PlayerCancion
         private void CalcularIntervaloActualizacion()
         {
             double tiempoSemicorchea = this.calculadorDuracionNotas.CalcularDuracion
-                (this.CancionActual.Partitura.TiempoCancion,FiguraMusical.Semicorchea);
+                (this.CancionActual.Partitura.TiempoCancion,FiguraMusical.Semifusa);
 
             //en segundos
-            this.intervaloActualizacion = (decimal) (tiempoSemicorchea/10);
+            this.intervaloActualizacion = (decimal) (tiempoSemicorchea/3.0);
             this.segundosProximaNota = this.intervaloActualizacion;
         }
 
