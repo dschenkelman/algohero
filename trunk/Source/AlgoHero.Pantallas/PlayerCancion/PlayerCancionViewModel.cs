@@ -231,11 +231,11 @@ namespace AlgoHero.Pantallas.PlayerCancion
         /* Este metodo calcula el intervalo de actualizacion en segundos */
         private void CalcularIntervaloActualizacion()
         {
-            double tiempoSemicorchea = this.calculadorDuracionNotas.CalcularDuracion
+            double tiempoSemifusa = this.calculadorDuracionNotas.CalcularDuracion
                 (this.CancionActual.Partitura.TiempoCancion,FiguraMusical.Semifusa);
 
             //en segundos
-            this.intervaloActualizacion = (decimal) (tiempoSemicorchea/3.0);
+            this.intervaloActualizacion = (decimal) (tiempoSemifusa/3.0);
             this.segundosProximaNota = this.intervaloActualizacion;
         }
 

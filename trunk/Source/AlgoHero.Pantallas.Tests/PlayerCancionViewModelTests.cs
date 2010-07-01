@@ -128,7 +128,7 @@ namespace AlgoHero.Pantallas.Tests
                 , new Nivel("Nivel Test", new MockEstrategiaNivelCancionFinita())));
 
             Assert.IsTrue(calculadorDuracionNotas.CalcularDuracionFueLlamado);
-            Assert.AreEqual(FiguraMusical.Semicorchea, calculadorDuracionNotas.FiguraLlamado);
+            Assert.AreEqual(FiguraMusical.Semifusa, calculadorDuracionNotas.FiguraLlamado);
         }
 
         [Test]
@@ -625,6 +625,10 @@ namespace AlgoHero.Pantallas.Tests
                 else if(figuraMusical == FiguraMusical.Semicorchea)
                 {
                     return 0.25;
+                }
+                else if (figuraMusical == FiguraMusical.Semifusa)
+                {
+                    return 0.0625;
                 }
                 return 0;
             }
