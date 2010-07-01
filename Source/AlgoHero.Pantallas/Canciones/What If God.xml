@@ -1,6 +1,6 @@
 <xml>
   <cancion nombre="What If God(was one of us)" autor="Joan Osborn" archivoMusica="Musica\What If God.wav">
-    <tiempo duracionCompasSegundos="1,667" cantidadNegras="4" />
+    <tiempo duracionCompasSegundos="1,6" cantidadNegras="4" />
     <compases>
       <compas>
         <notas>
@@ -2332,43 +2332,61 @@
       </compas>
       <compas>
         <notas>
-          <nota forma="redonda">
-            <tono valor="Silencio" />
+          <nota forma="blanca">
+            <tono valor="La" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Do" />
           </nota>
         </notas>
       </compas>
       <compas>
         <notas>
-          <nota forma="redonda">
-            <tono valor="Silencio" />
+          <nota forma="blanca">
+            <tono valor="La" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Do" />
           </nota>
         </notas>
       </compas>
       <compas>
         <notas>
-          <nota forma="redonda">
-            <tono valor="Silencio" />
+          <nota forma="blanca">
+            <tono valor="La" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Do" />
           </nota>
         </notas>
       </compas>
       <compas>
         <notas>
-          <nota forma="redonda">
-            <tono valor="Silencio" />
+          <nota forma="blanca">
+            <tono valor="La" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Do" />
           </nota>
         </notas>
       </compas>
       <compas>
         <notas>
-          <nota forma="redonda">
-            <tono valor="Silencio" />
+          <nota forma="blanca">
+            <tono valor="La" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Do" />
           </nota>
         </notas>
       </compas>
       <compas>
         <notas>
-          <nota forma="redonda">
-            <tono valor="Silencio" />
+          <nota forma="blanca">
+            <tono valor="La" />
+          </nota>
+          <nota forma="blanca">
+            <tono valor="Do" />
           </nota>
         </notas>
       </compas>
