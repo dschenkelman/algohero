@@ -1773,56 +1773,6 @@
           </nota>
         </notas>
       </compas>
-      <compas>
-        <notas>
-          <nota forma="negra">
-            <tono valor="La" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="La" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Mi" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Do#" />
-          </nota>
-          <nota forma="negra">
-            <tono valor="Si" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Mi" />
-          </nota>
-        </notas>
-      </compas>
-      <compas>
-        <notas>
-          <nota forma="corchea">
-            <tono valor="Silencio" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Si" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Mi" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Sol#" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="La" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Sol#" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Mi" />
-          </nota>
-          <nota forma="corchea">
-            <tono valor="Sol#" />
-          </nota>
-        </notas>
-      </compas>
     </compases>
   </cancion>
 </xml>
