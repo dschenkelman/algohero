@@ -1,5 +1,5 @@
 #summary Rápida guía para correr algohero.
-#labels Phase-Deploy,Phase-Support
+#labels Phase-Deploy,Phase-Support,Featured
 
 = Introduction =
 
