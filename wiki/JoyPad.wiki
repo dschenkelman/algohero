@@ -1,0 +1,13 @@
+#summary Resumen.
+
+= Introduction =
+
+Intro.
+
+
+= Details =
+
+Contenido:
+  * Info
+  * Fotos
+  * Mas
