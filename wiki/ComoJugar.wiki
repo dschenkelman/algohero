@@ -1,5 +1,5 @@
 #summary No soy programador, ¿Como Hago para Jugar?
-#labels Phase-Support,Instalar,Jugar,Usuario
+#labels Phase-Support,Instalar,Jugar,Usuario,Featured
 
 = Introduction =
 
