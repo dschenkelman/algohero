@@ -1,13 +1,24 @@
-#summary Resumen.
+#summary Nueva interfaz de Usuario.
+#labels Featured
 
 = Introduction =
 
-Intro.
+Un pequeño proyecto de un Game Pad para el AlgoHero 2010.
 
+= Información =
 
-= Details =
+  * Dispositivo de Interfaz Humana, Auto-Configurable, lo enchufas y funca!
 
-Contenido:
-  * Info
-  * Fotos
-  * Mas
+  * Es USB y funciona en cualquier sistema operativo.
+
+  * Tiene 9 botones: 4 teclas de colores para el juego (Verde/A, Negra(Roja)/S, Amarilla/K, Azul/L), tecla Select/Tab, Arriba, Abajo, Start/Enter y Apagar/Alt+F4.
+
+= Fotos =
+
+  * La falta de sueño, nuevos proyectos: http://img204.imageshack.us/i/27429983.jpg/
+
+  * It's Arcade Time! http://img340.imageshack.us/i/14850521.jpg/
+
+  * Tal cual el original: http://img822.imageshack.us/i/99739935.jpg/
+
+  * Y tmb para zurdos... http://img10.imageshack.us/i/78851581.jpg/
