@@ -136,6 +136,14 @@ namespace AlgoHero.Pantallas.PlayerCancion
         /* Este metodo actualiza el estado de la vista. */
         public void ActualizarEstado(object sender, ElapsedEventArgs e)
         {
+            int count = 0;
+            
+            foreach (var compas in this.CancionActual.Partitura.ObtenerCompases())
+            {
+                count += compas.CantidadNotas;
+            }
+            
+            
             this.vistaPlayerCancion.Actualizar();
 
             this.segundosProximaNota -= this.intervaloActualizacion;
@@ -231,11 +239,11 @@ namespace AlgoHero.Pantallas.PlayerCancion
         /* Este metodo calcula el intervalo de actualizacion en segundos */
         private void CalcularIntervaloActualizacion()
         {
-            double tiempoSemifusa = this.calculadorDuracionNotas.CalcularDuracion
-                (this.CancionActual.Partitura.TiempoCancion,FiguraMusical.Semifusa);
+            double tiempoSemicorchea = this.calculadorDuracionNotas.CalcularDuracion
+                (this.CancionActual.Partitura.TiempoCancion,FiguraMusical.Semicorchea);
 
             //en segundos
-            this.intervaloActualizacion = (decimal) (tiempoSemifusa/3.0);
+            this.intervaloActualizacion = (decimal) (tiempoSemicorchea/5.0);
             this.segundosProximaNota = this.intervaloActualizacion;
         }
 
