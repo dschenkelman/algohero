@@ -1,6 +1,6 @@
 <xml>
   <cancion nombre="What If God(was one of us)" autor="Joan Osborn" archivoMusica="Musica\What If God.wav">
-    <tiempo duracionCompasSegundos="1,75" cantidadNegras="4" />
+    <tiempo duracionCompasSegundos="1.75" cantidadNegras="4" />
     <compases>
       <compas>
         <notas>
